@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { TagCloud } from "react-tagcloud";
+//import { TagCloud } from "react-tagcloud";
 import ReactWordcloud from 'react-wordcloud';
 import useTrait from "./useTrait";
-//import "./wordCloud.css";
-import Button from '@mui/material/Button';
+import "./wordCloud.css";
 
 function wordFreq(string) {
   if (string === null) return;
@@ -44,7 +43,7 @@ const InputHandler = () => {
     enableTooltip: true,
     deterministic: true,
     fontFamily: "impact",
-    fontSizes: [5, 60],
+    fontSizes: [15, 70],
     fontStyle: "normal",
     fontWeight: "normal",
     padding: 1,
@@ -70,7 +69,6 @@ const InputHandler = () => {
       />
 
       
-      {/* <Button variant="contained" type="submit" onClick={submitHandler}>Submit</Button>; */}
       <button type="submit" onClick={submitHandler} className="btn">
         Submit
       </button>
