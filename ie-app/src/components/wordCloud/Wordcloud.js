@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { TagCloud } from 'react-tagcloud'
+import {useLocation} from 'react-router-dom';
 
 const defaultData = [
   { value: 'jQuery', count: 25 },
@@ -28,9 +29,11 @@ const WordCloud = () => {
   const [data, setData] = useState(defaultData)
   const [randomColor, setRandomColor] = useState(true)
   const [shuffle, setShuffle] = useState(true)
+  const location = useLocation();
   return (
     <div>
       <div className="controls">
+        <span>{location.state.name}</span>
         <div>
           <span>Min</span>
           <input

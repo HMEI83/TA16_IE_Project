@@ -7,7 +7,7 @@ export default function Learning() {
     <>
       <h1 className='learning'>LEARNING</h1>
       <InputHandler />
-      <WordCloud />
+      {/* <WordCloud /> */}
     </>
   );
 }
