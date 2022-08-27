@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import {useNavigate} from 'react-router-dom';
 import { TagCloud } from 'react-tagcloud'
+import useTrait from "./useTrait";
 
 function wordFreq(string) {
   if (string === null) return
@@ -19,9 +19,9 @@ function wordFreq(string) {
 
 const InputHandler = () => {
   const [enteredText, setEnteredText] = useState("");
+  const str = useTrait("")
   const [submittedText, setSubmittedText] = useState(null);
   const [dt, setDt] = useState([])
-  const navi = useNavigate()
 
   const textChangeHandler = (i) => {
     setEnteredText(i.target.value);
@@ -29,26 +29,25 @@ const InputHandler = () => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setSubmittedText(enteredText);
+    str.set(enteredText)
     setEnteredText("");
-    setDt(wordFreq(submittedText))
-    //navi("/learning", {state:{id:1, name:submittedText}})
+    setDt(wordFreq(str.get()))
   };
 
   return (
     <div className="App">
       <h1>Get user input</h1>
-      <form onSubmit={submitHandler}>
+      {/* <form onSubmit={submitHandler}> */}
       <input
         placeholder="type something"
         type="text"
         value={enteredText}
         onChange={textChangeHandler}
       />
-      <button type="submit" >
+      <button type="submit" onClick={submitHandler}>
         Submit
       </button>
-      </form>
+      {/* </form> */}
       <TagCloud
         tags={dt}
         className="simple-cloud"
