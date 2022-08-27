@@ -22,7 +22,7 @@ const defaultData = [
   { value: 'NPM', count: 11 },
 ]
 
-export default () => {
+const WordCloud = () => {
   const [minSize, setMinSize] = useState(12)
   const [maxSize, setMaxSize] = useState(35)
   const [data, setData] = useState(defaultData)
@@ -94,3 +94,5 @@ export default () => {
     </div>
   )
 }
+
+export default WordCloud;
