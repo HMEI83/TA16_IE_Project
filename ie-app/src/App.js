@@ -14,10 +14,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' exact element={<Home/>} />
-        <Route path='/life' component={<Life/>} />
-        <Route path='/learning' component={<Learning/>} />
-        <Route path='/entertainments' component={<Entertainment/>} />
-        <Route path='/contact-us' component={<Contact/>} />
+        <Route path='/life' element={<Life/>} />
+        <Route path='/learning' element={<Learning/>} />
+        <Route path='/entertainments' element={<Entertainment/>} />
+        <Route path='/contact-us' element={<Contact/>} />
       </Routes>
     </Router>
   );
