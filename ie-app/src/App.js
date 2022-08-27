@@ -1,19 +1,25 @@
-import React from "react";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import NavBar from "./components/Layout/Navbar";
+import React from 'react';
+import Navbar from './components/Navbar';
 import './App.css';
-import Home from "./components/pages/Home"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/pages/homePg';
+import Life from './components/pages/lifePg';
+import Learning from './components/pages/learnPg';
+import Entertainment from './components/pages/entertainPg';
+import Contact from './components/pages/contactPg';
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <NavBar />
-        <Switch>
-          <Route path="/" exact component={Home}></Route>
-        </Switch>
-      </BrowserRouter>
-    </>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' exact element={<Home/>} />
+        <Route path='/life' component={<Life/>} />
+        <Route path='/learning' component={<Learning/>} />
+        <Route path='/entertainments' component={<Entertainment/>} />
+        <Route path='/contact-us' component={<Contact/>} />
+      </Routes>
+    </Router>
   );
 }
 
