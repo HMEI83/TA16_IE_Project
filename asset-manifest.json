@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/AgedCareProj/static/css/main.5f945743.css",
-    "main.js": "/AgedCareProj/static/js/main.cc51de67.js",
-    "static/media/home.jpg": "/AgedCareProj/static/media/home.6712cab3be1fe3d5d1bf.jpg",
-    "index.html": "/AgedCareProj/index.html",
-    "main.5f945743.css.map": "/AgedCareProj/static/css/main.5f945743.css.map",
-    "main.cc51de67.js.map": "/AgedCareProj/static/js/main.cc51de67.js.map"
+    "main.css": "/TA16_IE_Project/static/css/main.bedd490b.css",
+    "main.js": "/TA16_IE_Project/static/js/main.cc51de67.js",
+    "static/media/home.jpg": "/TA16_IE_Project/static/media/home.6712cab3be1fe3d5d1bf.jpg",
+    "index.html": "/TA16_IE_Project/index.html",
+    "main.bedd490b.css.map": "/TA16_IE_Project/static/css/main.bedd490b.css.map",
+    "main.cc51de67.js.map": "/TA16_IE_Project/static/js/main.cc51de67.js.map"
   },
   "entrypoints": [
-    "static/css/main.5f945743.css",
+    "static/css/main.bedd490b.css",
     "static/js/main.cc51de67.js"
   ]
 }
