@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { TagCloud } from "react-tagcloud";
+import ReactWordcloud from 'react-wordcloud';
 import useTrait from "./useTrait";
-import "./wordCloud.css";
+//import "./wordCloud.css";
 import Button from '@mui/material/Button';
 
 function wordFreq(string) {
@@ -14,9 +15,9 @@ function wordFreq(string) {
     }
     freqMap[w] += 1;
   });
-  const result = Object.entries(freqMap).map(([value, count]) => ({
-    value,
-    count,
+  const result = Object.entries(freqMap).map(([text, value]) => ({
+    text,
+    value
   }));
   console.log(result);
   return result;
@@ -25,7 +26,6 @@ function wordFreq(string) {
 const InputHandler = () => {
   const [enteredText, setEnteredText] = useState("");
   const str = useTrait("");
-  //const [submittedText, setSubmittedText] = useState(null);
   const [dt, setDt] = useState([]);
 
   const textChangeHandler = (i) => {
@@ -38,6 +38,23 @@ const InputHandler = () => {
     setEnteredText("");
     setDt(wordFreq(str.get()));
   };
+
+  const options = {
+    colors: ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b"],
+    enableTooltip: true,
+    deterministic: true,
+    fontFamily: "impact",
+    fontSizes: [5, 60],
+    fontStyle: "normal",
+    fontWeight: "normal",
+    padding: 1,
+    rotations: 3,
+    rotationAngles: [0, 90],
+    scale: "sqrt",
+    spiral: "archimedean",
+    transitionDuration: 1000
+  };
+  const size = [600, 400];
 
   return (
     <div className="word-cloud">
@@ -57,7 +74,12 @@ const InputHandler = () => {
       <button type="submit" onClick={submitHandler} className="btn">
         Submit
       </button>
-      <TagCloud
+      <ReactWordcloud
+        options={options}
+        size={size}
+        words={dt}
+      />
+      {/* <TagCloud
         minSize={12}
         maxSize={35}
         tags={dt}
@@ -76,7 +98,7 @@ const InputHandler = () => {
           });
           setDt(newData);
         }}
-      />
+      /> */}
     </div>
   );
 };
