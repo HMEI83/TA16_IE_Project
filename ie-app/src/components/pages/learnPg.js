@@ -19,7 +19,7 @@ export default function Learning() {
         <StartingPage
           setShowStartingPage={setShowStartingPage}
           setShowQuestionsPage={setShowQuestionsPage}
-          topScore={setTopScore}
+          topScore={topScore}
         />
       )}
 
