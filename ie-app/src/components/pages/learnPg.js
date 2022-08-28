@@ -27,7 +27,7 @@ export default function Learning() {
         <QuestionsPage
           score={score}
           setScore={setScore}
-          setShowQuesstionsPage={setShowQuestionsPage}
+          setShowQuestionsPage={setShowQuestionsPage}
           setShowFinalPage={setShowFinalPage}
         />
       )}

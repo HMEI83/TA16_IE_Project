@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-//import { TagCloud } from "react-tagcloud";
 import ReactWordcloud from 'react-wordcloud';
 import useTrait from "./useTrait";
-import "./wordCloud.css";
+import "./WordCloud.css";
 
 function wordFreq(string) {
   if (string === null) return;
@@ -77,26 +76,6 @@ const InputHandler = () => {
         size={size}
         words={dt}
       />
-      {/* <TagCloud
-        minSize={12}
-        maxSize={35}
-        tags={dt}
-        className="simple-cloud"
-        onClick={(tag) => {
-          const value = prompt("Edit tag value", tag.value);
-          if (value == null) {
-            return;
-          }
-          const newTag = { value, count: tag.count };
-          const newData = dt.map((t) => {
-            if (t.value === tag.value) {
-              return newTag;
-            }
-            return t;
-          });
-          setDt(newData);
-        }}
-      /> */}
     </div>
   );
 };
