@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+
 import "./Question.css";
 
 const Question = ({
@@ -11,17 +12,18 @@ const Question = ({
   score,
   setScore,
 }) => {
-  const clickHanlder = (isCorrect) => {
+  const handleClick = (isCorrect) => {
     if (questionIndex < 9) {
       if (isCorrect) {
-        setScore((score) => (score += 1));
+        setScore((score) => (score += 100));
       }
 
       setQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
       if (isCorrect) {
-        setScore((score) => (score += 1));
+        setScore((score) => (score += 100));
       }
+
       setShowQuestionsPage(false);
       setShowFinalPage(true);
     }
@@ -29,21 +31,25 @@ const Question = ({
 
   return (
     <Card>
-      <h1 className="question">{question[questionIndex].questionText}</h1>
-      <div>
-        {questions[questionIndex].answer.map((answer, i) => (
+      <h1 className="question">{questions[questionIndex].questionText}</h1>
+
+      <div className="answers">
+        {questions[questionIndex].answers.map((answer, i) => (
           <div
             key={i}
             className="answer"
-            onClick={() => clickHanlder(answer.correctAnswer)}
+            onClick={() => handleClick(answer.correctAnswer)}
           >
-           <p>{answer.answerText}</p>
+            <p>{answer.answerText}</p>
           </div>
         ))}
       </div>
 
-      <p className="score"> Score: <span>{score}</span></p>
-      <p>
+      <p className="score">
+        Score: <span>{score}</span>
+      </p>
+
+      <p className="question_number">
         Question <span>{questionIndex + 1}</span>/10
       </p>
     </Card>

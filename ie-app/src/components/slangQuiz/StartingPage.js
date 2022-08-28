@@ -1,13 +1,14 @@
 import React from "react";
 import "./StartingPage.css";
+import Card from "./Card";
 
 const StartingPage = ({
-    setShowStartgingPage,
+    setShowStartingPage,
     setShowQuestionsPage,
     topScore
 }) => {
     const startGame = () => {
-        setShowStartgingPage(false);
+        setShowStartingPage(false);
         setShowQuestionsPage(true);
     }
 

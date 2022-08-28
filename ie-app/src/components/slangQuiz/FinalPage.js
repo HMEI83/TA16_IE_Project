@@ -11,7 +11,7 @@ const FinalPage = ({
     topScore,
     setTopScore,
 }) => {
-    const clickHanlder = () => {
+    const clickHandler = () => {
         if (score > topScore){
             setTopScore(score);
         }
@@ -27,7 +27,7 @@ const FinalPage = ({
             <h3 className="primary_text">Your final score is: </h3>
             <h3 className="final_score">{score}</h3>
 
-            <button className="play_again_btn">Play Again</button>
+            <button className="play_again_btn" onClick={clickHandler}>Play Again</button>
         </Card>
     );
 };
