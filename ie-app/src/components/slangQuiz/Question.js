@@ -15,13 +15,13 @@ const Question = ({
   const handleClick = (isCorrect) => {
     if (questionIndex < 9) {
       if (isCorrect) {
-        setScore((score) => (score += 100));
+        setScore((score) => (score += 1));
       }
 
       setQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
       if (isCorrect) {
-        setScore((score) => (score += 100));
+        setScore((score) => (score += 1));
       }
 
       setShowQuestionsPage(false);

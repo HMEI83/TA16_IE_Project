@@ -7,23 +7,24 @@ const QuestionPage = ({
     setShowPages,
     score,
     setScore,
-    setShowQuesstionsPage,
+    setShowQuestionsPage,
     setShowFinalPage,
 }) => {
-    const [questionIndex, setQuestionIndex] = useState(0);
+  const [questionIndex, setQuestionIndex] = useState(0);
 
-    return (
-        <>
-        <Question questionIndex={questionIndex} questions={questions}
-        setQuestionIndex={setQuestionIndex} 
-        setShowQuesstionsPage={setShowQuesstionsPage}
-        setShowFinalPage={setShowFinalPage}
-        score={score}
-        setScore={setScore}
-        />
-        </>
-    );
+  return (
+    <>
+      <Question
+         questionIndex={questionIndex}
+         questions={questions}
+         setQuestionIndex={setQuestionIndex}
+         setShowQuestionsPage={setShowQuestionsPage}
+         setShowFinalPage={setShowFinalPage}
+         score={score}
+         setScore={setScore}
+      />
+    </>
+  );
 };
-
 
 export default QuestionPage;
