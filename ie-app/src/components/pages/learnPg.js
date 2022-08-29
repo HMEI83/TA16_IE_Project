@@ -3,6 +3,7 @@ import InputHandler from "../wordCloud/InputHandler";
 import FinalPage from "../slangQuiz/FinalPage";
 import QuestionsPage from "../slangQuiz/QuestionPage";
 import StartingPage from "../slangQuiz/StartingPage";
+import WritingHandler from "../writingAssessment/WritingHandler";
 
 export default function Learning() {
   const [score, setScore] = useState(0);
@@ -13,9 +14,12 @@ export default function Learning() {
   return (
     <>
       <h1 className="learning">LEARNING</h1>
+
+      <WritingHandler />
+
       {/* <InputHandler /> */}
 
-      {showStartingPage && (
+      {/* {showStartingPage && (
         <StartingPage
           setShowStartingPage={setShowStartingPage}
           setShowQuestionsPage={setShowQuestionsPage}
@@ -41,7 +45,7 @@ export default function Learning() {
           setShowFinalPage={setShowFinalPage}
           setScore={setScore}
         />
-      )}
+      )} */}
     </>
   );
 }
