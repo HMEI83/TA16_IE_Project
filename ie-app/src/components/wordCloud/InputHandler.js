@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactWordcloud from 'react-wordcloud';
-import useTrait from "./useTrait";
+import useTrait from "../utility/useTrait";
 import "./wordCloud.css";
 
 function wordFreq(string) {

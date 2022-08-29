@@ -1,21 +1,24 @@
 import React, { useState } from "react";
+import useTrait from "../utility/useTrait";
 
 const WritingHandler = () => {
-  const [values, setValues] = useState("");
-
+  const [enteredText, setEnteredText] = useState("");
+  const str = useTrait("");
+  const [dt, setDt] = useState([]);
   const handleInputContent = (event) => {
-    setValues(event.target.value);
+    setEnteredText(event.target.value);
   };
 
   const getSuggestions = (inputValue) => {
-    var writeGood = require("write-good");
-    var suggestions = writeGood(inputValue);
-    return suggestions;
+    var writeGood = require('write-good');
+    return writeGood(inputValue);
   };
 
   const submitHandler = (event) => {
     event.preventDefault();
-    setValues("");
+    str.set(enteredText);
+    setEnteredText("");
+    setDt(getSuggestions(str.get()));
   };
 
   return (
@@ -26,11 +29,23 @@ const WritingHandler = () => {
         cols="50"
         placeholder="type something"
         type="text"
-        value={values}
+        value={enteredText}
         onChange={handleInputContent}
       />
 
       <button type="submit" onClick={submitHandler}>Submit</button>
+      <ul>
+      {dt.map((book, idx) => {
+        const {a, b, c} = book;
+        return (
+          <li key={idx}>
+            <h3>{a}</h3>
+            <p>{b}</p>
+            <p>{c}</p>
+          </li>
+        );
+      })}
+     </ul>
     </div>
   );
 };
