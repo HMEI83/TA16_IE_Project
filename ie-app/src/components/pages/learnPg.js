@@ -14,12 +14,17 @@ export default function Learning() {
   return (
     <>
       <h1 className="learning">LEARNING</h1>
+      <a href="#i1">Slang Quiz</a>
+      <a href="#i2">Writing</a>
+      <a href="#i3">wordCloud</a>
 
+      <div id="i1">
       <WritingHandler />
+      </div>
 
-      {/* <InputHandler /> */}
 
-      {/* {showStartingPage && (
+      <div id="i2">
+      {showStartingPage && (
         <StartingPage
           setShowStartingPage={setShowStartingPage}
           setShowQuestionsPage={setShowQuestionsPage}
@@ -45,7 +50,12 @@ export default function Learning() {
           setShowFinalPage={setShowFinalPage}
           setScore={setScore}
         />
-      )} */}
+      )}
+      </div>
+
+      <div id="i3">
+      <InputHandler />
+      </div>
     </>
   );
 }

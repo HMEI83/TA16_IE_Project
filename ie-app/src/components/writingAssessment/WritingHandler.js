@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useTrait from "../utility/useTrait";
+import "./WritingHandler.css";
 
 const WritingHandler = () => {
   const [enteredText, setEnteredText] = useState("");
@@ -39,7 +40,7 @@ const WritingHandler = () => {
   }
 
   return (
-    <div>
+    <div className="layout">
       <textarea
         className="text-area"
         rows="5"
