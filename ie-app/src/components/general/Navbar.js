@@ -2,26 +2,43 @@ import React, { useState } from 'react';
 import { Button1 } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Dropdown from './Dropdown';
+import {Dropdown1, Dropdown2} from './Dropdown';
 
 function Navbar() {
   const [click, setClick] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
+  const [dropdown1, setDropdown1] = useState(false);
+  const [dropdown2, setDropdown2] = useState(false);
   const closeMobileMenu = () => setClick(false);
 
-  const onMouseEnter = () => {
+  const onMouseEnter1 = () => {
     if (window.innerWidth < 960) {
-      setDropdown(false);
+      setDropdown1(false);
     } else {
-      setDropdown(true);
+      setDropdown1(true);
     }
   };
 
-  const onMouseLeave = () => {
+  const onMouseLeave1 = () => {
     if (window.innerWidth < 960) {
-      setDropdown(false);
+      setDropdown1(false);
     } else {
-      setDropdown(false);
+      setDropdown1(false);
+    }
+  };
+
+  const onMouseEnter2 = () => {
+    if (window.innerWidth < 960) {
+      setDropdown2(false);
+    } else {
+      setDropdown2(true);
+    }
+  };
+
+  const onMouseLeave2 = () => {
+    if (window.innerWidth < 960) {
+      setDropdown2(false);
+    } else {
+      setDropdown2(false);
     }
   };
 
@@ -39,8 +56,8 @@ function Navbar() {
           </li>
           <li
             className='nav-item'
-            onMouseEnter={onMouseEnter}
-            onMouseLeave={onMouseLeave}
+            onMouseEnter={onMouseEnter1}
+            onMouseLeave={onMouseLeave1}
           >
             <span
               className='nav-links'
@@ -49,7 +66,7 @@ function Navbar() {
               Life in AU <i className='fas fa-caret-down' />
             </span>
             
-            {dropdown && <Dropdown />}
+            {dropdown1 && <Dropdown1 />}
           </li>
           <li className='nav-item'>
             <Link
@@ -60,14 +77,20 @@ function Navbar() {
               Learn English
             </Link>
           </li>
-          <li className='nav-item'>
-            <Link
-              to='/entertainments'
+
+          <li
+            className='nav-item'
+            onMouseEnter={onMouseEnter2}
+            onMouseLeave={onMouseLeave2}
+          >
+            <span
               className='nav-links'
               onClick={closeMobileMenu}
             >
-              Social Entertainments
-            </Link>
+              Social Entertainments <i className='fas fa-caret-down' />
+            </span>
+            
+            {dropdown2 && <Dropdown2 />}
           </li>
         </ul>
         <Button1 />

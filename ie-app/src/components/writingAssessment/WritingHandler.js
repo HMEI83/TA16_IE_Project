@@ -17,9 +17,26 @@ const WritingHandler = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     str.set(enteredText);
-    setEnteredText("");
     setDt(getSuggestions(str.get()));
   };
+
+  const printdt = () => {
+    if (dt && dt === null) {
+      return <></>
+    }
+    return (
+      <ul>
+      {dt.map((book, idx) => {
+        const {index, offset, reason} = book;
+        return (
+          <li key={idx}>
+            <p>{reason}</p>
+          </li>
+        );
+      })}
+     </ul>
+    );
+  }
 
   return (
     <div>
@@ -34,18 +51,7 @@ const WritingHandler = () => {
       />
 
       <button type="submit" onClick={submitHandler}>Submit</button>
-      <ul>
-      {dt.map((book, idx) => {
-        const {a, b, c} = book;
-        return (
-          <li key={idx}>
-            <h3>{a}</h3>
-            <p>{b}</p>
-            <p>{c}</p>
-          </li>
-        );
-      })}
-     </ul>
+      <span>{printdt()}</span>
     </div>
   );
 };
