@@ -1,12 +1,12 @@
 export const LifeInAU = [
   {
     title: 'Transport',
-    path: '/ptv',
+    path: '/transport',
     cName: 'dropdown-link'
   },
   {
     title: 'Daily Diet',
-    path: '/stat',
+    path: '/diet',
     cName: 'dropdown-link'
   }
 ];
@@ -14,7 +14,7 @@ export const LifeInAU = [
 export const Entertainment = [
   {
     title: 'Find Landmark',
-    path: '/ptv',
+    path: '/landmark',
     cName: 'dropdown-link'
   },
   {

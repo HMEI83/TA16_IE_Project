@@ -7,6 +7,7 @@ import Life from './components/pages/lifePg';
 import Learning from './components/pages/learnPg';
 import Entertainment from './components/pages/entertainPg';
 import Contact from './components/pages/contactPg';
+import GenMap from './components/landmark/map'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/learning' element={<Learning/>} />
         <Route path='/entertainments' element={<Entertainment/>} />
         <Route path='/contact-us' element={<Contact/>} />
+        <Route path='/landmark' element={<GenMap/>} />
       </Routes>
     </Router>
   );
