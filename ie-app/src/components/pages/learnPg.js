@@ -4,7 +4,7 @@ import FinalPage from "../slangQuiz/FinalPage";
 import QuestionsPage from "../slangQuiz/QuestionPage";
 import StartingPage from "../slangQuiz/StartingPage";
 import WritingHandler from "../writingAssessment/WritingHandler";
-import NewCard from "../general/NewCard.css";
+import  "../general/NewCard.css";
 
 export default function Learning() {
   const [score, setScore] = useState(0);
@@ -59,14 +59,16 @@ export default function Learning() {
             </div>
           </div>
         </div>
-
-
-        {showQuizPage && (<WritingHandler/>)}
+{/* 
+        <>
+        {SHowHandler}
+        </> */}
         {/* <WritingHandler/> */}
-        {/* {showQuizPage && (<InputHandler/>)} */}
+        {showWordPage && (<InputHandler/>)}
+        {showWordPage && (<WritingHandler/>)}
 
 
-      {showStartingPage && (
+      {showStartingPage && showQuizPage && (
         <StartingPage
           setShowStartingPage={setShowStartingPage}
           setShowQuestionsPage={setShowQuestionsPage}
@@ -74,7 +76,7 @@ export default function Learning() {
         />
       )}
 
-      {showQuestionsPage && (
+      {showQuestionsPage && showQuizPage && (
         <QuestionsPage
           score={score}
           setScore={setScore}
@@ -83,7 +85,7 @@ export default function Learning() {
         />
       )}
 
-      {showFinalPage && (
+      {showFinalPage && showQuizPage && (
         <FinalPage
           score={score}
           topScore={topScore}
