@@ -68,9 +68,10 @@ const InputHandler = () => {
       />
 
       
-      <button type="submit" onClick={submitHandler} className="btn">
+      <button type="submit" onClick={submitHandler}>
         Submit
       </button>
+      
       <ReactWordcloud
         options={options}
         size={size}
