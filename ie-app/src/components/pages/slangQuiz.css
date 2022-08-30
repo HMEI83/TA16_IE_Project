@@ -1,0 +1,16 @@
+.slangBg {
+    display: flex;
+    margin: 5px;
+    height:40rem;
+    background-image: url('../../images/slangImage.jpg');
+}
+
+.quizPos {
+    margin-left: 25rem;
+}
+
+.slangIntro {
+    display: flex;
+    align-content: center;
+    margin-left: 25rem;
+}

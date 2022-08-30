@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import FinalPage from "../slangQuiz/FinalPage";
 import QuestionsPage from "../slangQuiz/QuestionPage";
 import StartingPage from "../slangQuiz/StartingPage";
+import "./slangQuiz.css";
+
 
 const SlangQuiz = () => {
   const [score, setScore] = useState(0);
@@ -11,6 +13,13 @@ const SlangQuiz = () => {
   const [showFinalPage, setShowFinalPage] = useState(false);
   return (
     <>
+      <div className="slangBg">
+        hello
+      </div>
+
+      <h1 className="slangIntro">Intro:</h1>
+
+      <div className="quizPos">
       {showStartingPage && (
         <StartingPage
           setShowStartingPage={setShowStartingPage}
@@ -38,6 +47,8 @@ const SlangQuiz = () => {
           setScore={setScore}
         />
       )}
+    </div>
+
     </>
   );
 };
