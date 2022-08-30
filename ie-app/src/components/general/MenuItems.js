@@ -11,6 +11,20 @@ export const LifeInAU = [
   }
 ];
 
+
+export const LearnEnglish = [
+  {
+    title: 'Slang Quiz',
+    path: '/slang',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Vocabulary and Writing',
+    path: '/vocabularyAndWriting',
+    cName: 'dropdown-link'
+  }
+];
+
 export const Entertainment = [
   {
     title: 'Find Landmark',
@@ -23,3 +37,5 @@ export const Entertainment = [
     cName: 'dropdown-link'
   }
 ];
+
+

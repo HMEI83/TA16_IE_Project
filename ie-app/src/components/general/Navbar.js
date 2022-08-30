@@ -1,13 +1,14 @@
-import React, { useState } from 'react';
-import { Button1 } from './Button';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import {Dropdown1, Dropdown2} from './Dropdown';
+import React, { useState } from "react";
+import { Button1 } from "./Button";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import { Dropdown1, Dropdown2, Dropdown3 } from "./Dropdown";
 
 function Navbar() {
   const [click, setClick] = useState(false);
   const [dropdown1, setDropdown1] = useState(false);
   const [dropdown2, setDropdown2] = useState(false);
+  const [dropdown3, setDropdown3] = useState(false);
   const closeMobileMenu = () => setClick(false);
 
   const onMouseEnter1 = () => {
@@ -42,54 +43,67 @@ function Navbar() {
     }
   };
 
+  const onMouseEnter3 = () => {
+    if (window.innerWidth < 960) {
+      setDropdown3(false);
+    } else {
+      setDropdown3(true);
+    }
+  };
+
+  const onMouseLeave3 = () => {
+    if (window.innerWidth < 960) {
+      setDropdown3(false);
+    } else {
+      setDropdown3(false);
+    }
+  };
+
   return (
     <>
-      <nav className='navbar'>
-        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+      <nav className="navbar">
+        <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           LOGO
         </Link>
-        <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-          <li className='nav-item'>
-            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
               Home
             </Link>
           </li>
           <li
-            className='nav-item'
+            className="nav-item"
             onMouseEnter={onMouseEnter1}
             onMouseLeave={onMouseLeave1}
           >
-            <span
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Life in AU <i className='fas fa-caret-down' />
+            <span className="nav-links" onClick={closeMobileMenu}>
+              Life in AU <i className="fas fa-caret-down" />
             </span>
-            
+
             {dropdown1 && <Dropdown1 />}
-          </li>
-          <li className='nav-item'>
-            <Link
-              to='/learning'
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Learn English
-            </Link>
           </li>
 
           <li
-            className='nav-item'
+            className="nav-item"
+            onMouseEnter={onMouseEnter3}
+            onMouseLeave={onMouseLeave3}
+          >
+            <span className="nav-links" onClick={closeMobileMenu}>
+              Lean English <i className="fas fa-caret-down" />
+            </span>
+
+            {dropdown3 && <Dropdown3 />}
+          </li>
+
+          <li
+            className="nav-item"
             onMouseEnter={onMouseEnter2}
             onMouseLeave={onMouseLeave2}
           >
-            <span
-              className='nav-links'
-              onClick={closeMobileMenu}
-            >
-              Social Entertainments <i className='fas fa-caret-down' />
+            <span className="nav-links" onClick={closeMobileMenu}>
+              Social Entertainments <i className="fas fa-caret-down" />
             </span>
-            
+
             {dropdown2 && <Dropdown2 />}
           </li>
         </ul>
