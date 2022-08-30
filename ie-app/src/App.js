@@ -8,6 +8,7 @@ import Learning from './components/pages/learnPg';
 import Entertainment from './components/pages/entertainPg';
 import Contact from './components/pages/contactPg';
 import GenMap from './components/landmark/map'
+import SlangQuiz from './components/pages/slangQuizPg';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/entertainments' element={<Entertainment/>} />
         <Route path='/contact-us' element={<Contact/>} />
         <Route path='/landmark' element={<GenMap/>} />
+        <Route path='/slang' element={<SlangQuiz/>} />
       </Routes>
     </Router>
   );
