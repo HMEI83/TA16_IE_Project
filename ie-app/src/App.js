@@ -9,9 +9,11 @@ import Entertainment from './components/pages/entertainPg';
 import Contact from './components/pages/contactPg';
 import GenMap from './components/landmark/map'
 import SlangQuiz from './components/pages/slangQuizPg';
+import Footer from "./components/general/Footer";
 
 function App() {
   return (
+    <div className='App'>
     <Router>
       <Navbar />
       <Routes>
@@ -24,6 +26,10 @@ function App() {
         <Route path='/slang' element={<SlangQuiz/>} />
       </Routes>
     </Router>
+
+    <div><Footer/></div>
+    
+    </div>
   );
 }
 
