@@ -12,14 +12,28 @@ export default function Learning() {
   const [showStartingPage, setShowStartingPage] = useState(true);
   const [showQuestionsPage, setShowQuestionsPage] = useState(false);
   const [showFinalPage, setShowFinalPage] = useState(false);
+  const [showQuizPage, setQuizPage] = useState(false);
+  const [showWordPage, setWordPage] = useState(false);
+
+
+  const StartQuiz = () => {
+    setQuizPage(!showQuizPage);
+    console.log(showQuizPage);
+  }
+
+  const StartWord = () => {
+    setWordPage(!showWordPage);
+    console.log(!showWordPage);
+  }
+
+
   return (
     <div>
-      {/* <h1 className="learning">LEARNING</h1> */}
 
-        {/* <div className="card">
+        <div className="newCard" onClick={StartQuiz}>
           <div className="content">
             <div className="front">
-              <h3 className="title">Hey</h3>
+              <h3 className="title">Hello</h3>
               <p className="subtitle">Hover me :)</p>
             </div>
 
@@ -29,9 +43,9 @@ export default function Learning() {
               </p>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        <div className="card1">
+        <div className="newCard1" onClick={StartWord}>
           <div className="content">
             <div className="front">
               <h3 className="title">Hey</h3>
@@ -46,31 +60,12 @@ export default function Learning() {
           </div>
         </div>
 
-        <div className="card">
-          <div className="content">
-            <div className="front">
-              <h3 className="title">Hey</h3>
-              <p className="subtitle">Hover me :)</p>
-            </div>
 
-            <div className="back">
-              <p className="description">
-                Cool description so you can read it too my friend
-              </p>
-            </div>
-          </div>
-        </div>
-
-      {/* <a href="#i1">Slang Quiz</a>
-      <a href="#i2">Writing</a>
-      <a href="#i3">wordCloud</a> */}
-
-      {/* <div id="i1">
-      <WritingHandler />
-      </div>
+        {showQuizPage && (<WritingHandler/>)}
+        {/* <WritingHandler/> */}
+        {/* {showQuizPage && (<InputHandler/>)} */}
 
 
-      <div id="i2">
       {showStartingPage && (
         <StartingPage
           setShowStartingPage={setShowStartingPage}
@@ -98,11 +93,10 @@ export default function Learning() {
           setScore={setScore}
         />
       )}
-      </div>
 
-      <div id="i3">
-      <InputHandler />
-      </div> */}
+
+      
+
     </div>
   );
 }

@@ -28,11 +28,9 @@ const WritingHandler = () => {
     return (
       <ul>
       {dt.map((res, idx) => {
-        const reason = res;
+        const {index, offset, reason} = res;
         return (
-          <li key={idx}>
-            <p>{reason}</p>
-          </li>
+            <p key={idx}>{reason}</p>
         );
       })}
      </ul>
