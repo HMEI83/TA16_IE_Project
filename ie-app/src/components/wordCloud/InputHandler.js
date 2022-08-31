@@ -56,22 +56,24 @@ const InputHandler = () => {
 
   return (
     <div className="word-cloud">
-      <h1>Get user input</h1>
+      <h4>WordCloud</h4>
       <textarea
         className="text-area"
-        rows="5"
-        cols="50"
+        rows="8"
+        cols="60"
         placeholder="type something"
         type="text"
         value={enteredText}
         onChange={textChangeHandler}
       />
 
-      
+      <br></br>
+      <br></br>
+
       <button type="submit" onClick={submitHandler}>
-        Submit
+        <span class="button_top"> Submit</span>
       </button>
-      
+
       <ReactWordcloud
         options={options}
         size={size}

@@ -10,6 +10,7 @@ import Contact from './components/pages/contactPg';
 import GenMap from './components/landmark/map'
 import SlangQuiz from './components/pages/slangQuizPg';
 import Footer from "./components/general/Footer";
+import VocabPg from './components/pages/VocabPg';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/contact-us' element={<Contact/>} />
         <Route path='/landmark' element={<GenMap/>} />
         <Route path='/slang' element={<SlangQuiz/>} />
+        <Route path='/vocabularyAndWriting' element={<VocabPg />}/>
       </Routes>
     </Router>
 

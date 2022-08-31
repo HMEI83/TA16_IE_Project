@@ -1,7 +1,7 @@
 /* From uiverse.io by @JoseIsra */
 .newCard {
     cursor: pointer;
-    width: 40%;
+    width: 35%;
     margin-top: 2rem;
     margin-left: 5rem;
   }
@@ -55,9 +55,8 @@
 .newCard1 {
     cursor: pointer;
     width: 40%;
-    margin-top: -10rem;
     margin-left: 50%;
-
+    margin-bottom: -15rem;
   }
   
   .content {
@@ -69,7 +68,7 @@
     transform-style: preserve-3d;
   }
   
-  .newCard1:hover .content {
+  .newCard:hover .content {
     transform: rotateY(0.5turn);
   }
   
@@ -102,4 +101,3 @@
   .description {
     transform: translateZ(3rem);
   }
-  

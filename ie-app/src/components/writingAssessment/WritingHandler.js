@@ -27,29 +27,36 @@ const WritingHandler = () => {
     }
     return (
       <ul>
-      {dt.map((res, idx) => {
-        const {index, offset, reason} = res;
-        return (
+        {dt.map((res, idx) => {
+          const { index, offset, reason } = res;
+          return (
             <p key={idx}>{reason}</p>
-        );
-      })}
-     </ul>
+          );
+        })}
+      </ul>
     );
   }
 
   return (
     <div className="layout">
+      <h4>Writing Check</h4>
       <textarea
         className="text-area"
-        rows="5"
-        cols="50"
+        rows="8"
+        cols="60"
         placeholder="type something"
         type="text"
         value={enteredText}
         onChange={handleInputContent}
       />
 
-      <button type="submit" onClick={submitHandler}>Submit</button>
+      <br></br>
+      <br></br>
+
+      <button type="submit" onClick={submitHandler}>
+        <span class="button_top"> Submit
+        </span>
+      </button>
       <span>{printdt()}</span>
     </div>
   );

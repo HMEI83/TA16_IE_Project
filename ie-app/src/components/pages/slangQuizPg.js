@@ -14,7 +14,7 @@ const SlangQuiz = () => {
   return (
     <>
       <div className="slangBg">
-        hello
+
       </div>
 
       <h1 className="slangIntro">Intro:</h1>
