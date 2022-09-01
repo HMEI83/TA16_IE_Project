@@ -1,16 +1,18 @@
-.slangBg {
-    display: flex;
-    margin: 5px;
-    height:40rem;
-    background-image: url('../../images/slangImage.jpg');
+.slangPage {
+    margin-left: 15rem;
 }
 
 .quizPos {
     margin-left: 25rem;
+    margin-bottom: 3rem;
 }
 
 .slangIntro {
+    width: 34rem;
     display: flex;
     align-content: center;
     margin-left: 25rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background-color: #f3f3f3;
 }

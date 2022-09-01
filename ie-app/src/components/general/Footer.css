@@ -27,7 +27,7 @@
   }
   
   .footer-info-left, .footer-info-center, .footer-info-right {
-    font-size: x-small;
+    font-size:smaller;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;

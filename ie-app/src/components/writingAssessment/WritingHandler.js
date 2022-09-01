@@ -42,7 +42,7 @@ const WritingHandler = () => {
       <textarea
         className="Writetextarea"
         rows="8"
-        cols="70"
+        cols="93"
         placeholder="type something"
         type="text"
         value={enteredText}

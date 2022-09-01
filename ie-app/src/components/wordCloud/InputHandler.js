@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReactWordcloud from 'react-wordcloud';
+import ReactWordcloud from "react-wordcloud";
 import useTrait from "../utility/useTrait";
 import "./WordCloud.css";
 
@@ -15,7 +15,7 @@ function wordFreq(string) {
   });
   const result = Object.entries(freqMap).map(([text, value]) => ({
     text,
-    value
+    value,
   }));
   console.log(result);
   return result;
@@ -50,18 +50,16 @@ const InputHandler = () => {
     rotationAngles: [0, 90],
     scale: "sqrt",
     spiral: "archimedean",
-    transitionDuration: 1000
+    transitionDuration: 1000,
   };
   const size = [600, 400];
 
   return (
-    <div >
+    <div>
       <div className="word-cloud">
         {/* <h4>WordCloud</h4> */}
         <div>
-          <div className="titleBg">
-            Key word Visulazation
-          </div>
+          <div className="titleBg">Key word Visulazation</div>
           <textarea
             className="Vocatextarea"
             rows="8"
@@ -81,17 +79,19 @@ const InputHandler = () => {
         </div>
 
         <div>
-          <ReactWordcloud
-            options={options}
-            size={size}
-            words={dt}
-          />
+          <ReactWordcloud options={options} size={size} words={dt} />
         </div>
       </div>
       <div className="subDiv">
         <p>
-          Welcome to our word cloud and have fun.
-          We want to make our website more interesting and encourage users to interact with us. Whether you want to learn English or keep up with Australian news, enter some words so that you can see the word frequency. For example, if you copy an article into this box, you can see the keywords, it is the word that appears most frequently in the article
+          Welcome to our word cloud and have fun. We want to make our website
+          more interesting and encourage users to interact with us. The use of
+          this feature is particularly important if you are a beginner speaker
+          of English. Whether you want to learn English or keep up with
+          Australian news, enter some words so that you can see the word
+          frequency. For example, if you copy an article into this box, you can
+          see the keywords, it is the word that appears most frequently in the
+          article. Try it!
         </p>
       </div>
     </div>
