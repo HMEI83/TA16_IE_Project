@@ -152,7 +152,7 @@ export const questions = [
         "To be “a stubbie short of a six pack” is to be:",
       answers: [
         {
-          answerText: "Someone who does silly thins",
+          answerText: "Someone who does silly things",
           correctAnswer: false,
         },
         {

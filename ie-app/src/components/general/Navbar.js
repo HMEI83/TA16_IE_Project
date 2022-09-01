@@ -63,7 +63,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          VICISH
+          <div>VICISH<br></br>Victoria Internation student help</div>
         </Link>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
