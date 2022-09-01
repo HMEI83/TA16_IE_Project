@@ -11,6 +11,7 @@ import GenMap from './components/landmark/map'
 import SlangQuiz from './components/pages/slangQuizPg';
 import Footer from "./components/general/Footer";
 import VocabPg from './components/pages/VocabPg';
+import WriteCheck from './components/pages/WriteCheckPg';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path='/landmark' element={<GenMap/>} />
         <Route path='/slang' element={<SlangQuiz/>} />
         <Route path='/vocabularyAndWriting' element={<VocabPg />}/>
+        <Route path='/writing' element={<WriteCheck />}/>
       </Routes>
     </Router>
 

@@ -89,7 +89,7 @@ function Navbar() {
             onMouseLeave={onMouseLeave3}
           >
             <span className="nav-links" onClick={closeMobileMenu}>
-              Lean English <i className="fas fa-caret-down" />
+              Learn English <i className="fas fa-caret-down" />
             </span>
 
             {dropdown3 && <Dropdown3 />}

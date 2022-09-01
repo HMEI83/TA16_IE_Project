@@ -19,8 +19,13 @@ export const LearnEnglish = [
     cName: 'dropdown-link'
   },
   {
-    title: 'Vocabulary and Writing',
+    title: 'Vocabulary',
     path: '/vocabularyAndWriting',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Write-Check',
+    path: '/writing',
     cName: 'dropdown-link'
   }
 ];

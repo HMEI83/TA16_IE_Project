@@ -55,30 +55,45 @@ const InputHandler = () => {
   const size = [600, 400];
 
   return (
-    <div className="word-cloud">
-      <h4>WordCloud</h4>
-      <textarea
-        className="text-area"
-        rows="8"
-        cols="60"
-        placeholder="type something"
-        type="text"
-        value={enteredText}
-        onChange={textChangeHandler}
-      />
+    <div >
+      <div className="word-cloud">
+        {/* <h4>WordCloud</h4> */}
+        <div>
+          <div className="titleBg">
+            Key word Visulazation
+          </div>
+          <textarea
+            className="Vocatextarea"
+            rows="8"
+            cols="60"
+            placeholder="type something"
+            type="text"
+            value={enteredText}
+            onChange={textChangeHandler}
+          />
 
-      <br></br>
-      <br></br>
+          <br></br>
+          <br></br>
 
-      <button type="submit" onClick={submitHandler}>
-        <span class="button_top"> Submit</span>
-      </button>
+          <button type="submit" onClick={submitHandler}>
+            <span>Submit</span>
+          </button>
+        </div>
 
-      <ReactWordcloud
-        options={options}
-        size={size}
-        words={dt}
-      />
+        <div>
+          <ReactWordcloud
+            options={options}
+            size={size}
+            words={dt}
+          />
+        </div>
+      </div>
+      <div className="subDiv">
+        <p>
+          Welcome to our word cloud and have fun.
+          We want to make our website more interesting and encourage users to interact with us. Whether you want to learn English or keep up with Australian news, enter some words so that you can see the word frequency. For example, if you copy an article into this box, you can see the keywords, it is the word that appears most frequently in the article
+        </p>
+      </div>
     </div>
   );
 };
