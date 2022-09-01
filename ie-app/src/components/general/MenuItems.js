@@ -14,17 +14,17 @@ export const LifeInAU = [
 
 export const LearnEnglish = [
   {
-    title: 'Slang Quiz',
+    title: 'Australian slang test',
     path: '/slang',
     cName: 'dropdown-link'
   },
   {
-    title: 'Vocabulary',
+    title: 'Keywords Visualisation',
     path: '/vocabularyAndWriting',
     cName: 'dropdown-link'
   },
   {
-    title: 'Write-Check',
+    title: 'Grammar',
     path: '/writing',
     cName: 'dropdown-link'
   }

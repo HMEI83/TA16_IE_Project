@@ -63,7 +63,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          LOGO
+          VICISH
         </Link>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
@@ -89,7 +89,7 @@ function Navbar() {
             onMouseLeave={onMouseLeave3}
           >
             <span className="nav-links" onClick={closeMobileMenu}>
-              Learn English <i className="fas fa-caret-down" />
+            Learning language <i className="fas fa-caret-down" />
             </span>
 
             {dropdown3 && <Dropdown3 />}
