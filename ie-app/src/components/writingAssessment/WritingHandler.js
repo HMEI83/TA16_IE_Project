@@ -5,7 +5,7 @@ import "./WritingHandler.css";
 const WritingHandler = () => {
   const [enteredText, setEnteredText] = useState("");
   const str = useTrait("");
-  const [dt, setDt] = useState([]);
+  const [dt, setDt] = useState(null);
   const handleInputContent = (event) => {
     setEnteredText(event.target.value);
   };
@@ -22,16 +22,28 @@ const WritingHandler = () => {
   };
 
   const printdt = () => {
-    if (dt && dt === null) {
+    console.log(dt);
+    console.log(enteredText);
+    if (!dt || dt === null) {
       return <></>
+    }
+    if(dt.length===0 && enteredText.length!==0){
+      return <><p>all good</p></>
     }
     return (
       <ul>
         {dt.map((res, idx) => {
           const { index, offset, reason } = res;
-          return (
-            <p key={idx}>{reason}</p>
-          );
+          if(!index || index===null){
+            return (
+              <div className="result"><p >All good</p></div>
+            )
+          } else{
+            return (
+              <div className="result"><p key={idx}>{reason}</p></div>
+            );
+          }
+          
         })}
       </ul>
     );
@@ -42,7 +54,7 @@ const WritingHandler = () => {
       <textarea
         className="Writetextarea"
         rows="8"
-        cols="93"
+        cols="70"
         placeholder="type something"
         type="text"
         value={enteredText}
@@ -56,6 +68,7 @@ const WritingHandler = () => {
         <span> Submit
         </span>
       </button>
+      <br></br>
       <span>{printdt()}</span>
     </div>
   );

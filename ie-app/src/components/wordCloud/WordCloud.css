@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   margin: 5rem;
-  margin-top: 10rem;
+  margin-top: 3rem;
 }
 
 
@@ -13,11 +13,10 @@
 }
 
 .subDiv {
-  width: 23%;
+  width: 28rem;
   margin-left: 12rem;
-  margin-bottom: 5rem;
   background-color: #f3f3f3;
-  margin-top: -10rem;
+  margin-top: 3rem;
   padding: 1rem;
   font-family:'Courier New', Courier, monospace;
   font-weight: 100;
@@ -34,7 +33,7 @@
 
 
 /* From uiverse.io by @alexroumi */
-button {
+button {  
   padding: 15px 25px;
   border: unset;
   border-radius: 15px;

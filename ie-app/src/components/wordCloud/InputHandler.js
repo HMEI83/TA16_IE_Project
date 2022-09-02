@@ -56,6 +56,19 @@ const InputHandler = () => {
 
   return (
     <div>
+
+      <div className="subDiv">
+        <p>
+          Welcome to our word cloud and have fun. We want to make our website
+          more interesting and encourage users to interact with us. The use of
+          this feature is particularly important if you are a beginner speaker
+          of English. Whether you want to learn English or keep up with
+          Australian news, enter some words so that you can see the word
+          frequency. For example, if you copy an article into this box, you can
+          see the keywords, it is the word that appears most frequently in the
+          article. Try it!
+        </p>
+      </div>
       <div className="word-cloud">
         {/* <h4>WordCloud</h4> */}
         <div>
@@ -82,7 +95,7 @@ const InputHandler = () => {
           <ReactWordcloud options={options} size={size} words={dt} />
         </div>
       </div>
-      <div className="subDiv">
+      {/* <div className="subDiv">
         <p>
           Welcome to our word cloud and have fun. We want to make our website
           more interesting and encourage users to interact with us. The use of
@@ -93,7 +106,7 @@ const InputHandler = () => {
           see the keywords, it is the word that appears most frequently in the
           article. Try it!
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

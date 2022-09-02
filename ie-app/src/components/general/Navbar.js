@@ -71,7 +71,7 @@ function Navbar() {
               Home
             </Link>
           </li>
-          <li
+          {/* <li
             className="nav-item"
             onMouseEnter={onMouseEnter1}
             onMouseLeave={onMouseLeave1}
@@ -81,7 +81,7 @@ function Navbar() {
             </span>
 
             {dropdown1 && <Dropdown1 />}
-          </li>
+          </li> */}
 
           <li
             className="nav-item"
@@ -107,7 +107,7 @@ function Navbar() {
             {dropdown2 && <Dropdown2 />}
           </li>
         </ul>
-        <Button1 />
+        {/* <Button1 /> */}
       </nav>
     </>
   );

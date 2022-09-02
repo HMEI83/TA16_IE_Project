@@ -10,19 +10,19 @@ function Footer () {
       <section className="footer-info">
         <section className="footer-info-left">
           <section className="footer-info__name">
-              TA16
+              {/* TA16 */}
           </section>
           <section className="footer-info__returns">
-            123-456-789
+            {/* 123-456-789 */}
             <br />
-            Melbourne, Australia
+            {/* Melbourne, Australia */}
             <br />
-            Monash University
+            {/* Monash University */}
           </section>        
         </section>
         <section className="footer-info-center">
           <section className="footer-info__email">
-            contact.info@gmail.com
+            {/* contact.info@gmail.com */}
           </section>
           <section className="footer-info__terms">
             Terms and Conditions
@@ -32,12 +32,12 @@ function Footer () {
         </section>
         <section className="footer-info-right">
           <section className="footer-info__number">
-            Team Memebers
+            {/* Team Memebers */}
           </section>
           <section className="footer-info__contact">
-            Our Story
+            {/* Our Story */}
             <br />
-            Contact Us
+            {/* Contact Us */}
           </section>
         </section>
       </section>

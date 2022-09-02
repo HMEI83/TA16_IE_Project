@@ -36,11 +36,11 @@ export const Entertainment = [
     path: '/landmark',
     cName: 'dropdown-link'
   },
-  {
-    title: 'Venues and Events statistics',
-    path: '/stat',
-    cName: 'dropdown-link'
-  }
+  // {
+  //   title: 'Venues and Events statistics',
+  //   path: '/stat',
+  //   cName: 'dropdown-link'
+  // }
 ];
 
 
