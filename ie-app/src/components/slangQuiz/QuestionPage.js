@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import Question from "./Question";
 
-import { questions } from "./questions";
-
 const QuestionPage = ({
-    setShowPages,
+    questions,
     score,
     setScore,
     setShowQuestionsPage,
     setShowFinalPage,
+    handleRecord
 }) => {
   const [questionIndex, setQuestionIndex] = useState(0);
 
@@ -22,6 +21,7 @@ const QuestionPage = ({
          setShowFinalPage={setShowFinalPage}
          score={score}
          setScore={setScore}
+         handleRecord = {handleRecord}
       />
     </>
   );

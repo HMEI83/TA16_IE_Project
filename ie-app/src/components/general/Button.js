@@ -2,14 +2,6 @@ import React from 'react';
 import './Button.css';
 import { Link } from 'react-router-dom';
 
-export function Button1() {
-  return (
-    <Link to='contact-us'>
-      <button className='btn1'>Contact Us</button>
-    </Link>
-  );
-}
-
 export function Button2() {
   return (
     <Link to='find-event'>

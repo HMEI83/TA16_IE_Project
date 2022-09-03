@@ -3,6 +3,7 @@ import FinalPage from "../slangQuiz/FinalPage";
 import QuestionsPage from "../slangQuiz/QuestionPage";
 import StartingPage from "../slangQuiz/StartingPage";
 import "./slangQuiz.css";
+import {questions} from "../slangQuiz/questions";
 
 const SlangQuiz = () => {
   const [score, setScore] = useState(0);
@@ -10,6 +11,12 @@ const SlangQuiz = () => {
   const [showStartingPage, setShowStartingPage] = useState(true);
   const [showQuestionsPage, setShowQuestionsPage] = useState(false);
   const [showFinalPage, setShowFinalPage] = useState(false);
+  const [answerRecord, setAnswerRecord] = useState({q1:0, q2:0, q3:0, q4:0, q5:0, q6:0, q7:0, q8:0, q9:0, q10:0});
+
+  const handleRecord = (ind) => {
+    var q = "q" + ind;
+    setAnswerRecord({...answerRecord, [q] : 1});
+  }
   return (
     <div className="slangTotal">
       <div className="slangBackgroud">
@@ -69,6 +76,8 @@ const SlangQuiz = () => {
               setScore={setScore}
               setShowQuestionsPage={setShowQuestionsPage}
               setShowFinalPage={setShowFinalPage}
+              handleRecord = {handleRecord}
+              questions={questions}
             />
           )}
 
@@ -80,6 +89,8 @@ const SlangQuiz = () => {
               setShowStartingPage={setShowStartingPage}
               setShowFinalPage={setShowFinalPage}
               setScore={setScore}
+              record = {answerRecord}
+              questions={questions}
             />
           )}
         </div>

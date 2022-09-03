@@ -16,6 +16,7 @@ export default function GeocoderControl(props) {
                 (result.center || (((_a = result.geometry) === null || _a === void 0 ? void 0 : _a.type) === 'Point' && result.geometry.coordinates));
             if (location && props.marker) {
                 setMarker(React.createElement(Marker, Object.assign({}, props.marker, { longitude: location[0], latitude: location[1] })));
+                props.handleInput(location[0], location[1]);
             }
             else {
                 setMarker(null);

@@ -11,17 +11,20 @@ const Question = ({
   setShowFinalPage,
   score,
   setScore,
+  handleRecord
 }) => {
   const handleClick = (isCorrect) => {
     if (questionIndex < 9) {
       if (isCorrect) {
         setScore((score) => (score += 1));
+        handleRecord(questionIndex)
       }
 
       setQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
       if (isCorrect) {
         setScore((score) => (score += 1));
+        handleRecord(questionIndex)
       }
 
       setShowQuestionsPage(false);

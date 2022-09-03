@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Button1 } from "./Button";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Dropdown1, Dropdown2, Dropdown3 } from "./Dropdown";
@@ -63,7 +62,7 @@ function Navbar() {
     <>
       <nav className="navbar">
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-          <div>VICISH<br></br>Victoria Internation student help</div>
+        <div>VICISH<br></br>Victoria Internation student help</div>
         </Link>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
@@ -89,7 +88,7 @@ function Navbar() {
             onMouseLeave={onMouseLeave3}
           >
             <span className="nav-links" onClick={closeMobileMenu}>
-            Learning language <i className="fas fa-caret-down" />
+              Learning Language <i className="fas fa-caret-down" />
             </span>
 
             {dropdown3 && <Dropdown3 />}
@@ -107,7 +106,6 @@ function Navbar() {
             {dropdown2 && <Dropdown2 />}
           </li>
         </ul>
-        {/* <Button1 /> */}
       </nav>
     </>
   );
