@@ -20,10 +20,9 @@ const WritingHandler = () => {
     str.set(enteredText);
     setDt(getSuggestions(str.get()));
   };
+  
 
   const printdt = () => {
-    console.log(dt);
-    console.log(enteredText);
     if (!dt || dt === null) {
       return <></>
     }
