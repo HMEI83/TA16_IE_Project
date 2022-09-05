@@ -1,5 +1,6 @@
 .slangPage {
-    margin-left: -5rem;
+    margin-left: 360px;
+    margin-top: -907px;
 }
 
 .quizPos {
@@ -21,14 +22,16 @@
 .slangBackgroud {
     width: 40rem;
     align-content: center;
-    margin-left: 10rem;
+    margin-left: 58px;
     margin-top: 3rem;
     margin-bottom: 2rem;
     background-color: #f3f3f3;
 }
 
 .slangTotal {
-    display: flex;
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
 }
 .aussieP {
     padding: 1rem;

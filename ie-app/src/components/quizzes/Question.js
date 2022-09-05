@@ -17,14 +17,14 @@ export const SlangQuestion = ({
     if (questionIndex < 9) {
       if (isCorrect) {
         setScore((score) => (score += 1));
-        handleRecord(questionIndex)
+        handleRecord(questionIndex + 1)
       }
 
       setQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
       if (isCorrect) {
         setScore((score) => (score += 1));
-        handleRecord(questionIndex)
+        handleRecord(questionIndex + 1)
       }
 
       setShowQuestionsPage(false);
@@ -74,14 +74,14 @@ export const EnglishQuestion = ({
       if (questionIndex < 9) {
         if (response.data[0].ans === selectedAns) {
           setScore((score) => (score += 1));
-          handleRecord(questionIndex)
+          handleRecord(questionIndex + 1)
         }
   
         setQuestionIndex((prevIndex) => prevIndex + 1);
       } else {
         if (response.data[0].ans === selectedAns) {
           setScore((score) => (score += 1));
-          handleRecord(questionIndex)
+          handleRecord(questionIndex + 1)
         }
   
         setShowQuestionsPage(false);

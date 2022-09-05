@@ -104,7 +104,6 @@ export const Button = styled(Link)`
 
 export const BtnWrap = styled.div`
   display: inline-block;
-  float: left;
   padding:0px 11px;
   margin-left: -15px;
   justify-content: space-between;

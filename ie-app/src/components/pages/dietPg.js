@@ -9,7 +9,7 @@ export default function Diet() {
     return (
         <>
         <div className="headerBg">Diet</div>
-        <CardWrapper style={{ marginLeft: "280px", marginTop: "60px"}}>
+        <CardWrapper style={{ marginLeft: "361px", marginTop: "60px"}}>
         <Link to='/recipe' style={{ textDecoration: 'none' }}>
           <CardLayout style={{width: "300px", height: "250px"}}>
             <CardIcon src={recipecard} />

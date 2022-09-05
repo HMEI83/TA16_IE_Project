@@ -13,12 +13,13 @@
 }
 
 .homebg {
-  width: 190vh;
+  width: 180vh;
   height: 30%;
 }
 
 .headerBg {
   width: 100%;
+  background-repeat: no-repeat;
   height: 400px;
   opacity: .8;
   text-align: center;
@@ -36,7 +37,7 @@
 #home-content1 {
   font-size: 40px;
   font-family: 'Geneva';
-  margin-top: -69%;
+  margin-top: -66%;
   margin-left: 100px;
   color: rgba(123, 126, 119, 0.908);
   height: fit-content;
