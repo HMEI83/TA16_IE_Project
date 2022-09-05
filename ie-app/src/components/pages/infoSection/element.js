@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
-
+  background: ${({ lightBg }) => (lightBg ? '#fff' : '#010606')};
+  margin-top: 90px;
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -12,7 +12,8 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
-  height: 660px;
+  vertical-align: middle;
+  height: 700px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -104,6 +105,8 @@ export const Button = styled(Link)`
 export const BtnWrap = styled.div`
   display: inline-block;
   float: left;
+  padding:0px 11px;
+  margin-left: -15px;
   justify-content: space-between;
 `;
 
