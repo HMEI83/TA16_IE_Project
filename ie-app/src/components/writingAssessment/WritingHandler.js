@@ -63,7 +63,7 @@ const WritingHandler = () => {
       <br></br>
       <br></br>
 
-      <button type="submit" onClick={submitHandler}>
+      <button className = "writingHandlerBt" type="submit" onClick={submitHandler}>
         <span> Submit
         </span>
       </button>

@@ -39,7 +39,7 @@ export default function GenMap() {
     setViewState(newCenter);
   }, [])
   return (
-    <div style={{ height: "100vh" }}>
+    <div style={{ height: "100vh", marginTop: "90px" }}>
       <Map
       {...viewState}
       mapStyle="mapbox://styles/fuwak0o0/cl2vqyhwn000n14tgci6txwby"

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import FinalPage from "../slangQuiz/FinalPage";
-import QuestionsPage from "../slangQuiz/QuestionPage";
-import StartingPage from "../slangQuiz/StartingPage";
-import "./slangQuiz.css";
-import {questions} from "../slangQuiz/questions";
+import {FinalSlangPage} from "../quizzes/FinalPage";
+import {SlangQuestionPage} from "../quizzes/QuestionPage";
+import {SlangStartingPage} from "../quizzes/StartingPage";
+import "./quiz.css";
+import {slangqs} from "../quizzes/questions";
 
 const SlangQuiz = () => {
   const [score, setScore] = useState(0);
@@ -18,6 +18,8 @@ const SlangQuiz = () => {
     setAnswerRecord({...answerRecord, [q] : 1});
   }
   return (
+    <>
+      <div className="headerBg">Australia Slang Test</div>
     <div className="slangTotal">
       <div className="slangBackgroud">
         <h3 className="aussieH">How To Speak Australian</h3>
@@ -63,7 +65,7 @@ const SlangQuiz = () => {
 
         <div className="quizPos">
           {showStartingPage && (
-            <StartingPage
+            <SlangStartingPage
               setShowStartingPage={setShowStartingPage}
               setShowQuestionsPage={setShowQuestionsPage}
               topScore={topScore}
@@ -71,31 +73,33 @@ const SlangQuiz = () => {
           )}
 
           {showQuestionsPage && (
-            <QuestionsPage
+            <SlangQuestionPage
               score={score}
               setScore={setScore}
               setShowQuestionsPage={setShowQuestionsPage}
               setShowFinalPage={setShowFinalPage}
               handleRecord = {handleRecord}
-              questions={questions}
+              questions={slangqs}
             />
           )}
 
           {showFinalPage && (
-            <FinalPage
+            <FinalSlangPage
               score={score}
               topScore={topScore}
               setTopScore={setTopScore}
               setShowStartingPage={setShowStartingPage}
               setShowFinalPage={setShowFinalPage}
               setScore={setScore}
+              setAnswerRecord = {setAnswerRecord}
               record = {answerRecord}
-              questions={questions}
+              questions={slangqs}
             />
           )}
         </div>
       </div>
     </div>
+    </>
   );
 };
 

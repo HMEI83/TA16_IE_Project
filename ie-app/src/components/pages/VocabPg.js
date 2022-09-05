@@ -6,11 +6,14 @@ import "../general/NewCard.css";
 
 const VocabPg = () => {
   return (
+    <>
+    <div className="headerBg">WordCloud Visualization</div>
     <div>
       <div>
         <InputHandler />
       </div>
     </div>
+    </>
   );
 };
 

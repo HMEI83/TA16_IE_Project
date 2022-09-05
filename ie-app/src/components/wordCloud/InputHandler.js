@@ -86,7 +86,7 @@ const InputHandler = () => {
           <br></br>
           <br></br>
 
-          <button type="submit" onClick={submitHandler}>
+          <button className = "wordcloudBt" type="submit" onClick={submitHandler}>
             <span>Submit</span>
           </button>
         </div>

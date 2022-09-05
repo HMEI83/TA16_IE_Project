@@ -31,6 +31,19 @@ app.get("/landmark", (req, res) => {
   });
 });
 
+app.get("/englishquiz", (req, res) => {
+  const qno = req.query.quizno;
+  db.query(`SELECT * FROM englishquiz WHERE qno = ?;
+  `, [qno], (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(result);
+      res.send(result);
+    }
+  });
+});
+
 app.listen(3001, () => {
   console.log("Yey, your server is running on port 3001");
 });

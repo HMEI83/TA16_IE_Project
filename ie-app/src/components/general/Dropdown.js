@@ -32,7 +32,7 @@ export function Dropdown1() {
   );
 }
 
-export function Dropdown2() {
+export function Dropdown3() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);
@@ -61,7 +61,7 @@ export function Dropdown2() {
   );
 }
 
-export function Dropdown3() {
+export function Dropdown2() {
   const [click, setClick] = useState(false);
 
   const handleClick = () => setClick(!click);

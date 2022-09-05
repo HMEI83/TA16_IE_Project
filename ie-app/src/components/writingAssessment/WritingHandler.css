@@ -12,7 +12,7 @@ margin-top: 1.5rem;
 }
 
 /* From uiverse.io by @alexroumi */
-button {
+.writingHandlerBt {
 padding: 15px 25px;
 border: unset;
 border-radius: 15px;
@@ -28,7 +28,7 @@ transition: all 250ms;
 overflow: hidden;
 }
 
-button::before {
+.writingHandlerBt::before {
 content: "";
 position: absolute;
 top: 0;
@@ -43,10 +43,10 @@ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
 transition: all 250ms
 }
 
-button:hover {
+.writingHandlerBt:hover {
 color: #e8e8e8;
 }
 
-button:hover::before {
+.writingHandlerBt:hover::before {
 width: 100%;
 }

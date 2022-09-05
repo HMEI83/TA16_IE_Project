@@ -1,9 +1,9 @@
 export const LifeInAU = [
-  {
-    title: 'Transport',
-    path: '/transport',
-    cName: 'dropdown-link'
-  },
+  // {
+  //   title: 'Transport',
+  //   path: '/transport',
+  //   cName: 'dropdown-link'
+  // },
   {
     title: 'Daily Diet',
     path: '/diet',
@@ -14,8 +14,8 @@ export const LifeInAU = [
 
 export const LearnEnglish = [
   {
-    title: 'Australian slang test',
-    path: '/slang',
+    title: 'English Quizzes',
+    path: '/quizzes',
     cName: 'dropdown-link'
   },
   {

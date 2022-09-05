@@ -39,7 +39,7 @@ export const RecipeResultView = ({
         <h5> Digests:</h5>
         <ul>
           {digests.map((res, idx) => {
-            return res.label === "Fat" || res.label == "Protein" ? <li key={idx}>{res.label}: {res.total.toFixed(0)}</li> : <></>
+            return res.label === "Fat" || res.label === "Protein" ? <li key={idx}>{res.label}: {res.total.toFixed(0)}</li> : <></>
           })}
         </ul>
       </div>
