@@ -8,6 +8,11 @@ export const LifeInAU = [
     title: 'Daily Diet',
     path: '/diet',
     cName: 'dropdown-link'
+  },
+  {
+    title: 'Bank',
+    path: '/bank',
+    cName: 'dropdown-link'
   }
 ];
 

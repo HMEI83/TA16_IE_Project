@@ -14,9 +14,11 @@ import EnglishQuiz from './components/pages/englishQuiz';
 import VocabPg from './components/pages/VocabPg';
 import WriteCheck from './components/pages/WriteCheckPg';
 import Diet from './components/pages/dietPg';
+import Bank from './components/pages/bankPg';
 import { RecipeReq } from "./components/recipe/recipeReqHandler";
 import { MenuPlanner } from './components/menuplan/menuplanHandler';
-import ScrollToTop from "./components/general/scrollToTop.js"
+import ScrollToTop from "./components/general/scrollToTop.js";
+
 function App() {
   return (
     <div className='App'>
@@ -37,6 +39,7 @@ function App() {
         <Route path='/diet' element={<Diet/>} />
         <Route path='/recipe' element={<RecipeReq/>} />
         <Route path='/meal-plan' element={<MenuPlanner/>} />
+        <Route path='/bank' element={<Bank/>} />
       </Routes>
     </Router>
 
