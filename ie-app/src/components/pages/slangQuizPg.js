@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import {FinalSlangPage} from "../quizzes/FinalPage";
-import {SlangQuestionPage} from "../quizzes/QuestionPage";
-import {SlangStartingPage} from "../quizzes/StartingPage";
+import { FinalSlangPage } from "../quizzes/FinalPage";
+import { SlangQuestionPage } from "../quizzes/QuestionPage";
+import { SlangStartingPage } from "../quizzes/StartingPage";
 import "./quiz.css";
-import {slangqs} from "../quizzes/questions";
+import { slangqs } from "../quizzes/questions";
+import "../general/SlangCard.css";
 
 const SlangQuiz = () => {
   const [score, setScore] = useState(0);
@@ -11,51 +12,52 @@ const SlangQuiz = () => {
   const [showStartingPage, setShowStartingPage] = useState(true);
   const [showQuestionsPage, setShowQuestionsPage] = useState(false);
   const [showFinalPage, setShowFinalPage] = useState(false);
-  const [answerRecord, setAnswerRecord] = useState({q1:0, q2:0, q3:0, q4:0, q5:0, q6:0, q7:0, q8:0, q9:0, q10:0});
+  const [answerRecord, setAnswerRecord] = useState({ q1: 0, q2: 0, q3: 0, q4: 0, q5: 0, q6: 0, q7: 0, q8: 0, q9: 0, q10: 0 });
+
+  const leanrnSlangcards = [
+    { id: 1, front: "Hard yakka", back: "Hard Work", color: "#77AADA" },
+    { id: 2, front: "Sparrow", back: "Very early in the morning" , color: "#5f7fbf" },
+    { id: 3, front: "mate's rates", back: "A special discounter price for close friends or family", color: "#BAE1F2"  },
+    { id: 4, front: "Knackered", back: "Tired" , color: "#B5C5E5" },
+    { id: 5, front: "McDonald's", back: "Macca's" , color: "#749DC3" },
+    { id: 6, front: "Have a crack", back: "Try to attempt something" , color: "#A8DEFD" },
+    { id: 7, front: "Sanger", back: "A sandwich" , color: "#77AADA"},
+    { id: 8, front: "A stubbie short of a six pack", back: "Somene who is a bit crazy" , color: "#5f7fbf"},
+    { id: 9, front: "Steve Irwin's famous catch phrase", back: "Crikey" , color: "#BAE1F2"},
+    { id: 10, front: "Budgie Smugglers", back: "Male swimming costume" , color: "#B5C5E5"},
+  ]
 
   const handleRecord = (ind) => {
     var q = "q" + ind;
-    setAnswerRecord({...answerRecord, [q] : 1});
+    setAnswerRecord({ ...answerRecord, [q]: 1 });
   }
   return (
     <>
-      <div className="headerBg">Australia Slang Test</div>
-    <div className="slangTotal">
-      <div className="slangBackgroud">
-        <h3 className="aussieH">How To Speak Australian</h3>
-        <p className="aussieP">
-          Once you've been in Australia for, well, an hour, you'll notice that
-          nearly every word has an 'o' on the end of it. This is because for
-          some weird reason Australians like to shorten every word and then add
-          a vowel to the end of it… e.g. “bottle-o” (Bottle shop / off license)
-          “servo” (garage / service station). Oddly though, some of these words
-          end up being longer than they were originally. At other times they'll
-          just add a different vowel instead of the 'o'. MacDonalds, you know
-          that famous fast food burger joint, is only known as Macca's over
-          here! I think the video below perfectly illustrates this unique way of
-          speaking Australian!
-        </p>
-        <iframe
-          title="How to speak Australian"
-          width="580"
-          height="345"
-          src="https://www.youtube.com/embed/yDb_WsAt_Z0?feature=oembed&enablejsapi=1&origin=https://nomadsworld.com"
-        ></iframe>
-        <h3 className="aussieH">Australian Phrases and Sayings</h3>
-        <p className="aussieP">
-          Some phrases can be a bit more difficult to work out than the
-          abbreviations Australians use. When someone exclaimed to me: “OMG
-          check out his budgie smugglers” I really had absolutely no clue what
-          they were talking about. Let's just say it only refers to men, and
-          they tend to be wearing speedos! I was at the bar and my friend says
-          “it's my shout mate“. Huh?! This is an important one to know. If it's
-          their shout they're going to be paying. Another common one to hear at
-          the pub is “he's blotto“… Yeah don't buy that guy another drink he's
-          already had too many!
-        </p>
-      </div>
+      <div className="slangHeader"><h1>Australia Slang Test</h1></div>
+      <div>
+        <div className="learnSlang">
+          {leanrnSlangcards.map(leanrnSlangcard => {
+            return (
+              <div key={leanrnSlangcard.id} className="card">
+                <div style={{backgroundColor: leanrnSlangcard.color}} className="content">
+                  <div className="front">
+                    <p>{leanrnSlangcard.front}</p>
+                    <br></br>
+                    <p className="subtitle">Hover me :)</p>
+                  </div>
 
-      <div className="slangPage">
+                  <div style={{backgroundColor: leanrnSlangcard.color}} className="back">
+                    <p className="description">
+                      {leanrnSlangcard.back}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )
+
+          })}
+        </div>
+
         <div className="slangIntro">
           Wanna test your ability in understanding Australian slang? Come and
           take our quiz. You can view it as a simple game. There is ten commonly
@@ -78,7 +80,7 @@ const SlangQuiz = () => {
               setScore={setScore}
               setShowQuestionsPage={setShowQuestionsPage}
               setShowFinalPage={setShowFinalPage}
-              handleRecord = {handleRecord}
+              handleRecord={handleRecord}
               questions={slangqs}
             />
           )}
@@ -91,14 +93,13 @@ const SlangQuiz = () => {
               setShowStartingPage={setShowStartingPage}
               setShowFinalPage={setShowFinalPage}
               setScore={setScore}
-              setAnswerRecord = {setAnswerRecord}
-              record = {answerRecord}
+              setAnswerRecord={setAnswerRecord}
+              record={answerRecord}
               questions={slangqs}
             />
           )}
         </div>
       </div>
-    </div>
     </>
   );
 };

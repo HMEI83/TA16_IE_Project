@@ -1,6 +1,6 @@
 .slangPage {
     margin-left: 360px;
-    margin-top: -907px;
+    /* margin-top: -907px; */
 }
 
 .quizPos {
@@ -42,3 +42,13 @@
     padding: 1rem;
 }
 
+.learnSlang {
+    width: 90%;
+    margin-left: 5rem;
+    margin-top: 4rem;
+}
+
+.slangHeader {
+    margin-top: 10rem;
+    margin-left: 35rem;
+}
