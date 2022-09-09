@@ -1,16 +1,36 @@
 .main-checkBox {
-    width: 32rem;
-    margin-top: 10rem;
-    margin-left: 15rem;
-    background-color: aliceblue;
+  width: 32rem;
+  margin-top: -44.5rem;
+  margin-left: 70rem;
+  background-color: aliceblue;
 }
-
 
 .checkBoxDiv {
-    display: inline-block;
+  display: inline-block;
 }
 
-.checkBoxSection{
-    margin-left: 1rem;
-    margin-top: 1rem;
+.checkBoxSection {
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
+
+.mainBankPage {
+  width: 90rem;
+  display: inline-block;
+  margin-top: 8rem;
+}
+
+.bankCardLatout {
+  width: 30rem;
+  margin-left: 10rem;
+}
+
+.vl {
+    border-left: 6px solid rgb(37, 157, 204);
+    height: 45rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    margin-top: -44.5rem;
+    border-radius: 15rem;
+  }
