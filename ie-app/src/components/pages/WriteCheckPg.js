@@ -4,14 +4,24 @@ import "./WriteCheck.css";
 
 const WriteCheck = () => {
   return (
-    <div>
+    <div style={{backgroundColor: "#ABC9E9", height: "1000px"}}>
       <div className="headerBg">Grammar Checker</div>
-      <div className="headContent">
-        For the new learners, we have a special offer. You can practice spelling
-        characters in this box, we provide grammar check features. In this way,
-        you cannot get bored with grammar as you learn it. Come and try it on!
-      </div>
-      <div className="writingTitleDIv">Writing Check</div>
+      <div className="slangIntro" style={{
+          marginLeft: "320px", 
+          marginTop: "30px", 
+          borderRadius: "60px",
+          padding: "25px",
+          width: "56%",
+          backgroundColor: "#98abd9"}}>
+           Wondering where to improve your grammar? This grammar check feature helps you to identify any mistake made in a paragraph. 
+          </div>
+          <div className="titleBg" style={{
+          marginLeft: "550px", 
+          marginTop: "30px", 
+          borderRadius: "20px",
+          padding: "20px",
+          width: "25%",
+          backgroundColor: "#98abd9"}}>Enter your paragraph in the text box below</div>
       <div className="inputDiv">{<WritingHandler />}</div>
       <div></div>
     </div>

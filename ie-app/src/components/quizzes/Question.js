@@ -1,8 +1,10 @@
 import React from "react";
 import {Card1, Card2} from "./Card";
-import Axios from "axios";
+import { useState } from "react";
 import "./Question.css";
-
+import {
+  Button
+} from '@material-ui/core';
 export const SlangQuestion = ({
   questionIndex,
   setQuestionIndex,
@@ -67,45 +69,67 @@ export const EnglishQuestion = ({
   setShowFinalPage,
   score,
   setScore,
+  answers,
   handleRecord
 }) => {
+  const [showAnswers, setShowAnswers] = useState(false);
   const handleClick = (selectedAns) => {
-    Axios.get("http://localhost:3001/englishquiz", {params: { quizno: questionIndex}}).then((response) => {
-      if (questionIndex < 9) {
-        if (response.data[0].ans === selectedAns) {
-          setScore((score) => (score += 1));
-          handleRecord(questionIndex + 1)
-        }
-  
-        setQuestionIndex((prevIndex) => prevIndex + 1);
-      } else {
-        if (response.data[0].ans === selectedAns) {
-          setScore((score) => (score += 1));
-          handleRecord(questionIndex + 1)
-        }
-  
-        setShowQuestionsPage(false);
-        setShowFinalPage(true);
+    if (!showAnswers) {
+      if (answers[questionIndex].ans === selectedAns) {
+        setScore((score) => (score += 1));
+        handleRecord(questionIndex + 1)
       }
-    });
+    }
+    setShowAnswers(true);
   };
+
+  const handleNextQuestion = () => {
+    setQuestionIndex((prevIndex) => prevIndex + 1);
+    setShowAnswers(false);
+    if (questionIndex === 9) {
+      setShowQuestionsPage(false);
+      setShowFinalPage(true);
+    }
+  }
+
+  const handleQues = () => {
+      const finalButton = questionIndex === 9 ? "Finish" : "Next Question";
+      return (
+        <div style={{position: 'absolute', marginTop: "5%", left: "15%", width: "70%"}}>
+          <p style={{color: "#1b3a85", marginLeft: "1px", fontSize: "20px"}}>
+            Explaination: {questions[questionIndex].solution}</p>
+          <div style={{justifyContent: "center", alignItems: "center", marginLeft: "40%"}}>
+          <Button 
+          color="primary" 
+          variant="outlined"
+          style={{color: "#1b3a85", fontSize: "17px", marginLeft: "-5%", marginTop: "10px"}}
+          onClick = {handleNextQuestion}>{finalButton}</Button>
+          </div>
+          </div>
+      )
+  }
 
   return (
     <Card2>
-      <h1 className="question">{questions[questionIndex].questionText}</h1>
+      <h1 className="question" style={{fontSize: "25px"}}>{questions[questionIndex].questionText}</h1>
 
       <div className="answers">
-        {questions[questionIndex].answers.map((answer, i) => (
-          <div
+        {questions[questionIndex].answers.map((answer, i) => {
+          const col = showAnswers ? (
+            answer.answerText === answers[questionIndex].ans ? "#08c73b": "#c70808"
+        ) : "";
+          return (<div
             key={i}
             className="answer"
+            style={{color: `${col}`}}
             onClick={() => handleClick(answer.answerText)}
           >
-            <p>{answer.answerText}</p>
+            <p  style={{fontSize: "15px"}}>{answer.answerText}</p>
           </div>
-        ))}
+          )
+        })}
       </div>
-
+      {showAnswers && <>{handleQues()}</>}
       <p className="score">
         Score: <span>{score}</span>
       </p>

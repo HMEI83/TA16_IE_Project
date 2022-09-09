@@ -6,14 +6,14 @@ import "../general/NewCard.css";
 
 const VocabPg = () => {
   return (
-    <>
+    <div style={{backgroundColor: "#ABC9E9", height: "1000px"}}>
     <div className="headerBg">WordCloud Visualization</div>
     <div>
       <div>
         <InputHandler />
       </div>
     </div>
-    </>
+    </div>
   );
 };
 

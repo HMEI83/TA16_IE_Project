@@ -35,7 +35,7 @@ const WritingHandler = () => {
           const { index, offset, reason } = res;
           if(!index || index===null){
             return (
-              <div className="result"><p >All good</p></div>
+              <div className="result"><p>All good</p></div>
             )
           } else{
             return (
@@ -53,8 +53,9 @@ const WritingHandler = () => {
       <textarea
         className="Writetextarea"
         rows="8"
-        cols="70"
-        placeholder="type something"
+        cols="64"
+        placeholder="type something..."
+        style={{backgroundColor: "#dee7ff", color:"#000"}}
         type="text"
         value={enteredText}
         onChange={handleInputContent}
@@ -64,7 +65,7 @@ const WritingHandler = () => {
       <br></br>
 
       <button className = "writingHandlerBt" type="submit" onClick={submitHandler}>
-        <span> Submit
+        <span> Check My Grammar
         </span>
       </button>
       <br></br>

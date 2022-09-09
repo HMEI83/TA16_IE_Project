@@ -3,6 +3,7 @@
     width: 5rem;
     cursor: pointer;
     display: inline-block;
+    position: relative;
     margin-left: 5rem;
     margin-right: 5rem;
     margin-top: 2rem;
@@ -20,6 +21,7 @@
   
   .card:hover .content {
     transform: rotateY(0.5turn);
+    z-index: 999;
   }
   
   .front,
@@ -40,7 +42,7 @@
   }
   
   .subtitle {
-    transform: translateZ(2rem);
+    transform: translateZ(5rem);
   }
   
   .back {

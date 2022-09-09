@@ -8,48 +8,51 @@
 
 .home {
   display:block;
-  margin-top: 500px;
-  height: 370px;
+  margin-top: -600px;
+  margin-left: 700px;
+  height: 95px;
+  width: 700px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.963);
 }
 
 .homebg {
-  width: 180vh;
-  height: 30%;
+  width: 170vh;
+  height: 840px;
 }
 
 .headerBg {
   width: 100%;
-  background-repeat: no-repeat;
-  height: 400px;
+  height: 200px;
   opacity: .8;
   text-align: center;
   color: rgb(22, 50, 57);
-  line-height: 400px;
-  font-size: 81px;
-  background-image: url('./images/contentbg.jpg');
+  line-height: 300px;
+  font-size: 60px;
 }
 
 .logo {
   width: 150px;
+  margin-left: -100px;
   object-fit: cover;
 }
 
 #home-content1 {
-  font-size: 40px;
+  font-size: 43px;
   font-family: 'Geneva';
-  margin-top: -66%;
-  margin-left: 100px;
-  color: rgba(123, 126, 119, 0.908);
+  margin-top: 78%;
+  margin-left: 12px;
+  color: rgba(45, 51, 94, 0.908);
   height: fit-content;
   background: transparent;
 }
 
 #home-content2 {
-  font-size: 25px;
+  font-size: 28px;
   font-family: 'Geneva';
   margin-top: -1px;
-  margin-left: 100px;
-  color: rgba(123, 126, 119, 0.908);
+  margin-left: 12px;
+  color: rgba(45, 51, 94, 0.908);
   height: fit-content;
   background: transparent;
   width: 880px;

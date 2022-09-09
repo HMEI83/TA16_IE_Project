@@ -30,43 +30,43 @@ export const FinalSlangPage = ({
     switch (key) {
       case "q1": {
         if (val) return <span style={{color: "green"}}>q1: {questions[0].questionText} correct</span>
-        else return <span style={{color: "red"}}>q1: {questions[0].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q1: {questions[0].questionText} incorrect</span>
       }
       case "q2": {
         if (val) return <span style={{color: "green"}}>q2: {questions[1].questionText} correct</span>
-        else return <span style={{color: "red"}}>q2: {questions[1].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q2: {questions[1].questionText} incorrect</span>
       }
       case "q3": {
         if (val) return <span style={{color: "green"}}>q3: {questions[2].questionText} correct</span>
-        else return <span style={{color: "red"}}>q3: {questions[2].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q3: {questions[2].questionText} incorrect</span>
       }
       case "q4": {
         if (val) return <span style={{color: "green"}}>q4: {questions[3].questionText} correct</span>
-        else return <span style={{color: "red"}}>q4: {questions[3].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q4: {questions[3].questionText} incorrect</span>
       }
       case "q5": {
         if (val) return <span style={{color: "green"}}>q5: {questions[4].questionText} correct</span>
-        else return <span style={{color: "red"}}>q5: {questions[4].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q5: {questions[4].questionText} incorrect</span>
       }
       case "q6": {
         if (val) return <span style={{color: "green"}}>q6: {questions[5].questionText} correct</span>
-        else return <span style={{color: "red"}}>q6: {questions[5].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q6: {questions[5].questionText} incorrect</span>
       }
       case "q7": {
         if (val) return <span style={{color: "green"}}>q7: {questions[6].questionText} correct</span>
-        else return <span style={{color: "red"}}>q7: {questions[6].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q7: {questions[6].questionText} incorrect</span>
       }
       case "q8": {
         if (val) return <span style={{color: "green"}}>q8: {questions[7].questionText} correct</span>
-        else return <span style={{color: "red"}}>q8: {questions[7].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q8: {questions[7].questionText} incorrect</span>
       }
       case "q9": {
         if (val) return <span style={{color: "green"}}>q9: {questions[8].questionText} correct</span>
-        else return <span style={{color: "red"}}>q9: {questions[8].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q9: {questions[8].questionText} incorrect</span>
       }
       case "q10": {
         if (val) return <span style={{color: "green"}}>q10: {questions[9].questionText} correct</span>
-        else return <span style={{color: "red"}}>q10: {questions[9].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q10: {questions[9].questionText} incorrect</span>
       }
     }
   }
@@ -119,43 +119,43 @@ export const FinalGrammarPage = ({
     switch (key) {
       case "q1": {
         if (val) return <span style={{color: "green"}}>q1: {questions[0].questionText} correct</span>
-        else return <span style={{color: "red"}}>q1: {questions[0].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q1: {questions[0].questionText} incorrect</span>
       }
       case "q2": {
         if (val) return <span style={{color: "green"}}>q2: {questions[1].questionText} correct</span>
-        else return <span style={{color: "red"}}>q2: {questions[1].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q2: {questions[1].questionText} incorrect</span>
       }
       case "q3": {
         if (val) return <span style={{color: "green"}}>q3: {questions[2].questionText} correct</span>
-        else return <span style={{color: "red"}}>q3: {questions[2].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q3: {questions[2].questionText} incorrect</span>
       }
       case "q4": {
         if (val) return <span style={{color: "green"}}>q4: {questions[3].questionText} correct</span>
-        else return <span style={{color: "red"}}>q4: {questions[3].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q4: {questions[3].questionText} incorrect</span>
       }
       case "q5": {
         if (val) return <span style={{color: "green"}}>q5: {questions[4].questionText} correct</span>
-        else return <span style={{color: "red"}}>q5: {questions[4].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q5: {questions[4].questionText} incorrect</span>
       }
       case "q6": {
         if (val) return <span style={{color: "green"}}>q6: {questions[5].questionText} correct</span>
-        else return <span style={{color: "red"}}>q6: {questions[5].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q6: {questions[5].questionText} incorrect</span>
       }
       case "q7": {
         if (val) return <span style={{color: "green"}}>q7: {questions[6].questionText} correct</span>
-        else return <span style={{color: "red"}}>q7: {questions[6].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q7: {questions[6].questionText} incorrect</span>
       }
       case "q8": {
         if (val) return <span style={{color: "green"}}>q8: {questions[7].questionText} correct</span>
-        else return <span style={{color: "red"}}>q8: {questions[7].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q8: {questions[7].questionText} incorrect</span>
       }
       case "q9": {
         if (val) return <span style={{color: "green"}}>q9: {questions[8].questionText} correct</span>
-        else return <span style={{color: "red"}}>q9: {questions[8].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q9: {questions[8].questionText} incorrect</span>
       }
       case "q10": {
         if (val) return <span style={{color: "green"}}>q10: {questions[9].questionText} correct</span>
-        else return <span style={{color: "red"}}>q10: {questions[9].questionText} incorrect</span>
+        else return <span style={{color: "#c70808"}}>q10: {questions[9].questionText} incorrect</span>
       }
     }
   }

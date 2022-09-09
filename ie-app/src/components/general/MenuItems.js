@@ -1,16 +1,11 @@
 export const LifeInAU = [
-  // {
-  //   title: 'Transport',
-  //   path: '/transport',
-  //   cName: 'dropdown-link'
-  // },
   {
-    title: 'Daily Diet',
-    path: '/diet',
+    title: 'Transport',
+    path: '/transport',
     cName: 'dropdown-link'
   },
   {
-    title: 'Bank',
+    title: 'Bank Account Set Up',
     path: '/bank',
     cName: 'dropdown-link'
   }
@@ -19,17 +14,22 @@ export const LifeInAU = [
 
 export const LearnEnglish = [
   {
-    title: 'English Quizzes',
-    path: '/quizzes',
+    title: 'Grammar Ability Test',
+    path: '/english-quiz',
     cName: 'dropdown-link'
   },
   {
-    title: 'Keywords Visualisation',
-    path: '/vocabularyAndWriting',
+    title: 'Slang Game',
+    path: '/slang',
     cName: 'dropdown-link'
   },
   {
-    title: 'Grammar',
+    title: 'Catch Keyword',
+    path: '/catch-keyword',
+    cName: 'dropdown-link'
+  },
+  {
+    title: 'Grammar Checker',
     path: '/writing',
     cName: 'dropdown-link'
   }
@@ -37,7 +37,7 @@ export const LearnEnglish = [
 
 export const Entertainment = [
   {
-    title: 'Find Landmark',
+    title: 'Melbourne Landmark',
     path: '/landmark',
     cName: 'dropdown-link'
   },

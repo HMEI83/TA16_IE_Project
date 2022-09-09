@@ -10,11 +10,13 @@ export default function Home() {
     <>
     <img className='homebg' src={homebg} alt='home'/>
       <div className='home'>
-      <h1 id="home-content1">
-          Start A New Journey in Victoria
+        <h1>
+          <span id="home-content1">Start A New Journey in Victoria</span>
         </h1>
-        <h1 id="home-content2">
+        <h1>
+          <span id="home-content2">
           As an International Student
+          </span>
       </h1>
       </div>
       <InfoSection {...aboutObj} />

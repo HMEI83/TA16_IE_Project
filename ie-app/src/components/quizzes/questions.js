@@ -1,3 +1,46 @@
+export const slangTut = [
+  {
+    slang: "hard yakka",
+    meaning: "hard work",
+  },
+  {
+    slang: "sparrow's fart",
+    meaning: "very early in the morning",
+  },
+  {
+    slang: "mate's rates",
+    meaning: "a special discounter price for close friends or family",
+  },
+  {
+    slang: "knackered",
+    meaning: "tired",
+  },
+  {
+    slang: "McDonald's",
+    meaning: "Macca's",
+  },
+  {
+    slang: "have a crack",
+    meaning: "try to attempt something",
+  },
+  {
+    slang: "sanger",
+    meaning: "sandwich",
+  },
+  {
+    slang: "a stubbie short of a six pack",
+    meaning: "somene who is a bit crazy",
+  },
+  {
+    slang: "Steve Irwin's famous catch phrase",
+    meaning: "Crikey",
+  },
+  {
+    slang: "Budgie Smugglers",
+    meaning: "male swimming costume",
+  },
+]
+
 export const slangqs = [
     {
       questionText: "What does “hard yakka” refer to?",
@@ -216,6 +259,7 @@ export const slangqs = [
   export const englishqz = [
     {
       questionText: "Which words are all adverbs?",
+      solution: `Calmly, slowly, accurately, usually are all adverbs. When used next to a verb, they give information about how the action is carried out`,
       answers: [
         {
           answerText: "running,walking,giving,talking"
@@ -234,6 +278,7 @@ export const slangqs = [
     {
       questionText:
         "Which sentence is correct?",
+      solution: `We're is the abbreviation of we are. It is a shorter way of writing it.`,
       answers: [
         {
           answerText: "we'are walking to the bus stop"
@@ -252,6 +297,8 @@ export const slangqs = [
     {
       questionText:
         "Which sentence is correct?",
+      solution: `The singular noun decoration takes the singular verb is. 
+      The plural noun colours takes the plural verb represent.`,
       answers: [
         {
           answerText: "the decoration of the cakes is always in different colors that represent each color of the rainbow"
@@ -270,6 +317,8 @@ export const slangqs = [
     {
       questionText:
         `It was illegal to swim in the surf during daylight hours before 1902. ____ men and women could swim early in the morning or in the evening, they could not swim at the same time.`,
+      solution: `The word while gives the idea that though one thing is allowed, another may not be. The words because and since suggest a reason 
+      for the second part of the sentence. When gives the idea of a time.`,
       answers: [
         {
           answerText: "Because"
@@ -288,6 +337,7 @@ export const slangqs = [
     {
       questionText:
         `A stroke or slash (/) has been used in these sentences. Which sentence correctly uses the stroke or slash?`,
+        solution: `The slash indicates a strong link between consecutive words. The word or should replace it in Matthew or Sarah and Monday or Tuesday. A dash should replace it in north-west.`,
       answers: [
         {
           answerText: "the excursion could be on Monday/Tuesday next week"
@@ -307,25 +357,8 @@ export const slangqs = [
       questionText:
         `"The clouds were like a blanket, holding in the clammy heat."
           The language device used in the above text is an example of`,
-      answers: [
-        {
-          answerText: "metaphor"
-        },
-        {
-          answerText: "personification"
-        },
-        {
-          answerText: "simile"
-        },
-        {
-          answerText: "hyperbole"
-        },
-      ],
-    },
-    {
-      questionText:
-        `"The clouds were like a blanket, holding in the clammy heat."
-          The language device used in the above text is an example of`,
+        solution:`You are not told that the clouds were a blanket, therefore, this is a simile, since the composer uses the word like to compare the clouds to a blanket. 
+        This simile is used to give the responder a better idea of what the clouds were like.`,
       answers: [
         {
           answerText: "metaphor"
@@ -346,7 +379,8 @@ export const slangqs = [
         `"Is it not possible for people who are studying for examinations, to begin their preparation with sufficient time 
         for them to assimilate their knowledge and check with their teachers topics which remain unclear"
         Which punctuation is missing from the end of the above sentence?`,
-      answers: [
+     solution: `The words Is it not possible ask the question; the rest of the sentence clarifies what the question is about but does not change the idea of a question. You need a question mark.`,
+        answers: [
         {
           answerText: "question mark(?)"
         },
@@ -364,6 +398,7 @@ export const slangqs = [
     {
       questionText:
         `When we see them again, it ___ summer.`,
+        solution: `The rest of the sentence is written in future tense.`,
       answers: [
         {
           answerText: "was being"
@@ -382,6 +417,7 @@ export const slangqs = [
     {
       questionText:
         `In order to reach the summit _____ have to pace herself`,
+        solution: `today - this was her intention - Milly would is the text that was missing from the sentence. The text between the dashes is an added thought or piece of information. If you remove the text between the dashes, the remaining sentence will still make sense.`,
       answers: [
         {
           answerText: "today-this was her intention-Miley would"
@@ -401,6 +437,7 @@ export const slangqs = [
       questionText:
         `“Would the MOTOR MOUTHS in the front row be quiet!” stormed Miss Smith.
         The words MOTOR MOUTHS are in uppercases because`,
+        solution: `This technique is called alliteration, in which the occurrence of the same letter or sound at the beginning of adjacent or closely connected words`,
       answers: [
         {
           answerText: "both words have sharp and short sounds"

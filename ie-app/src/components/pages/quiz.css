@@ -1,6 +1,27 @@
 .slangPage {
     margin-left: 360px;
-    /* margin-top: -907px; */
+    margin-top: -907px;
+}
+
+.CardView {
+    width: 380px;
+    height: 500px;
+    border:  1px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 10px;
+    margin: 40px 20px;
+    background-color: white;
+}
+
+.start_btn {
+    width: 180px;
+    background-color: #4c5d87;
+}
+
+.start_btn:hover {
+    transition: all 0.3s ease-in-out;
+    background: rgb(111, 113, 173);
 }
 
 .quizPos {
@@ -16,7 +37,6 @@
     margin-left: 25rem;
     margin-top: 3rem;
     margin-bottom: 2rem;
-    background-color: #f3f3f3;
 }
 
 .slangBackgroud {
@@ -25,7 +45,6 @@
     margin-left: 58px;
     margin-top: 3rem;
     margin-bottom: 2rem;
-    background-color: #f3f3f3;
 }
 
 .slangTotal {
@@ -46,9 +65,4 @@
     width: 90%;
     margin-left: 5rem;
     margin-top: 4rem;
-}
-
-.slangHeader {
-    margin-top: 10rem;
-    margin-left: 35rem;
 }

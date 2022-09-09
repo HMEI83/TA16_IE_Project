@@ -114,6 +114,7 @@ const BankPg = () => {
   }, []);
 
   return (
+    <div style={{backgroundColor: "#ABC9E9", height: "1000px"}}>
     <div className="mainBankPage">
         
       <div className="bankCardLatout">
@@ -151,6 +152,7 @@ const BankPg = () => {
           ))}
         </form>
       </div>
+    </div>
     </div>
   );
 };

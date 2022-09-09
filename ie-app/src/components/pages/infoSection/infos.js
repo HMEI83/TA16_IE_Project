@@ -4,7 +4,7 @@ import { InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Btn
 import { Link } from "react-router-dom";
 
 const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, showCard, cards,
-  headline, darkText, description, img, alt, primary, dark, dark2 }) => {
+  headline, darkText, description, img, alt, topSpace, dark, dark2 }) => {
   return (
     <>
       <InfoContainer lightBg={lightBg} id={id}>
@@ -12,7 +12,7 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, showCard, card
           <InfoRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
-                <TopLine>{topLine}</TopLine>
+                <TopLine lightText={lightText} topspace={topSpace}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle darkText={darkText}>{description}</Subtitle>
               </TextWrapper>
@@ -24,14 +24,14 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, showCard, card
                   // </Link>
                   <BtnWrap>
                     <Button to={card.nav} smooth={true} duration={500} spy={true} exact='true' offset={-80} 
-                    primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0} 
+                    col={card.col} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0} 
                     style={{ textDecoration: 'none' }}>{card.title}</Button>
                 </BtnWrap>
               ))}
             </Column1>
             <Column2>
               <ImgWrap>
-                <Img src={img} alt={alt} />
+                <Img src={img} alt={alt} style={{height: "470px", width: "560px", float: "left"}}/>
               </ImgWrap>
             </Column2>
           </InfoRow>

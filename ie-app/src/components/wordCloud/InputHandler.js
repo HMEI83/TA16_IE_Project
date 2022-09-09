@@ -56,57 +56,43 @@ const InputHandler = () => {
 
   return (
     <div>
-
-      <div className="subDiv">
-        <p>
-          Welcome to our word cloud and have fun. We want to make our website
-          more interesting and encourage users to interact with us. The use of
-          this feature is particularly important if you are a beginner speaker
-          of English. Whether you want to learn English or keep up with
-          Australian news, enter some words so that you can see the word
-          frequency. For example, if you copy an article into this box, you can
-          see the keywords, it is the word that appears most frequently in the
-          article. Try it!
-        </p>
-      </div>
+      <div className="slangIntro" style={{
+          marginLeft: "280px", 
+          marginTop: "30px", 
+          borderRadius: "60px",
+          padding: "25px",
+          width: "60%",
+          backgroundColor: "#98abd9"}}>
+            Have you ever lost focus while reading a dry, long article? This WorldCloud feature is here to assist capturing the high-frequency words. Reading has never been that easy with keywords in your mind. 
+          </div>
       <div className="word-cloud">
         {/* <h4>WordCloud</h4> */}
         <div>
-          <div className="titleBg">Key word Visulazation</div>
+          <div className="titleBg" style={{
+          marginLeft: "20px", 
+          marginTop: "30px", 
+          borderRadius: "20px",
+          padding: "20px",
+          width: "100%",
+          backgroundColor: "#98abd9"}}>Enter or paste paragraphs of your readings in the text box below</div>
           <textarea
             className="Vocatextarea"
             rows="8"
             cols="60"
-            placeholder="type something"
+            placeholder="type something..."
+            style={{backgroundColor: "#dee7ff", color:"#000"}}
             type="text"
             value={enteredText}
             onChange={textChangeHandler}
           />
-
-          <br></br>
-          <br></br>
-
           <button className = "wordcloudBt" type="submit" onClick={submitHandler}>
-            <span>Submit</span>
+            <span style={{marginLeft: "2px"}}>Generate</span>
           </button>
         </div>
-
         <div>
           <ReactWordcloud options={options} size={size} words={dt} />
         </div>
       </div>
-      {/* <div className="subDiv">
-        <p>
-          Welcome to our word cloud and have fun. We want to make our website
-          more interesting and encourage users to interact with us. The use of
-          this feature is particularly important if you are a beginner speaker
-          of English. Whether you want to learn English or keep up with
-          Australian news, enter some words so that you can see the word
-          frequency. For example, if you copy an article into this box, you can
-          see the keywords, it is the word that appears most frequently in the
-          article. Try it!
-        </p>
-      </div> */}
     </div>
   );
 };

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import { FinalSlangPage } from "../quizzes/FinalPage";
-import { SlangQuestionPage } from "../quizzes/QuestionPage";
-import { SlangStartingPage } from "../quizzes/StartingPage";
+import {FinalSlangPage} from "../quizzes/FinalPage";
+import {SlangQuestionPage} from "../quizzes/QuestionPage";
+import {SlangStartingPage} from "../quizzes/StartingPage";
 import "./quiz.css";
-import { slangqs } from "../quizzes/questions";
-import "../general/SlangCard.css";
+import {slangqs} from "../quizzes/questions";
+import ReactCardFlip from "react-card-flip";
+import "../general/slangCard.css";
 
 const SlangQuiz = () => {
   const [score, setScore] = useState(0);
@@ -12,8 +13,11 @@ const SlangQuiz = () => {
   const [showStartingPage, setShowStartingPage] = useState(true);
   const [showQuestionsPage, setShowQuestionsPage] = useState(false);
   const [showFinalPage, setShowFinalPage] = useState(false);
-  const [answerRecord, setAnswerRecord] = useState({ q1: 0, q2: 0, q3: 0, q4: 0, q5: 0, q6: 0, q7: 0, q8: 0, q9: 0, q10: 0 });
-
+  const [answerRecord, setAnswerRecord] = useState({q1:0, q2:0, q3:0, q4:0, q5:0, q6:0, q7:0, q8:0, q9:0, q10:0});
+  const handleRecord = (ind) => {
+    var q = "q" + ind;
+    setAnswerRecord({...answerRecord, [q] : 1});
+  }
   const leanrnSlangcards = [
     { id: 1, front: "Hard yakka", back: "Hard Work", color: "#77AADA" },
     { id: 2, front: "Sparrow", back: "Very early in the morning" , color: "#5f7fbf" },
@@ -26,16 +30,19 @@ const SlangQuiz = () => {
     { id: 9, front: "Steve Irwin's famous catch phrase", back: "Crikey" , color: "#BAE1F2"},
     { id: 10, front: "Budgie Smugglers", back: "Male swimming costume" , color: "#B5C5E5"},
   ]
-
-  const handleRecord = (ind) => {
-    var q = "q" + ind;
-    setAnswerRecord({ ...answerRecord, [q]: 1 });
-  }
   return (
-    <>
-      <div className="slangHeader"><h1>Australia Slang Test</h1></div>
-      <div>
-        <div className="learnSlang">
+    <div style={{backgroundColor: "#ABC9E9", height: "1700px"}}>
+      <div className="headerBg">Australia Slang Game</div>
+      <div className="slangIntro" style={{
+          marginLeft: "360px", 
+          marginTop: "30px", 
+          borderRadius: "60px",
+          padding: "25px",
+          width: "50%",
+          backgroundColor: "#98abd9"}}>
+            Learn the ten popular slang using flip cards, and then welcome to play our Australian Slang Game!
+      </div>
+      <div className="learnSlang">
           {leanrnSlangcards.map(leanrnSlangcard => {
             return (
               <div key={leanrnSlangcard.id} className="card">
@@ -43,7 +50,7 @@ const SlangQuiz = () => {
                   <div className="front">
                     <p>{leanrnSlangcard.front}</p>
                     <br></br>
-                    <p className="subtitle">Hover me :)</p>
+                    <p>Hover me :)</p>
                   </div>
 
                   <div style={{backgroundColor: leanrnSlangcard.color}} className="back">
@@ -57,14 +64,8 @@ const SlangQuiz = () => {
 
           })}
         </div>
-
-        <div className="slangIntro">
-          Wanna test your ability in understanding Australian slang? Come and
-          take our quiz. You can view it as a simple game. There is ten commonly
-          used slang in AU. After finishing the test, you can view your result
-          regarding the level of understanding of AU slang.
-        </div>
-
+    <div className="slangTotal">
+      <div className="slangPage">
         <div className="quizPos">
           {showStartingPage && (
             <SlangStartingPage
@@ -80,7 +81,7 @@ const SlangQuiz = () => {
               setScore={setScore}
               setShowQuestionsPage={setShowQuestionsPage}
               setShowFinalPage={setShowFinalPage}
-              handleRecord={handleRecord}
+              handleRecord = {handleRecord}
               questions={slangqs}
             />
           )}
@@ -93,14 +94,15 @@ const SlangQuiz = () => {
               setShowStartingPage={setShowStartingPage}
               setShowFinalPage={setShowFinalPage}
               setScore={setScore}
-              setAnswerRecord={setAnswerRecord}
-              record={answerRecord}
+              setAnswerRecord = {setAnswerRecord}
+              record = {answerRecord}
               questions={slangqs}
             />
           )}
         </div>
       </div>
-    </>
+    </div>
+    </div>
   );
 };
 

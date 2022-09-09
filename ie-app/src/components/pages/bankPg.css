@@ -1,8 +1,8 @@
 .main-checkBox {
   width: 32rem;
-  margin-top: -44.5rem;
-  margin-left: 70rem;
-  background-color: aliceblue;
+  margin-top: -35rem;
+  margin-left: 52rem;
+  background-color: rgb(158, 195, 227);
 }
 
 .checkBoxDiv {
@@ -30,7 +30,7 @@
     height: 45rem;
     position: absolute;
     left: 50%;
-    margin-left: -3px;
-    margin-top: -44.5rem;
+    margin-left: -10rem;
+    margin-top: -35rem;
     border-radius: 15rem;
   }

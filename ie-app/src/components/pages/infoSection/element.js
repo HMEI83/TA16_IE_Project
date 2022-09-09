@@ -2,8 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? '#fff' : '#010606')};
-  margin-top: 90px;
+  background: ${({ lightBg }) => (lightBg ? '#E0EFF3' : '#5f8db0')};
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -13,7 +12,7 @@ export const InfoWrapper = styled.div`
   display: grid;
   z-index: 1;
   vertical-align: middle;
-  height: 700px;
+  height: 720px;
   width: 100%;
   max-width: 1100px;
   margin-right: auto;
@@ -52,21 +51,22 @@ export const TextWrapper = styled.div`
 `;
 
 export const TopLine = styled.p`
-  color: #01bf71;
-  font-size: 16px;
+  color: ${({ lightText }) => (lightText ? '#fff' : '#0B3F78')};
+  font-size: 20px;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-top: ${({ topspace }) => (topspace)};
 `;
 
 export const Heading = styled.h1`
-  margin-bottom: 24px;
-  font-size: 48px;
+  margin-bottom: 27px;
+  margin-top: 20px;
+  font-size: 30px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
+  color: ${({ lightText }) => (lightText ? '#fff' : '#0B3F78')};
 
   @media screen and (max-width: 480px) {
     font-size: 32px;
@@ -75,19 +75,20 @@ export const Heading = styled.h1`
 
 export const Subtitle = styled.p`
   max-width: 440px;
-  margin-bottom: 35px;
+  margin-bottom: -10px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
+  color: ${({ darkText }) => (darkText ? '#0B3F78' : '#fff')};
 `;
 
 export const Button = styled(Link)`
   border-radius: 50px;
-  background: ${({ primary }) => (primary ? '#01BF71' : '#010606')};
+  background: ${({ col }) => (col)};
   white-space: nowrap;
   padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
   color: ${({ dark }) => (dark ? '#010606' : '#fff')};
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+  font-weight: 520;
   outline: none;
   border: none;
   cursor: pointer;
@@ -98,13 +99,13 @@ export const Button = styled(Link)`
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: ${({ primary }) => (primary ? '#fff' : '#01BF71')};
+    background: ${({ primary }) => (primary ? '#fff' : '#808cab')};
   }
 `;
 
 export const BtnWrap = styled.div`
   display: inline-block;
-  padding:0px 11px;
+  padding:10px 15px;
   margin-left: -15px;
   justify-content: space-between;
 `;

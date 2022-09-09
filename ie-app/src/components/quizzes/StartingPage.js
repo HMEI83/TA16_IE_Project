@@ -14,9 +14,10 @@ export const SlangStartingPage = ({
 
     return (
         <Card1>
-            <h1 className="header">Welcom to Slang Quiz Game!</h1>
-            <button className="start_btn" onClick={startGame}>Let's play</button>
-            <p>Top score: <span>{topScore}</span></p>
+            <h1 className="header" style={{marginTop: "100px", fontWeight: "100"}}>Welcome to Slang Quiz Game!</h1>
+            <button className="start_btn" style={{}}
+            onClick={startGame}>Let's play</button>
+            <p style={{marginLeft: "210px", fontWeight: "100"}}>Top score: <span>{topScore}</span></p>
         </Card1>
     );
 };
@@ -33,9 +34,9 @@ export const GrammarStartingPage = ({
 
     return (
         <Card2>
-            <h1 className="header">Welcom to English Grammar Quiz!</h1>
+            <h1 className="header" style={{marginTop: "200px", fontWeight: "100"}}>Welcome to Grammar Ability Test!</h1>
             <button className="start_btn" onClick={startGame}>Let's play</button>
-            <p>Top score: <span>{topScore}</span></p>
+            <p style={{marginLeft: "390px", fontWeight: "100"}}>Top score: <span>{topScore}</span></p>
         </Card2>
     );
 };
