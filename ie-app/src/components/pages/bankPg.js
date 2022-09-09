@@ -1,14 +1,81 @@
 import React, { useEffect, useState } from "react";
 import "./bankPg.css";
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import ContactSupportIcon from "@mui/icons-material/ContactSupport";
+import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
+import { styled } from "@mui/material/styles";
+import Checkbox from "@mui/material/Checkbox";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
 
 const userData = [
-  { name: "Passport / Citizenship / Birth Certificate" },
   {
-    name: "University /TAFE / College student card, Proof of age card / Australian Drivers Licence, Confirmation of enrolment from your education institution, Health care card or Health insurance document",
+    name: (
+      <div className="checkBoxSection">
+      <p>
+        Passport
+        <br />
+        Citizenship
+        <br />
+        Birth Certificate
+      </p><br/>
+      </div>
+    ),
+    note: "Note: You can only get points for one item in this section"
   },
-  { name: "Any card with your name on it" },
-  { name: "Other documents on which your name and address appear:" },
+  {
+    name: (
+      <div className="checkBoxSection">
+      <p>
+        Student card
+        <br />
+        or Proof of age card
+        <br />
+        or Australian Drivers Licence
+        <br />
+        or Confirmation of enrolment(COE)
+        <br />
+        or Health care card
+        <br />
+        or Health insurance document
+      </p><br/>
+      </div>
+    ),
+    note: "Note: These cards must have a photograph or signature"
+  },
+  { name: (
+    <div className="checkBoxSection">
+    <p>
+      Any card with your name on it:
+      <br />
+      · Store account card
+      <br />
+      · Library card
+      <br />
+      · Credit card
+      <br />
+      · Union card
+      <br />
+      · Medicare card
+      <br />
+      · Video Store Card
+    </p><br/>
+    </div>
+  ),
+},
+  { name: (
+    <div className="checkBoxSection">
+    <p>
+      Other documents on which your name and address appear:
+      <br />
+      · Car registration
+      <br />
+      · Rental receipts
+      <br />
+      · Utility bill
+    </p>
+    </div>
+  ),
+},
 ];
 
 const BankPg = () => {
@@ -33,31 +100,23 @@ const BankPg = () => {
     }
   };
 
+
   return (
+
     <div className="main-checkBox">
       <form className="form w-100">
         <h3>Documents Required</h3>
-        <div className="form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            name="allSelect"
-            checked={!users.some((user) => user?.isChecked !== true)}
-            onChange={handleChange}
-          />
-          <label className="form-check-label ms-2">All Select</label>
-        </div>
         {users.map((user, index) => (
-          <div className="form-check" key={index}>
-            <input
-              type="checkbox"
-              className="form-check-input"
-              name={user.name}
-              checked={user?.isChecked || false}
-              onChange={handleChange}
+          <div key={index} className="checkBoxDiv">
+            <FormControlLabel
+              control={<Checkbox/>}
+              label={user.name}
             />
-            <label className="form-check-label ms-2">{user.name}</label>
-            <ContactSupportIcon />
+            <Tooltip title={user.note}>
+              <ContactSupportIcon sx={{ m: 0 }}>
+                Default Width [300px]
+              </ContactSupportIcon>
+            </Tooltip>
           </div>
         ))}
       </form>
