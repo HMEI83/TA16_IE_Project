@@ -35,7 +35,7 @@ export const lifeObj = {
     cards: [{
       title: "Transport",
       info: "empty",
-      nav: 'ptv',
+      nav: 'transport',
       col: "#d5dfed"
     },{
       title: <p style={{color:"white"}}>Bank Account Set Up</p>,
