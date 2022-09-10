@@ -5,7 +5,7 @@ import {SlangStartingPage} from "../quizzes/StartingPage";
 import "./quiz.css";
 import {slangqs} from "../quizzes/questions";
 import ReactCardFlip from "react-card-flip";
-import "../general/slangCard.css";
+import "../general/SlangCard.css";
 
 const SlangQuiz = () => {
   const [score, setScore] = useState(0);
