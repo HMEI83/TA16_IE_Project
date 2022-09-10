@@ -1,5 +1,5 @@
 /* From uiverse.io by @JoseIsra */
- .card {
+ .bankcard {
      width: 100%;
      cursor: pointer;
      display: inline-block;
@@ -19,7 +19,7 @@
      transform-style: preserve-3d;
    }
 
-   .card:hover .content {
+   .bankcard:hover .content {
      transform: rotateY(0.5turn);
    }
 

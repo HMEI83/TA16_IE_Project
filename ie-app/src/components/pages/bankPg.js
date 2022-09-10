@@ -119,7 +119,7 @@ const BankPg = () => {
         
       <div className="bankCardLatout">
         {accounts.map((account) => (
-             <div class="card">
+             <div class="bankcard">
              <div style={{backgroundColor: account.color}} class="content">
                  <div class="front">
                      <h3 class="title">{account.type}</h3>
