@@ -5,6 +5,7 @@ import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import "../general/BankCard.css";
+import Chart from 'react-apexcharts';
 
 const accounts = [
   {
@@ -12,21 +13,21 @@ const accounts = [
     type: "The transaction account",
     explain:
       "The transaction account is the most common account that can be used for daily expenses, deposits, money access, shopping, paying off bills, and withdrawing money from an ATM.",
-      color: "#77AADA"
+    color: "#77AADA",
   },
   {
     id: 2,
     type: "The savings account",
     explain:
       "The savings account is a ready to go account, which is linked to your everyday bank account. It is different from the transaction account as it allows you to earn interest on your balance.",
-      color: "#5f7fbf"
+    color: "#5f7fbf",
   },
   {
     id: 3,
     type: "The student account ",
     explain:
       "The student account comes with the same features as a transaction account but has some extra perks. For example, you don't pay any fees when you deposit cash or withdraw from an ATM on a monthly or annual basis.",
-      color: "#BAE1F2"
+    color: "#BAE1F2",
   },
 ];
 
@@ -109,50 +110,81 @@ const userData = [
 const BankPg = () => {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    setUsers(userData);
-  }, []);
-
   return (
-    <div style={{backgroundColor: "#ABC9E9", height: "1000px"}}>
-    <div className="mainBankPage">
-        
-      <div className="bankCardLatout">
-        {accounts.map((account) => (
-             <div class="bankcard">
-             <div style={{backgroundColor: account.color}} class="content">
-                 <div class="front">
-                     <h3 class="title">{account.type}</h3>
-                     <p class="subtitle">Hover me :)</p>
-                 </div>
-      
-                 <div style={{backgroundColor: account.color}} class="back">
-                     <p class="description">
-                         {account.explain}
-                     </p>
-                 </div>
-             </div>
-         </div>
-        ))}
-      </div>
+    <div style={{ backgroundColor: "#c0d7f0", height: "2000px" }}>
+      <div className="mainBankPage">
+      <div className="chartLayout">
+        <div className="container-fluid mt-3 mb-3">
+          <h2 className="text-left">Donut Chart</h2>
+          <Chart
+            type="donut"
+            width={1349}
+            height={550}
+            series={[17,14,9,8.5]}
+            options={{
+              labels: ['Commonwealth Bank of Australia (CBA)', 'Westpac Banking Corporation (WBC)', 'National Australia Bank (NBA)', 'Australia and NEW Zealand Banking Group (ANZ)'],
+              title: {
+                text: "Number of customers at the big four banks in Australia(in millions)",
+              },
 
-      <div className="vl"></div>
-      <div className="main-checkBox">
-        <form className="form w-100">
-          <h3>Documents Required</h3>
-          {users.map((user, index) => (
-            <div key={index} className="checkBoxDiv">
-              <FormControlLabel control={<Checkbox />} label={user.name} />
-              <Tooltip title={user.note}>
-                <ContactSupportIcon sx={{ m: 0 }}>
-                  Default Width [300px]
-                </ContactSupportIcon>
-              </Tooltip>
+              plotOptions: {
+                pie: {
+                  donut: {
+                    labels: {
+                      show: true,
+                      total: {
+                        show: true,
+                        // showAlways: true,
+                        //formatter: () => '343',
+                        fontSize: 15,
+                        color: "#f90000",
+                      },
+                    },
+                  },
+                },
+              },
+
+              dataLabels: {
+                enabled: true,
+              },
+            }}
+          />
+        </div>
+        </div>
+        <div className="bankCardLatout">
+          {accounts.map((account) => (
+            <div class="bankcard">
+              <div style={{ backgroundColor: account.color }} class="content">
+                <div class="front">
+                  <h3 class="title">{account.type}</h3>
+                  <p class="subtitle">Hover me :)</p>
+                </div>
+
+                <div style={{ backgroundColor: account.color }} class="back">
+                  <p class="description">{account.explain}</p>
+                </div>
+              </div>
             </div>
           ))}
-        </form>
+        </div>
+
+        <div className="vl"></div>
+        <div className="main-checkBox">
+          <form className="form w-100">
+            <h3>Documents Required</h3>
+            {userData.map((user, index) => (
+              <div key={index} className="checkBoxDiv">
+                <FormControlLabel control={<Checkbox />} label={user.name} />
+                <Tooltip title={user.note}>
+                  <ContactSupportIcon sx={{ m: 0 }}>
+                    Default Width [300px]
+                  </ContactSupportIcon>
+                </Tooltip>
+              </div>
+            ))}
+          </form>
+        </div>
       </div>
-    </div>
     </div>
   );
 };

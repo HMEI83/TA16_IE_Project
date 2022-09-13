@@ -1,7 +1,7 @@
 .main-checkBox {
   width: 32rem;
-  margin-top: -35rem;
-  margin-left: 52rem;
+  margin-top: -46rem;
+  margin-left: 60rem;
   background-color: rgb(158, 195, 227);
 }
 
@@ -18,11 +18,13 @@
   width: 90rem;
   display: inline-block;
   margin-top: 8rem;
+  margin-left: 10rem;
 }
 
 .bankCardLatout {
   width: 30rem;
   margin-left: 10rem;
+  margin-top: -5rem;
 }
 
 .vl {
@@ -30,7 +32,12 @@
     height: 45rem;
     position: absolute;
     left: 50%;
-    margin-left: -10rem;
-    margin-top: -35rem;
+    margin-left: 0rem;
+    margin-top: -45rem;
     border-radius: 15rem;
   }
+
+.chartLayout {
+  margin-bottom: 5rem;
+  margin-top: -10;
+}
