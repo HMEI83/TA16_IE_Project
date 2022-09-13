@@ -5,7 +5,31 @@ import Tooltip, { TooltipProps, tooltipClasses } from "@mui/material/Tooltip";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import "../general/BankCard.css";
-import Chart from 'react-apexcharts';
+import Chart from "react-apexcharts";
+import Collapsible from "react-collapsible";
+
+const bankDesc = [
+  {
+    id: 1,
+    name: "Commonwealth Bank of Australia",
+    desc: "The Commonwealth Bank of Australia (CBA), or CommBank, is an Australian multinational bank with businesses across New Zealand, Asia, the United States and the United Kingdom. It provides a variety of financial services including retail, business and institutional banking, funds management, superannuation, insurance, investment and broking services. The Commonwealth Bank is the largest Australian listed company on the Australian Securities Exchange as of August 2015 with brands including Bankwest, Colonial First State Investments, ASB Bank (New Zealand), Commonwealth Securities (CommSec) and Commonwealth Insurance (CommInsure).",
+  },
+  {
+    id: 2,
+    name: "Westpac Banking Corporation",
+    desc: "Westpac Banking Corporation, known simply as Westpac, is an Australian bank and financial services provider headquartered in Sydney, Australia.[2] Established in 1817 as the Bank of New South Wales, it acquired the Commercial Bank of Australia in 1982 before being renamed shortly afterwards. It is one of Australia's 'big four' banks and is Australia's first and oldest banking institution. Its name is a portmanteau of 'Western' and 'Pacific'.",
+  },
+  {
+    id: 3,
+    name: "National australia bank",
+    desc: "National Australia Bank (abbreviated NAB, branded nab) is one of the four largest financial institutions in Australia (colloquially referred to as 'The Big Four') in terms of market capitalisation, earnings and customers. NAB was ranked 21st-largest bank in the world measured by market capitalisation and 52nd-largest bank in the world as measured by total assets in 2019. As of January 2019, NAB operated 3,500 Bank@Post locations—including 7,000+ ATMs across Australia, New Zealand, and Asia—and served 9 million customers.",
+  },
+  {
+    id: 4,
+    name: "Australia and New Zealand banking group",
+    desc: "Its current corporate entity was established on 1 October 1970, when the Australia and New Zealand Bank (ANZ) merged with the English, Scottish & Australian Bank (ES&A). It was the largest bank merger in Australian history at the time. The Australia and New Zealand Bank had in turn been founded in 1951 as a merger of the Bank of Australasia and the Union Bank of Australia, which were established in 1835 and 1837 respectively. ANZ is one of the big four Australian banks, along with the Commonwealth Bank, National Australia Bank and Westpac.",
+  },
+];
 
 const accounts = [
   {
@@ -109,47 +133,65 @@ const userData = [
 
 const BankPg = () => {
   const [users, setUsers] = useState([]);
+  const [visible, setVisible] = useState(false);
 
   return (
     <div style={{ backgroundColor: "#c0d7f0", height: "2000px" }}>
       <div className="mainBankPage">
-      <div className="chartLayout">
-        <div className="container-fluid mt-3 mb-3">
-          <h2 className="text-left">Donut Chart</h2>
-          <Chart
-            type="donut"
-            width={1349}
-            height={550}
-            series={[17,14,9,8.5]}
-            options={{
-              labels: ['Commonwealth Bank of Australia (CBA)', 'Westpac Banking Corporation (WBC)', 'National Australia Bank (NBA)', 'Australia and NEW Zealand Banking Group (ANZ)'],
-              title: {
-                text: "Number of customers at the big four banks in Australia(in millions)",
-              },
+        <div className="chartLayout">
+          <div className="container-fluid mt-3 mb-3">
+            <h2 className="text-left">Donut Chart</h2>
+            <Chart
+              type="donut"
+              width={1349}
+              height={550}
+              series={[17, 14, 9, 8.5]}
+              options={{
+                labels: [
+                  "Commonwealth Bank of Australia (CBA)",
+                  "Westpac Banking Corporation (WBC)",
+                  "National Australia Bank (NBA)",
+                  "Australia and NEW Zealand Banking Group (ANZ)",
+                ],
+                title: {
+                  text: "Number of customers at the big four banks in Australia(in millions)",
+                },
 
-              plotOptions: {
-                pie: {
-                  donut: {
-                    labels: {
-                      show: true,
-                      total: {
+                plotOptions: {
+                  pie: {
+                    donut: {
+                      labels: {
                         show: true,
-                        // showAlways: true,
-                        //formatter: () => '343',
-                        fontSize: 15,
-                        color: "#f90000",
+                        total: {
+                          show: true,
+                          // showAlways: true,
+                          //formatter: () => '343',
+                          fontSize: 15,
+                          color: "#f90000",
+                        },
                       },
                     },
                   },
                 },
-              },
 
-              dataLabels: {
-                enabled: true,
-              },
-            }}
-          />
+                dataLabels: {
+                  enabled: true,
+                },
+              }}
+            />
+          </div>
         </div>
+        <div className="bankDescSection">
+          {bankDesc.map((bd) => (
+            <div key={bd.id} className="bankDescLayout">
+              <Collapsible trigger={bd.name}>
+                <h2>{bd.name}</h2>
+                <p>
+                  {bd.desc}
+                </p>
+              </Collapsible>
+            </div>
+          ))}
         </div>
         <div className="bankCardLatout">
           {accounts.map((account) => (
