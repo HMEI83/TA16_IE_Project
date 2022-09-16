@@ -14,15 +14,36 @@ import WEST from "../../images/west.jpg";
 import NBA from "../../images/nba.webp";
 import { height } from "@mui/system";
 
-const slideImages = [COMM, ANZ, WEST, NBA];
+const openInNewTab = url => {
+  window.open(url, '_blank', 'noopener,noreferrer');
+};
+
+const slideImages = [
+  {
+    pic: COMM,
+    caption: 'https://www.commbank.com.au/'
+  },
+  {
+    pic: ANZ,
+    caption: 'https://www.anz.com.au/personal/'
+  },
+  {
+    pic: WEST,
+    caption: 'https://www.westpac.com.au/'
+  },
+  {
+    pic: NBA,
+    caption: 'https://www.nab.com.au/'
+  },
+];
 
 
 const zoomOutProperties = {
-  duration: 5000,
+  duration: 3000,
   transitionDuration: 500,
   infinite: true,
-  indicators: true,
-  scale: 0.4,
+  indicators: true, 
+  scale: 0.8,
   arrows: true
 };
 const Slideshow = () => {
@@ -30,35 +51,18 @@ const Slideshow = () => {
     <div className="slide-container">
       <Slide {...zoomOutProperties}>
         {slideImages.map((each, index) => (
-          <img key={index} style={{ width: "100%", height: "30rem", objectFit: "contain"}} src={each} />
+          <div>
+          <img key={index} style={{ width: "100%", height: "30rem", objectFit: "contain"}} src={each.pic} />
+          <button className="web-button" onClick={() => openInNewTab(each.caption)}>
+         OFFICAL WEBSITE
+      </button>
+          </div>
         ))}
       </Slide>
     </div>
   );
 };
 
-// const bankDesc = [
-//   {
-//     id: 1,
-//     name: "Commonwealth Bank of Australia",
-//     desc: "The Commonwealth Bank of Australia (CBA), or CommBank, is an Australian multinational bank with businesses across New Zealand, Asia, the United States and the United Kingdom. It provides a variety of financial services including retail, business and institutional banking, funds management, superannuation, insurance, investment and broking services. The Commonwealth Bank is the largest Australian listed company on the Australian Securities Exchange as of August 2015 with brands including Bankwest, Colonial First State Investments, ASB Bank (New Zealand), Commonwealth Securities (CommSec) and Commonwealth Insurance (CommInsure).",
-//   },
-//   {
-//     id: 2,
-//     name: "Westpac Banking Corporation",
-//     desc: "Westpac Banking Corporation, known simply as Westpac, is an Australian bank and financial services provider headquartered in Sydney, Australia.[2] Established in 1817 as the Bank of New South Wales, it acquired the Commercial Bank of Australia in 1982 before being renamed shortly afterwards. It is one of Australia's 'big four' banks and is Australia's first and oldest banking institution. Its name is a portmanteau of 'Western' and 'Pacific'.",
-//   },
-//   {
-//     id: 3,
-//     name: "National australia bank",
-//     desc: "National Australia Bank (abbreviated NAB, branded nab) is one of the four largest financial institutions in Australia (colloquially referred to as 'The Big Four') in terms of market capitalisation, earnings and customers. NAB was ranked 21st-largest bank in the world measured by market capitalisation and 52nd-largest bank in the world as measured by total assets in 2019. As of January 2019, NAB operated 3,500 Bank@Post locations—including 7,000+ ATMs across Australia, New Zealand, and Asia—and served 9 million customers.",
-//   },
-//   {
-//     id: 4,
-//     name: "Australia and New Zealand banking group",
-//     desc: "Its current corporate entity was established on 1 October 1970, when the Australia and New Zealand Bank (ANZ) merged with the English, Scottish & Australian Bank (ES&A). It was the largest bank merger in Australian history at the time. The Australia and New Zealand Bank had in turn been founded in 1951 as a merger of the Bank of Australasia and the Union Bank of Australia, which were established in 1835 and 1837 respectively. ANZ is one of the big four Australian banks, along with the Commonwealth Bank, National Australia Bank and Westpac.",
-//   },
-// ];
 
 const accounts = [
   {
