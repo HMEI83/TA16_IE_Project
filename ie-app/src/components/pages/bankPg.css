@@ -1,8 +1,9 @@
 .main-checkBox {
   width: 32rem;
-  margin-top: -46rem;
-  margin-left: 60rem;
-  background-color: rgb(158, 195, 227);
+  margin-top: 5rem;
+  margin-left: 35rem;
+  margin-bottom: 5rem;
+  /* background-color: rgb(158, 195, 227); */
 }
 
 .checkBoxDiv {
@@ -15,16 +16,16 @@
 }
 
 .mainBankPage {
-  width: 90rem;
-  display: inline-block;
+  /* display: inline-block; */
   margin-top: 8rem;
   margin-left: 10rem;
 }
 
-.bankCardLatout {
-  width: 30rem;
-  margin-left: 10rem;
-  margin-top: -5rem;
+.bankCardLayout {
+  width: 100rem;
+  margin-left: -8rem;
+  margin-top: -15rem;
+  display: inline-block;
 }
 
 .vl {
@@ -40,6 +41,7 @@
 .chartLayout {
   margin-bottom: 8rem;
   margin-top: -10;
+  margin-left: -5rem;
 }
 
 .bankDescSection {
@@ -50,5 +52,27 @@
 
 .bankDescLayout{
   width: 40rem;
-  display: inline-block;
+  /* display: inline-block; */
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.type-name {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.checkListBg {
+  margin-left: -10rem;
+  background-color: #fefbe2;
+}
+
+.slideLayout {
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+
+.slide-container{
+  height: 50rem;
+  width: 60rem;
 }

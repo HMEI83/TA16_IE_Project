@@ -1,10 +1,10 @@
 /* From uiverse.io by @JoseIsra */
  .bankcard {
-     width: 100%;
+     width: 25rem;
      cursor: pointer;
      display: inline-block;
     position: relative;
-    margin-left: -5rem;
+    margin-left: 0rem;
     margin-right: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
@@ -50,5 +50,6 @@
    }
 
    .description {
+    width: 100%;
      transform: translateZ(3rem);
    }
