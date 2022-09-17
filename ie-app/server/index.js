@@ -41,6 +41,16 @@ app.get("/englishquiz", (req, res) => {
   });
 });
 
+app.get("/slangquiz", (req, res) => {
+  db.query(`SELECT * FROM quiz;`, (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send(result);
+    }
+  });
+});
+
 app.listen(3001, () => {
   console.log("Yey, your server is running on port 3001");
 });

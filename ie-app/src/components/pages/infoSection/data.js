@@ -36,12 +36,12 @@ export const lifeObj = {
       title: "Transport",
       info: "empty",
       nav: 'transport',
-      col: "#d5dfed"
+      col: "#f0b899"
     },{
-      title: <p style={{color:"white"}}>Bank Account Set Up</p>,
+      title: <p style={{color:"black"}}>Bank Account Set Up</p>,
       info: "empty",
       nav: 'bank',
-      col: "#7b9fd1"
+      col: "#f0e9c5"
     }],
     imgStart: true,
     primary: true,
@@ -50,8 +50,8 @@ export const lifeObj = {
   
   export const learnObj = {
     id: 'learn',
-    lightBg: true,
-    lightText: false,
+    lightBg: false,
+    lightText: true,
     lightTextDesc: false,
     topSpace: "30px",
     topLine: 'LEARNING ENGLISH',
@@ -60,12 +60,12 @@ export const lifeObj = {
       title: "Grammar Ability Test",
       info: "empty",
       nav: 'english-quiz',
-      col: "#4c5c73"
+      col: "#e8b582"
     }, {
       title: "Slang Game",
       info: "empty",
       nav: 'slang',
-      col: "#7b9fd1"
+      col: "#f0e9c5"
     }, {
       title: <p style={{color:"black"}}>Catch Keyword</p>,
       info: "empty",
@@ -85,10 +85,10 @@ export const lifeObj = {
     </p>,
     img: require('../../../images/learneng.jpg'),
   alt: 'svg3',
-  imgStart: false,
-    dark: false,
-    primary: false,
-    darkText: true
+  imgStart: true,
+    dark: true,
+    primary: true,
+    darkText: false
   };
   
   export const socialObj = {
@@ -104,7 +104,7 @@ export const lifeObj = {
       title: "Melbourne Landmark",
       info: "empty",
       nav: 'landmark',
-      col: "#9cc8d6"
+      col: "#e8b582"
     }],
     img: require('../../../images/entertain.jpg'),
   alt: 'svg3',

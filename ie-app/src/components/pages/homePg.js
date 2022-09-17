@@ -54,7 +54,7 @@ export default function Home() {
           <p className="aboutP">Curious to learn more? Get an understading of "Life in AU", "Learning English" and "Explore Local Culture"</p>
         </div>
       </div>
-      <InfoSection {...aboutObj} />
+      {/* <InfoSection {...aboutObj} /> */}
       <InfoSection {...lifeObj} />
       <InfoSection {...learnObj} />
       <InfoSection {...socialObj} />

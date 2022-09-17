@@ -7,7 +7,7 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, showCard, card
   headline, darkText, description, img, alt, topSpace, dark, dark2 }) => {
   return (
     <>
-      <InfoContainer lightBg={lightBg} id={id}>
+      <InfoContainer id={id} style={{backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(${img})`}}>
         <InfoWrapper>
           <InfoRow imgStart={imgStart}>
             <Column1>
@@ -17,11 +17,6 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, showCard, card
                 <Subtitle darkText={darkText}>{description}</Subtitle>
               </TextWrapper>
               {showCard && cards.map((card, ind) => (
-                  // <Link key={ind} to={card.nav} style={{ textDecoration: 'none' }}>
-                  // <CardLayout>
-                  //   <CardH2>{card.title}</CardH2>
-                  // </CardLayout>
-                  // </Link>
                   <BtnWrap>
                     <Button to={card.nav} smooth={true} duration={500} spy={true} exact='true' offset={-80} 
                     col={card.col} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0} 
@@ -29,11 +24,6 @@ const InfoSection = ({ lightBg, id, imgStart, topLine, lightText, showCard, card
                 </BtnWrap>
               ))}
             </Column1>
-            <Column2>
-              <ImgWrap>
-                <Img src={img} alt={alt} style={{height: "470px", width: "560px", float: "left"}}/>
-              </ImgWrap>
-            </Column2>
           </InfoRow>
         </InfoWrapper>
       </InfoContainer>

@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {FinalSlangPage} from "../quizzes/FinalPage";
 import {SlangQuestionPage} from "../quizzes/QuestionPage";
 import {SlangStartingPage} from "../quizzes/StartingPage";
 import "./quiz.css";
 import {slangqs} from "../quizzes/questions";
-import ReactCardFlip from "react-card-flip";
-import "../general/SlangCard.css";
+import "../general/slangCard.css";
+import Axios from "axios";
+import { Button } from "@mui/material";
+
+const colors = [
+  "#77AADA", "#5f7fbf", "#BAE1F2", "#B5C5E5", "#749DC3", "#A8DEFD", "#77AADA", "#5f7fbf", "#BAE1F2", "#B5C5E5"
+]
 
 const SlangQuiz = () => {
+  const [quizzes, setQuizzes] = useState([]);
+  const [index, setIndex] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
   const [score, setScore] = useState(0);
   const [topScore, setTopScore] = useState(0);
   const [showStartingPage, setShowStartingPage] = useState(true);
@@ -18,18 +25,22 @@ const SlangQuiz = () => {
     var q = "q" + ind;
     setAnswerRecord({...answerRecord, [q] : 1});
   }
-  const leanrnSlangcards = [
-    { id: 1, front: "Hard yakka", back: "Hard Work", color: "#77AADA" },
-    { id: 2, front: "Sparrow", back: "Very early in the morning" , color: "#5f7fbf" },
-    { id: 3, front: "mate's rates", back: "A special discounter price for close friends or family", color: "#BAE1F2"  },
-    { id: 4, front: "Knackered", back: "Tired" , color: "#B5C5E5" },
-    { id: 5, front: "McDonald's", back: "Macca's" , color: "#749DC3" },
-    { id: 6, front: "Have a crack", back: "Try to attempt something" , color: "#A8DEFD" },
-    { id: 7, front: "Sanger", back: "A sandwich" , color: "#77AADA"},
-    { id: 8, front: "A stubbie short of a six pack", back: "Somene who is a bit crazy" , color: "#5f7fbf"},
-    { id: 9, front: "Steve Irwin's famous catch phrase", back: "Crikey" , color: "#BAE1F2"},
-    { id: 10, front: "Budgie Smugglers", back: "Male swimming costume" , color: "#B5C5E5"},
-  ]
+
+  const changeIndex = () => {
+    var arr = [];
+    while (arr.length < 10) {
+        var r = Math.floor(Math.random() * 100);
+        if (arr.indexOf(r) === -1) arr.push(r);
+    }
+    setIndex(arr);
+  }
+
+  useEffect(() =>{
+    Axios.get("http://localhost:3001/slangquiz").then((response) => {
+      setQuizzes(response.data);
+    })
+  },[]);
+
   return (
     <div style={{backgroundColor: "#ABC9E9", height: "1700px"}}>
       <div className="headerBg">Australia Slang Game</div>
@@ -43,26 +54,28 @@ const SlangQuiz = () => {
             Learn the ten popular slang using flip cards, and then welcome to play our Australian Slang Game!
       </div>
       <div className="learnSlang">
-          {leanrnSlangcards.map(leanrnSlangcard => {
+          {quizzes.length && index.map((i, key) => {
             return (
-              <div key={leanrnSlangcard.id} className="card">
-                <div style={{backgroundColor: leanrnSlangcard.color}} className="content">
+              <div key={key} className="card">
+                <div style={{backgroundColor: colors[key]}} className="content">
                   <div className="front">
-                    <p>{leanrnSlangcard.front}</p>
+                    <p>{quizzes[i].Slang}</p>
                     <br></br>
                     <p>Hover me :)</p>
                   </div>
 
-                  <div style={{backgroundColor: leanrnSlangcard.color}} className="back">
+                  <div style={{backgroundColor: colors[key]}} className="back">
                     <p className="description">
-                      {leanrnSlangcard.back}
+                      {quizzes[i].Meaning}
                     </p>
                   </div>
                 </div>
               </div>
             )
-
           })}
+          <Button variant="contained" onClick={() => changeIndex()} style = {{marginLeft: "43%"}}>
+            Get New Slangs
+          </Button>
         </div>
     <div className="slangTotal">
       <div className="slangPage">

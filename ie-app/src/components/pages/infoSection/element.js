@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 export const InfoContainer = styled.div`
   color: #fff;
-  background: ${({ lightBg }) => (lightBg ? '#E0EFF3' : '#5f8db0')};
+  background: no-repeat center;
+  background-size: cover;
   @media screen and (max-width: 768px) {
     padding: 100px 0;
   }
@@ -14,7 +15,7 @@ export const InfoWrapper = styled.div`
   vertical-align: middle;
   height: 720px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1500px;
   margin-right: auto;
   margin-left: auto;
   padding: 0 24px;
@@ -34,7 +35,7 @@ export const InfoRow = styled.div`
 
 export const Column1 = styled.div`
   margin-bottom: 15px;
-  padding: 0 15px;
+  padding: 0 10px;
   grid-area: col1;
 `;
 
@@ -45,14 +46,15 @@ export const Column2 = styled.div`
 `;
 
 export const TextWrapper = styled.div`
-  max-width: 540px;
+  max-width: 600px;
   padding-top: 0;
   padding-bottom: 60px;
+  margin-left: 150px;
 `;
 
 export const TopLine = styled.p`
   color: ${({ lightText }) => (lightText ? '#fff' : '#0B3F78')};
-  font-size: 20px;
+  font-size: 40px;
   line-height: 16px;
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -74,7 +76,7 @@ export const Heading = styled.h1`
 `;
 
 export const Subtitle = styled.p`
-  max-width: 440px;
+  max-width: 600px;
   margin-bottom: -10px;
   font-size: 18px;
   line-height: 24px;
@@ -85,7 +87,7 @@ export const Button = styled(Link)`
   border-radius: 50px;
   background: ${({ col }) => (col)};
   white-space: nowrap;
-  padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
+  padding: ${({ big }) => (big ? '14px 40px' : '12px 30px')};
   color: ${({ dark }) => (dark ? '#010606' : '#fff')};
   font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
   font-weight: 520;
@@ -105,9 +107,11 @@ export const Button = styled(Link)`
 
 export const BtnWrap = styled.div`
   display: inline-block;
-  padding:10px 15px;
-  margin-left: -15px;
-  justify-content: space-between;
+  padding:10px 2px;
+  margin-left: 160px;
+  margin-right: -88px;
+  font-size:0;
+  justify-content: space-evenly;
 `;
 
 export const ImgWrap = styled.div`
