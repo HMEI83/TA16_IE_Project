@@ -14,21 +14,23 @@ export default function Home() {
     <>
       <div>
         <div>
-        <img className="homebg" src={homebg} alt="home" />
+          <img className="homebg" src={homebg} alt="home" />
         </div>
-        <div className="homepageDivider"></div>
+        <div className="homepageDivider">
+          <div className="titlePos">
+          <h1>
+            <span id="home-content1">Start A New Journey</span>
+          </h1>
+          <h1>
+            <span id="home-content2">Study in Victoria</span>
+          </h1>
+          </div>
+        </div>
         <div className="homepageDivider2"></div>
         <div className="homepageDivider3"></div>
       </div>
       <div className="home">
-        <h1>
-          <span id="home-content1">Start A New Journey</span>
-        </h1>
-        <div >
-          <h1>
-            <span id="home-content2">Study in Victoria</span>
-          </h1>
-        </div>
+        <div></div>
         <div className="IconDivider">
           <div className="SingleIcon">
             <p className="IconP">Number of Chinese students abroad</p>
@@ -49,9 +51,15 @@ export default function Home() {
         <div className="aboutSection">
           <h1 className="aboutH">About</h1>
           <br></br>
-          <p className="aboutP">This website is here to help young international students who are just landing in this foreign country</p>
+          <p className="aboutP">
+            This website is here to help young international students who are
+            just landing in this foreign country
+          </p>
           <br></br>
-          <p className="aboutP">Curious to learn more? Get an understading of "Life in AU", "Learning English" and "Explore Local Culture"</p>
+          <p className="aboutP">
+            Curious to learn more? Get an understading of "Life in AU",
+            "Learning English" and "Explore Local Culture"
+          </p>
         </div>
       </div>
       {/* <InfoSection {...aboutObj} /> */}

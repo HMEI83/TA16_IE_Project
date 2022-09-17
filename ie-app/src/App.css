@@ -97,8 +97,8 @@
 
 .IconDivider {
   display: flex;
-  margin-top: -25rem;
-  margin-left: -13rem;
+  margin-top: -18rem;
+  margin-left: -15rem;
   align-content: center;
 }
 
@@ -111,7 +111,7 @@
 
 .IconP{
   color: #000;
-  margin-left: -1rem;
+  margin-left: 1rem;
   width: 20rem;
 }
 
@@ -138,6 +138,11 @@
 
 .lifeBg{
   background-image: url("./images/life.jpg");
+}
+
+.titlePos{
+  margin-left: 32rem;
+  margin-top: -4rem;
 }
 
 

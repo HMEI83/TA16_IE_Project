@@ -4,7 +4,7 @@ import {SlangQuestionPage} from "../quizzes/QuestionPage";
 import {SlangStartingPage} from "../quizzes/StartingPage";
 import "./quiz.css";
 import {slangqs} from "../quizzes/questions";
-import "../general/slangCard.css";
+import "../general/SlangCard.css";
 import Axios from "axios";
 import { Button } from "@mui/material";
 
