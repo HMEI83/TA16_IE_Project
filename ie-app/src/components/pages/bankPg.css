@@ -3,7 +3,6 @@
   margin-top: 5rem;
   margin-left: 35rem;
   margin-bottom: 5rem;
-  /* background-color: rgb(158, 195, 227); */
 }
 
 .checkBoxDiv {
@@ -64,7 +63,7 @@
 
 .checkListBg {
   margin-left: -10rem;
-  background-color: #fefbe2;
+  background-color: #9cbfee;
 }
 
 .slideLayout {

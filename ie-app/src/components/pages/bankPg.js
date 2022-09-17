@@ -212,7 +212,6 @@ const BankPg = () => {
           ))}
         </div>
 
-        {/* <div className="vl"></div> */}
         <div className="checkListBg">
           <div className="main-checkBox">
             <form className="form w-100">
