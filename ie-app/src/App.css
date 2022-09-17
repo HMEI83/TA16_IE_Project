@@ -8,17 +8,17 @@
 
 .home {
   display:block;
-  margin-top: -600px;
-  margin-left: 700px;
+  margin-top: -55%;
+  margin-left: 450px;
   height: 95px;
   width: 700px;
   position: absolute;
-  background: rgba(255, 255, 255, 0.963);
+  color: aliceblue;
 }
 
 .homebg {
-  width: 170vh;
-  height: 840px;
+  width: 100%;
+  height: auto;
 }
 
 .headerBg {
@@ -38,21 +38,21 @@
 }
 
 #home-content1 {
-  font-size: 43px;
+  font-size: 55px;
   font-family: 'Geneva';
   margin-top: 78%;
   margin-left: 12px;
-  color: rgba(45, 51, 94, 0.908);
+  color: rgba(255, 255, 255, 0.908);
   height: fit-content;
   background: transparent;
 }
 
 #home-content2 {
-  font-size: 28px;
+  font-size: 55px;
   font-family: 'Geneva';
   margin-top: -1px;
-  margin-left: 12px;
-  color: rgba(45, 51, 94, 0.908);
+  margin-left: 50px;
+  color: rgba(255, 255, 255, 0.908);
   height: fit-content;
   background: transparent;
   width: 880px;
@@ -68,4 +68,76 @@
   box-shadow: 3px 3px 2px #8B5D33;
   font-family: 'Oswald';
 }
+
+
+.homepageDivider {
+  background-color: #EC7F6A;
+  height: 25rem;
+  width: 500rem;
+  align-self: center;
+  margin-top: -1rem;
+}
+
+.homepageDivider2 {
+  background-color: #FFF4E2;
+  height: 25rem;
+  width: 500rem;
+  align-self: center;
+  margin-top: -1rem;
+}
+
+.homepageDivider3 {
+  background-color: #F0BA98;
+  height: 25rem;
+  width: 500rem;
+  align-self: center;
+  margin-top: -1rem;
+}
+
+
+.IconDivider {
+  display: flex;
+  margin-top: -25rem;
+  margin-left: -13rem;
+  align-content: center;
+}
+
+.SingleIcon {
+  margin-top: 25rem;
+  margin-right: 10rem;
+  width: 30rem;
+}
+
+
+.IconP{
+  color: #000;
+  margin-left: -1rem;
+  width: 20rem;
+}
+
+.IconP1{
+  color: #000;
+  margin-left: 4rem;
+}
+
+.aboutSection {
+  width: 50rem;
+  margin-top: 8rem;
+}
+
+.aboutP{
+  width: 40rem;
+  text-align:center;
+  font-size: 21px;
+}
+
+.aboutH{
+  width: 40rem;
+  text-align:center;
+}
+
+.lifeBg{
+  background-image: url("./images/life.jpg");
+}
+
 
