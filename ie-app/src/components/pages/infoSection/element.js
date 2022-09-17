@@ -84,6 +84,7 @@ export const Subtitle = styled.p`
 `;
 
 export const Button = styled(Link)`
+  width: 12rem;
   border-radius: 50px;
   background: ${({ col }) => (col)};
   white-space: nowrap;

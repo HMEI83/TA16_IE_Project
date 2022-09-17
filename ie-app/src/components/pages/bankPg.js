@@ -6,45 +6,47 @@ import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import "../general/BankCard.css";
 import Chart from "react-apexcharts";
-import { Slide,Zoom } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import { Slide, Zoom } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 import COMM from "../../images/common.webp";
 import ANZ from "../../images/ANZ.jpeg";
 import WEST from "../../images/west.jpg";
 import NBA from "../../images/nba.webp";
-import { height } from "@mui/system";
+import accountPic from "../../images/accountPic.png";
+import chequePic from "../../images/chequePic.png";
+import creditPic from "../../images/creditPic.png";
+import { borderColor, height } from "@mui/system";
 
-const openInNewTab = url => {
-  window.open(url, '_blank', 'noopener,noreferrer');
+const openInNewTab = (url) => {
+  window.open(url, "_blank", "noopener,noreferrer");
 };
 
 const slideImages = [
   {
     pic: COMM,
-    caption: 'https://www.commbank.com.au/'
+    caption: "https://www.commbank.com.au/",
   },
   {
     pic: ANZ,
-    caption: 'https://www.anz.com.au/personal/'
+    caption: "https://www.anz.com.au/personal/",
   },
   {
     pic: WEST,
-    caption: 'https://www.westpac.com.au/'
+    caption: "https://www.westpac.com.au/",
   },
   {
     pic: NBA,
-    caption: 'https://www.nab.com.au/'
+    caption: "https://www.nab.com.au/",
   },
 ];
-
 
 const zoomOutProperties = {
   duration: 3000,
   transitionDuration: 500,
   infinite: true,
-  indicators: true, 
+  indicators: true,
   scale: 0.8,
-  arrows: true
+  arrows: true,
 };
 const Slideshow = () => {
   return (
@@ -52,17 +54,23 @@ const Slideshow = () => {
       <Slide {...zoomOutProperties}>
         {slideImages.map((each, index) => (
           <div>
-          <img key={index} style={{ width: "100%", height: "30rem", objectFit: "contain"}} src={each.pic} />
-          <button className="web-button" onClick={() => openInNewTab(each.caption)}>
-         OFFICAL WEBSITE
-      </button>
+            <img
+              key={index}
+              style={{ width: "100%", height: "30rem", objectFit: "contain" }}
+              src={each.pic}
+            />
+            <button
+              className="web-button"
+              onClick={() => openInNewTab(each.caption)}
+            >
+              OFFICAL WEBSITE
+            </button>
           </div>
         ))}
       </Slide>
     </div>
   );
 };
-
 
 const accounts = [
   {
@@ -71,13 +79,14 @@ const accounts = [
     explain:
       "The transaction account is the most common account that can be used for daily expenses, deposits, money access, shopping, paying off bills, and withdrawing money from an ATM.",
     color: "#77AADA",
+    bg: accountPic
   },
   {
     id: 2,
     type: "The savings account",
     explain:
       "The savings account is a ready to go account, which is linked to your everyday bank account. It is different from the transaction account as it allows you to earn interest on your balance.",
-    color: "#5f7fbf",
+    bg: creditPic
   },
   {
     id: 3,
@@ -85,6 +94,7 @@ const accounts = [
     explain:
       "The student account comes with the same features as a transaction account but has some extra perks. For example, you don't pay any fees when you deposit cash or withdraw from an ATM on a monthly or annual basis.",
     color: "#BAE1F2",
+    bg: chequePic
   },
 ];
 
@@ -99,7 +109,7 @@ const userData = [
           <br />
           Birth Certificate
         </p>
-        <br />
+        <br /> 
       </div>
     ),
     note: "Note: You can only get points for one item in this section",
@@ -171,22 +181,26 @@ const BankPg = () => {
   return (
     <div>
       <div className="mainBankPage">
-
         <div className="slideLayout">
-        <Slideshow />
+          <Slideshow />
         </div>
 
-
-       
-      
         <div className="bankCardLayout">
           {accounts.map((account) => (
             <div class="bankcard">
-              <div style={{ backgroundColor: account.color }} class="content">
-                <div class="front">
+              <div
+                style={{
+                  backgroundImage: `url(${account.bg})`,
+                  backgroundPosition: "center",
+                  backgroundSize: "contain",
+                  backgroundRepeat: "no-repeat",
+                }}
+                class="content"
+              >
+                {/* <div class="front">
                   <h3 class="title">{account.type}</h3>
                   <p class="subtitle">Hover me :)</p>
-                </div>
+                </div> */}
 
                 <div style={{ backgroundColor: account.color }} class="back">
                   <p class="description">{account.explain}</p>
@@ -194,27 +208,26 @@ const BankPg = () => {
               </div>
               <div className="type-name">{account.type}</div>
             </div>
-            
           ))}
         </div>
 
         {/* <div className="vl"></div> */}
         <div className="checkListBg">
-        <div className="main-checkBox">
-          <form className="form w-100">
-            <h3>Documents Required</h3>
-            {userData.map((user, index) => (
-              <div key={index} className="checkBoxDiv">
-                <FormControlLabel control={<Checkbox />} label={user.name} />
-                <Tooltip title={user.note}>
-                  <ContactSupportIcon sx={{ m: 0 }}>
-                    Default Width [300px]
-                  </ContactSupportIcon>
-                </Tooltip>
-              </div>
-            ))}
-          </form>
-        </div>
+          <div className="main-checkBox">
+            <form className="form w-100">
+              <h3>Documents Required</h3>
+              {userData.map((user, index) => (
+                <div key={index} className="checkBoxDiv">
+                  <FormControlLabel control={<Checkbox />} label={user.name} />
+                  <Tooltip title={user.note}>
+                    <ContactSupportIcon sx={{ m: 0 }}>
+                      Default Width [300px]
+                    </ContactSupportIcon>
+                  </Tooltip>
+                </div>
+              ))}
+            </form>
+          </div>
         </div>
 
         <div className="chartLayout">
@@ -259,7 +272,9 @@ const BankPg = () => {
               }}
             />
           </div>
-          <a href='../../IACR.pdf' download>Click to download</a>
+          <a href="../../IACR.pdf" download>
+            Click to download
+          </a>
         </div>
       </div>
     </div>

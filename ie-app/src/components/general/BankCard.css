@@ -8,13 +8,17 @@
     margin-right: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888888;
    }
 
    .content {
      text-align: center;
      position: relative;
      transition: all 2.25s;
-     background-color: rgb(127, 204, 240);
+     background-color: rgb(255, 255, 255);
+     /* background-image: url(../../images/); */
      padding: 5em;
      transform-style: preserve-3d;
    }
