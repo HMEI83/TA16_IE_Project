@@ -9,7 +9,7 @@ import Axios from "axios";
 import { Button } from "@mui/material";
 
 const colors = [
-  "#77AADA", "#5f7fbf", "#BAE1F2", "#B5C5E5", "#749DC3", "#A8DEFD", "#77AADA", "#5f7fbf", "#BAE1F2", "#B5C5E5"
+  "#FFF4E2", "#EC7F6A", "#D5E5DB", "#FFE0DB", "#FFF4E2", "#FFE0DB", "#FFF4E2", "#FFE4D8", "#EC7F6A", "#D5E5DB"
 ]
 
 const SlangQuiz = () => {
@@ -42,7 +42,7 @@ const SlangQuiz = () => {
   },[]);
 
   return (
-    <div style={{backgroundColor: "#ABC9E9", height: "1700px"}}>
+    <div style={{backgroundColor: "#F0BA98", height: "1780px"}}>
       <div className="headerBg">Australia Slang Game</div>
       <div className="slangIntro" style={{
           marginLeft: "360px", 
@@ -50,7 +50,8 @@ const SlangQuiz = () => {
           borderRadius: "60px",
           padding: "25px",
           width: "50%",
-          backgroundColor: "#98abd9"}}>
+          fontSize: "30px",
+          textAlign: "center"}}>
             Learn the ten popular slang using flip cards, and then welcome to play our Australian Slang Game!
       </div>
       <div className="learnSlang">
@@ -73,7 +74,7 @@ const SlangQuiz = () => {
               </div>
             )
           })}
-          <Button variant="contained" onClick={() => changeIndex()} style = {{marginLeft: "43%"}}>
+          <Button variant="contained" onClick={() => changeIndex()} style = {{marginLeft: "43%", backgroundColor: "#e8b17d", color: "black"}}>
             Get New Slangs
           </Button>
         </div>

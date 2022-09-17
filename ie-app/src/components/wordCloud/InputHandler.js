@@ -62,7 +62,8 @@ const InputHandler = () => {
           borderRadius: "60px",
           padding: "25px",
           width: "60%",
-          backgroundColor: "#98abd9"}}>
+          fontSize: "30px",
+          textAlign: "center"}}>
             Have you ever lost focus while reading a dry, long article? This WorldCloud feature is here to assist capturing the high-frequency words. Reading has never been that easy with keywords in your mind. 
           </div>
       <div className="word-cloud">
@@ -74,13 +75,13 @@ const InputHandler = () => {
           borderRadius: "20px",
           padding: "20px",
           width: "100%",
-          backgroundColor: "#98abd9"}}>Enter or paste paragraphs of your readings in the text box below</div>
+          backgroundColor: "#FFF4E2"}}>Enter or paste paragraphs of your readings in the text box below</div>
           <textarea
             className="Vocatextarea"
             rows="8"
             cols="60"
             placeholder="type something..."
-            style={{backgroundColor: "#dee7ff", color:"#000"}}
+            style={{backgroundColor: "#FFF4E2", color:"#000"}}
             type="text"
             value={enteredText}
             onChange={textChangeHandler}

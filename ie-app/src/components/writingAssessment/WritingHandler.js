@@ -55,7 +55,7 @@ const WritingHandler = () => {
         rows="8"
         cols="64"
         placeholder="type something..."
-        style={{backgroundColor: "#dee7ff", color:"#000"}}
+        style={{backgroundColor: "#FFF4E2", color:"#000"}}
         type="text"
         value={enteredText}
         onChange={handleInputContent}

@@ -180,7 +180,8 @@ const BankPg = () => {
   const [visible, setVisible] = useState(false);
 
   return (
-    <div>
+    <div style={{backgroundColor: "#FFF4E2", height: "2680px"}}>
+      <div className="headerBg">Set up Bank Account</div>
       <div className="mainBankPage">
         <div className="slideLayout">
           <Slideshow />

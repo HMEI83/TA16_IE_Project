@@ -6,8 +6,8 @@ import "../general/NewCard.css";
 
 const VocabPg = () => {
   return (
-    <div style={{backgroundColor: "#ABC9E9", height: "1000px"}}>
-    <div className="headerBg">WordCloud Visualization</div>
+    <div style={{backgroundColor: "#F0BA98", height: "1000px"}}>
+    <div className="headerBg">Keyword WordCloud</div>
     <div>
       <div>
         <InputHandler />

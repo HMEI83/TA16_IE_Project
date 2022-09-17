@@ -4,7 +4,7 @@ import "./WriteCheck.css";
 
 const WriteCheck = () => {
   return (
-    <div style={{backgroundColor: "#ABC9E9", height: "1000px"}}>
+    <div style={{backgroundColor: "#F0BA98", height: "1000px"}}>
       <div className="headerBg">Grammar Checker</div>
       <div className="slangIntro" style={{
           marginLeft: "320px", 
@@ -12,7 +12,8 @@ const WriteCheck = () => {
           borderRadius: "60px",
           padding: "25px",
           width: "56%",
-          backgroundColor: "#98abd9"}}>
+          fontSize: "30px",
+          textAlign: "center"}}>
            Wondering where to improve your grammar? This grammar check feature helps you to identify any mistake made in a paragraph. 
           </div>
           <div className="titleBg" style={{
@@ -21,7 +22,7 @@ const WriteCheck = () => {
           borderRadius: "20px",
           padding: "20px",
           width: "25%",
-          backgroundColor: "#98abd9"}}>Enter your paragraph in the text box below</div>
+          backgroundColor: "#FFF4E2"}}>Enter your paragraph in the text box below</div>
       <div className="inputDiv">{<WritingHandler />}</div>
       <div></div>
     </div>

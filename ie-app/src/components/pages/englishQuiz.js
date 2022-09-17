@@ -28,7 +28,7 @@ const EnglishQuiz = () => {
       setAnswerRecord({...answerRecord, [q] : 1});
     }
     return (
-      <div style={{backgroundColor: "#ABC9E9", height: "1500px"}}>
+      <div style={{backgroundColor: "#F0BA98", height: "1500px"}}>
         <div className="headerBg">Grammar Ability Test</div>
         <div className="slangIntro" style={{
           marginLeft: "280px", 
@@ -36,7 +36,9 @@ const EnglishQuiz = () => {
           borderRadius: "60px",
           padding: "25px",
           width: "60%",
-          backgroundColor: "#98abd9"}}>
+          fontSize: "30px",
+          textAlign: "center"
+          }}>
             Struggling where to start improving your English? Test your grammar ability first! See whether you are a starter or an advanced learner.
           </div>
       <div className="slangTotal">

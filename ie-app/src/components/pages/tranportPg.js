@@ -21,7 +21,8 @@ const Transport = () => {
   
 
   return (
-    <div>
+    <div style={{backgroundColor: "#F0BA98", height: "1780px"}}>
+      <div className="headerBg">Public Transport in Victoria</div>
           <div className="container">
       <Accordion />
     </div>
