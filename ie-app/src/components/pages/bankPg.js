@@ -78,7 +78,7 @@ const accounts = [
     type: "The transaction account",
     explain:
       "The transaction account is the most common account that can be used for daily expenses, deposits, money access, shopping, paying off bills, and withdrawing money from an ATM.",
-    color: "#77AADA",
+    color: "#FFF4E2",
     bg: accountPic
   },
   {
@@ -86,6 +86,7 @@ const accounts = [
     type: "The savings account",
     explain:
       "The savings account is a ready to go account, which is linked to your everyday bank account. It is different from the transaction account as it allows you to earn interest on your balance.",
+    color:"#F0BA98",
     bg: creditPic
   },
   {
@@ -93,7 +94,7 @@ const accounts = [
     type: "The student account ",
     explain:
       "The student account comes with the same features as a transaction account but has some extra perks. For example, you don't pay any fees when you deposit cash or withdraw from an ATM on a monthly or annual basis.",
-    color: "#BAE1F2",
+    color: "#EC7F6A",
     bg: chequePic
   },
 ];
