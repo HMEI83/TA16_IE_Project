@@ -73,7 +73,7 @@
 .homepageDivider {
   background-color: #EC7F6A;
   height: 25rem;
-  width: 500rem;
+  width: 100%;
   align-self: center;
   margin-top: -1rem;
 }
@@ -81,7 +81,7 @@
 .homepageDivider2 {
   background-color: #FFF4E2;
   height: 25rem;
-  width: 500rem;
+  width: 100%;
   align-self: center;
   margin-top: -1rem;
 }
@@ -89,7 +89,7 @@
 .homepageDivider3 {
   background-color: #F0BA98;
   height: 25rem;
-  width: 500rem;
+  width: 100%;
   align-self: center;
   margin-top: -1rem;
 }
@@ -97,8 +97,8 @@
 
 .IconDivider {
   display: flex;
-  margin-top: -18rem;
-  margin-left: -15rem;
+  margin-top: -22rem;
+  margin-left: -22rem;
   align-content: center;
 }
 
@@ -123,6 +123,7 @@
 .aboutSection {
   width: 50rem;
   margin-top: 8rem;
+  margin-left: -5rem;
 }
 
 .aboutP{
