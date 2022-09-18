@@ -34,35 +34,34 @@ export default function Home() {
         <div className="IconDivider">
           <div className="SingleIcon">
             <p className="IconP">Number of Chinese students abroad</p>
-            <img src={homeIcon1} />
-            <p className="IconP1">1.27 million</p>
+            <img src={homeIcon1} style={{marginLeft: "25px"}}/>
+            <p className="IconP1" style={{marginLeft: "85px"}}>1.27 million</p>
           </div>
           <div className="SingleIcon">
             <p className="IconP">International Student Tertiary enrolments</p>
-            <img src={homeIcon2} />
-            <p className="IconP1">21%</p>
+            <img src={homeIcon2} style={{marginLeft: "52px"}}/>
+            <p className="IconP1" style={{marginLeft: "142px"}}>21%</p>
           </div>
           <div className="SingleIcon">
-            <p className="IconP">Expect to increase</p>
-            <img src={homeIcon3} />
-            <p className="IconP1">17.65%</p>
+            <p className="IconP" style={{marginLeft: "58px"}}>Expect to increase</p>
+            <img src={homeIcon3} style={{marginLeft: "22px"}}/>
+            <p className="IconP1" style={{marginLeft: "112px"}}>17.65%</p>
           </div>
         </div>
         <div className="aboutSection">
-          <h1 className="aboutH">About</h1>
+          <h1 className="aboutH" style={{marginLeft: "55px"}}>About</h1>
           <br></br>
-          <p className="aboutP">
+          <p className="aboutP" style={{marginLeft: "55px"}}>
             This website is here to help young international students who are
             just landing in this foreign country
           </p>
           <br></br>
-          <p className="aboutP">
+          <p className="aboutP" style={{marginLeft: "55px"}}>
             Curious to learn more? Get an understading of "Life in AU",
             "Learning English" and "Explore Local Culture"
           </p>
         </div>
       </div>
-      {/* <InfoSection {...aboutObj} /> */}
       <InfoSection {...lifeObj} />
       <InfoSection {...learnObj} />
       <InfoSection {...socialObj} />

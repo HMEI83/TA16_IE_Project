@@ -93,7 +93,7 @@
 .web-button {
   padding: 15px 25px;
   border: unset;
-  border-radius: 15px;
+  border-radius: 45px;
   color: #212121;
   z-index: 1;
   background: #e8e8e8;
@@ -101,7 +101,7 @@
   font-weight: 1000;
   font-size: 17px;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
-  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(110, 105, 135, 0.27);
   transition: all 250ms;
   overflow: hidden;
   margin-left: 40rem;
@@ -117,7 +117,7 @@
   height: 100%;
   width: 0;
   border-radius: 15px;
-  background-color: #212121;
+  background-color: #eabd9d;
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
   box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
@@ -125,7 +125,7 @@
  }
  
  .web-button:hover {
-  color: #e8e8e8;
+  color: #1d1a1a;
  }
  
  .web-button:hover::before {

@@ -1,31 +1,3 @@
-export const aboutObj = {
-  id: "about",
-  lightBg: true,
-  lightText: false,
-  lightTextDesc: false,
-  topSpace: "-40px",
-  topLine: "ABOUT",
-  img: require("../../../images/lifeinau.jpg"),
-  alt: "svg3",
-  headline: "Ready to study in Victoria?",
-  description: (
-    <p style={{ fontWeight: "520", fontSize: "19px" }}>
-      This website is here to help young international students who are just
-      landing in this foreign country. <br />
-      <br />
-      Curious to learn more? Get an understanding of “
-      <span style={{ color: "orange" }}>Life in Australia</span>”, “
-      <span style={{ color: "orange" }}>Learning English</span>”, and “
-      <span style={{ color: "orange" }}>Explore Local Culture</span>”.
-    </p>
-  ),
-  showCard: false,
-  dark: false,
-  imgStart: false,
-  primary: false,
-  darkText: true,
-};
-
 export const lifeObj = {
   id: "life",
   lightBg: false,

@@ -65,7 +65,7 @@ const Slideshow = () => {
               className="web-button"
               onClick={() => openInNewTab(each.caption)}
             >
-              OFFICAL WEBSITE
+              Explore More
             </button>
           </div>
         ))}
@@ -211,10 +211,10 @@ const BankPg = () => {
           ))}
         </div>
 
-        <div className="checkListBg">
+        <div className="checkListBg" style={{backgroundColor: "#D5E5DB"}}>
           <div className="main-checkBox">
             <form className="form w-100">
-              <h3>Documents Required</h3>
+              <h2 style={{color: "#EC5F55"}}>Documents Checklist</h2>
               {userData.map((user, index) => (
                 <div key={index} className="checkBoxDiv">
                   <FormControlLabel control={<Checkbox />} label={user.name} />

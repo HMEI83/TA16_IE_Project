@@ -21,7 +21,7 @@ const AccordionItem = ({ faq, active, onToggle }) => {
             : { height: "0px" }
         }
       >
-        <div className="answer">{answer}</div>
+        <div className="answer" style={{width: "600px", textAlign: "left"}}>{answer}</div>
       </div>
     </li>
   );

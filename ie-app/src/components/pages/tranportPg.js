@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./transportationPg.css";
 import Accordion from "./Accordion";
+import transBg from '../../images/transBg.png';
 // import Select from 'react-select';
 
 const colourStyles = {
@@ -133,12 +134,23 @@ const Transport = () => {
   ];
 
   return (
-    <div style={{ backgroundColor: "#F0BA98", height: "1780px" }}>
+    <div style={{ backgroundColor: "#F0BA98", height: "2580px" }}>
       <div className="headerBg">Public Transport in Victoria</div>
+      <div className="slangIntro" style={{
+          marginLeft: "290px", 
+          marginTop: "30px", 
+          borderRadius: "60px",
+          padding: "25px",
+          width: "60%",
+          fontSize: "20px",
+          textAlign: "center"}}>
+            Myki, stylised as myki, is a reloadable credit card-sized contactless smart card ticketing 
+            system used for electronic payment of fares on most public transport services in Melbourne and regional Victoria, Australia.
+      </div>
+      <img src={transBg} alt="" style={{ height: "40rem", backgroundSize:"cover", marginLeft: "-4px", width: "1444px" }}/>
       <div className="container">
         <Accordion />
       </div>
-      <br></br>
       <div className="main-myki">
         <form onSubmit={handleSubmit}>
           <div className="box">

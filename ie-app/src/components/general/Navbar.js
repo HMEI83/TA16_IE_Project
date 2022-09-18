@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import { Dropdown1, Dropdown2, Dropdown3 } from "./Dropdown";
 import { animateScroll as scroll } from 'react-scroll';
-import logo from '../../images/logo.jpg';
-import { Nav, NavbarContainer, NavItem, NavLink, NavLogo, NavMenu } from './NavBarElem'
+import logo from '../../images/logo1.png';
+import { Nav, NavbarContainer, NavItem, NavLink, NavLogo, NavMenu,NavL } from './NavBarElem'
 
 function Navbar() {
   const [scrollNav, setScrollNav] = useState(false);
@@ -79,11 +79,11 @@ function Navbar() {
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
             <NavLogo to='/' onClick={toggleHome}>
-            <img className = "logo" src={logo} alt='logo'/>
+            <img className = "logo" src={logo} alt='logo' style={{filter: "brightness(10%)"}}/>
           </NavLogo>
             <NavMenu style={{fontFamily: "Geneva", fontSize: "19px"}}>
               <NavItem>
-                <NavLink to='about' smooth={true} duration={500} spy={true} exact='true' offset={-80} >About</NavLink>
+                <NavL to='/'>Home</NavL>
               </NavItem>
               <NavItem onMouseEnter={onMouseEnter1} onMouseLeave={onMouseLeave1}>
                 <NavLink to='life' smooth={true} duration={500} spy={true} exact='true' offset={-80}>Life in Australia <i className="fas fa-caret-down" style={{marginLeft: "5px"}} /></NavLink>
