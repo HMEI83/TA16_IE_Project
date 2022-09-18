@@ -83,6 +83,12 @@
   margin-top: -128px;
 }
 
+.download-div{
+  margin-top: 2rem;
+  margin-left: 42rem;
+  width: 8rem;
+}
+
 
 .web-button {
   padding: 15px 25px;
@@ -98,7 +104,7 @@
   box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
   transition: all 250ms;
   overflow: hidden;
-  margin-left: 27rem;
+  margin-left: 40rem;
   margin-top: -50rem;
   top: -8rem;
  }

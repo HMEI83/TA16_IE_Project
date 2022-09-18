@@ -1,7 +1,8 @@
 .main-myki {
   margin-top: 10rem;
-  margin-left: 30rem;
+  margin-left: 45rem;
   width: 30rem;
+  text-align: center;
 }
 
 .input-label {
@@ -21,7 +22,7 @@
 }
 
 .result-div{
-  margin-left: -14rem;
+  margin-left: -30rem;
 }
 
 .result-p{
@@ -140,7 +141,7 @@ body {
 }
 
 .button1 {
-  margin-left: -12rem;
+  margin-left: -30rem;
   width: 9em;
   height: 3em;
   border-radius: 30em;

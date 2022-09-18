@@ -226,6 +226,11 @@ const BankPg = () => {
                 </div>
               ))}
             </form>
+            <div className="download-div">
+            <a href="../../IACR.pdf" download>
+            Click to download
+          </a>
+          </div>
           </div>
         </div>
 
@@ -235,7 +240,7 @@ const BankPg = () => {
             <Chart
               type="donut"
               width={1349}
-              height={550}
+              height={500}
               series={[17, 14, 9, 8.5]}
               options={{
                 labels: [
@@ -270,9 +275,7 @@ const BankPg = () => {
               }}
             />
           </div>
-          <a href="../../IACR.pdf" download>
-            Click to download
-          </a>
+
         </div>
       </div>
     </div>
