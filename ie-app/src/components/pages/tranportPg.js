@@ -1,6 +1,19 @@
 import React, { useState } from "react";
 import "./transportationPg.css";
 import Accordion from "./Accordion";
+// import Select from 'react-select';
+
+const colourStyles = {
+  control: (styles) => ({ ...styles, backgroundColor: "white" }),
+  option: (styles, { isDisabled }) => {
+    return {
+      ...styles,
+      backgroundColor: isDisabled ? "red" : "green",
+      color: "#FFF",
+      cursor: isDisabled ? "not-allowed" : "default"
+    };
+  }
+};
 
 const Transport = () => {
   var map = {};
@@ -129,42 +142,51 @@ const Transport = () => {
       <br></br>
       <div className="main-myki">
         <form onSubmit={handleSubmit}>
-          <div>
+          <div className="box">
             <h2>1. Select a fare type</h2>
-            <select value={option1} onChange={handleChangeOption1}>
+            {/* <Select options = {options1} onChange={handleChangeOption1} autoFocus={true} defaultValue={option1}></Select> */}
+            <select value={option1} onChange={handleChangeOption1} style={colourStyles}>
               {options1.map((option) => (
                 <option value={option.value}>{option.label}</option>
               ))}
             </select>
           </div>
-          <div>
+          <br></br>
+          <div className="box">
             <h2>2. Select a day</h2>
+            {/* <Select value = {option2} options = {options2} onChange={handleChangeOption2} autoFocus={true} defaultValue={option2}></Select> */}
             <select value={option2} onChange={handleChangeOption2}>
               {options2.map((option) => (
                 <option value={option.value}>{option.label}</option>
               ))}
             </select>
           </div>
-          <div>
+          <br></br>
+          <div className="box">
             <h2>3. Select a product</h2>
+            {/* <Select value = {option3} options = {options3} onChange={handleChangeOption3} autoFocus={true} defaultValue={option3}></Select> */}
             <select  value={option3} onChange={handleChangeOption3}>
               {options3.map((option) => (
                 <option value={option.value}>{option.label}</option>
               ))}
             </select>
           </div>
-          <div>
+          <br></br>
+          <div className="box">
             <h2>4. Select a Zone</h2>
+            {/* <Select value = {option4} options = {options4} onChange={handleChangeOption4} autoFocus={true} defaultValue={option4}></Select> */}
             <select value={option4} onChange={handleChangeOption4}>
               {options4.map((option) => (
                 <option value={option.value}>{option.label}</option>
               ))}
             </select>
           </div>
-          <button type="submit">Calculate fare</button>
+          <button type="submit" className="button1">Calculate fare</button>
         </form>
-        <div>
-          {result}
+        <br></br>
+        <div className="result-div">
+          <h2>Myki money: </h2>
+          <span className="result-p">${result}</span>
         </div>
       </div>
     </div>

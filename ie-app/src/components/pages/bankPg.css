@@ -9,6 +9,11 @@
   display: inline-block;
 }
 
+.slide-image {
+  background-size: cover;
+  background-position: center;
+}
+
 .checkBoxSection {
   margin-left: 1rem;
   margin-top: 1rem;
