@@ -78,7 +78,6 @@ const Transport = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setResult(map[(1 << map[option1]) | (1 << map[option2]) | (1 << map[option3]) | (1 << map[option4])]);
-    console.log(map[option1], map[option2], map[option3], map[option4]);
   };
 
   const options1 = [

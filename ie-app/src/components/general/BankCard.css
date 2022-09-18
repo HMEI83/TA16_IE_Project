@@ -1,6 +1,6 @@
 /* From uiverse.io by @JoseIsra */
  .bankcard {
-     width: 25rem;
+     width: 20rem;
      cursor: pointer;
      display: inline-block;
     position: relative;
@@ -11,16 +11,21 @@
     border: 1px solid;
     padding: 10px;
     box-shadow: 5px 10px #888888;
+    transform-style: preserve-3d;
+    transform: perspective (1000px) rotateY(var(--rotate-y,0))
+translateY(var(--translate-y,0));
    }
 
    .content {
      text-align: center;
      position: relative;
+     height: 12rem;
      transition: all 2.25s;
      background-color: rgb(255, 255, 255);
      /* background-image: url(../../images/); */
      padding: 5em;
      transform-style: preserve-3d;
+     z-index: 99999;
    }
 
    .bankcard:hover .content {
@@ -35,7 +40,6 @@
      bottom: 0;
      right: 0;
      padding: 2em;
-     transform-style: preserve-3d;
      backface-visibility: hidden;
    }
 

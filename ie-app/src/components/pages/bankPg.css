@@ -20,14 +20,13 @@
 }
 
 .mainBankPage {
-  /* display: inline-block; */
   margin-top: 8rem;
   margin-left: 10rem;
 }
 
 .bankCardLayout {
-  width: 100rem;
-  margin-left: -8rem;
+  width: 100%;
+  margin-left: -1rem;
   margin-top: -15rem;
   display: inline-block;
 }
@@ -74,7 +73,7 @@
 .slideLayout {
   margin-left: 5rem;
   margin-top: 5rem;
-  width: 100%;
+  width: 80%;
 }
 
 .slide-container{

@@ -48,6 +48,7 @@ const zoomOutProperties = {
   scale: 0.8,
   arrows: true,
 };
+
 const Slideshow = () => {
   return (
     <div className="slide-container">
@@ -57,7 +58,7 @@ const Slideshow = () => {
             <img
             className="slide-image"
               key={index}
-              style={{ width: "100%", height: "30rem", objectFit: "contain" }}
+              style={{ width: "100%", height: "30rem", backgroundSize:"cover" }}
               src={each.pic}
             />
             <button
@@ -190,7 +191,7 @@ const BankPg = () => {
 
         <div className="bankCardLayout">
           {accounts.map((account) => (
-            <div class="bankcard">
+            <div className="bankcard">
               <div
                 style={{
                   backgroundImage: `url(${account.bg})`,
@@ -198,15 +199,11 @@ const BankPg = () => {
                   backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                 }}
-                class="content"
+                className="content"
               >
-                {/* <div class="front">
-                  <h3 class="title">{account.type}</h3>
-                  <p class="subtitle">Hover me :)</p>
-                </div> */}
 
                 <div style={{ backgroundColor: account.color }} class="back">
-                  <p class="description">{account.explain}</p>
+                  <p className="description">{account.explain}</p>
                 </div>
               </div>
               <div className="type-name">{account.type}</div>
@@ -258,8 +255,7 @@ const BankPg = () => {
                         show: true,
                         total: {
                           show: true,
-                          // showAlways: true,
-                          //formatter: () => '343',
+                         
                           fontSize: 15,
                           color: "#f90000",
                         },
