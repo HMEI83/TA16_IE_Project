@@ -22,7 +22,7 @@ import Transport from './components/pages/tranportPg';
 function App() {
   return (
     <div className='App'>
-    <Router basename="/ie-app">
+    <Router>
       <ScrollToTop/>
       <Navbar />
       <Routes>

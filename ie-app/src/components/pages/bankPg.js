@@ -58,7 +58,7 @@ const Slideshow = () => {
             <img
             className="slide-image"
               key={index}
-              style={{ width: "100%", height: "30rem", backgroundSize:"cover" }}
+              style={{ width: "100%", height: "40rem", backgroundSize:"cover" }}
               src={each.pic}
             />
             <button
