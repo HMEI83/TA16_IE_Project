@@ -36,7 +36,7 @@ const SlangQuiz = () => {
   }
 
   useEffect(() =>{
-    Axios.get("http://localhost:3001/slangquiz").then((response) => {
+    Axios.get("https://vicish.herokuapp.com/slangquiz").then((response) => {
       setQuizzes(response.data);
     })
   },[]);
