@@ -7,20 +7,20 @@ import Map, {Marker, Popup,  NavigationControl,
   ScaleControl,
   GeolocateControl} from 'react-map-gl';
 import "mapbox-gl/dist/mapbox-gl.css";
-import landmarker from '../../images/landmarker.svg';
+import musicicon from '../../images/concert.png';
 import mapboxgl from 'mapbox-gl';
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default; // eslint-disable-line
 
 const MAPBOX_TOKEN =
   "pk.eyJ1IjoiamFja2llZ2hvc3QiLCJhIjoiY2w3OXVpemhwMDNyczNwdGtlZ2dhcnh0ZyJ9.Ra3LrWhzfySg84TnhhI2jA";
 
-export default function GenMap() {
+export default function MusicMap() {
   const [viewState, setViewState] = useState({
       longitude: 144.946457,  
       latitude: -37.840935,
       zoom: 12
   });
-  const [landmarks, setLandmarks] = useState([]);
+  const [musicplaces, setPlaces] = useState([]);
   const [popupInfo, setPopupInfo] = useState(null);
 
   const promptAlert = {
@@ -30,8 +30,8 @@ export default function GenMap() {
   }
 
   const handleInput = (lon, lat) => {
-    Axios.get("https://vicish.herokuapp.com/landmark", {params: { lat: lat, lon: lon }}).then((response) => {
-      setLandmarks(response.data);
+    Axios.get("https://vicish.herokuapp.com/music", {params: { lat: lat, lon: lon }}).then((response) => {
+        setPlaces(response.data);
     });
   }
   const onMove = React.useCallback(({viewState}) => {
@@ -56,11 +56,11 @@ export default function GenMap() {
           zoom="11"
           language="english" 
           handleInput={handleInput}/>
-              {landmarks.map((city, index) => (
+              {musicplaces.map((city, index) => (
                 <Marker
                   key={`marker-${index}`}
-                  longitude={city.Longitude}
-                  latitude={city.Latitude}
+                  longitude={city.lon}
+                  latitude={city.lat}
                   style={promptAlert}
                   onClick={e => {
                     e.originalEvent.stopPropagation();
@@ -68,21 +68,21 @@ export default function GenMap() {
                     setPopupInfo(city);
                   }}
                 >
-                  <img src={landmarker} alt="land"/>
+                  <img src={musicicon} alt="" style={{width: "50px"}}/>
                 </Marker>
               ))}
               {popupInfo && (
                 <Popup
-                  latitude={popupInfo.Latitude}
-                  longitude={popupInfo.Longitude}
+                  latitude={popupInfo.lat}
+                  longitude={popupInfo.lon}
                   onClose={() => setPopupInfo(null)}
                   closeButton={false}
                   anchor="top"
                   offsetLeft={10}
                 >
                   <div style={{fontSize: "1vw", fontFamily: "Poppins"}}>
-                    <h5>{popupInfo.Title}</h5>
-                    <p>{popupInfo.Description}</p>
+                    <h5>{popupInfo.venue_name}</h5>
+                    <span><a href = {popupInfo.website} target="_blank">To Website</a></span>
                   </div>
                 </Popup>
               )}

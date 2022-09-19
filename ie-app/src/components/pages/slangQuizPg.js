@@ -42,7 +42,7 @@ const SlangQuiz = () => {
   },[]);
 
   return (
-    <div style={{backgroundColor: "#F0BA98", height: "1780px"}}>
+    <div style={{backgroundColor: "#F0BA98", height: "1860px"}}>
       <div className="headerBg">Australia Slang Game</div>
       <div className="slangIntro" style={{
           marginLeft: "360px", 
@@ -57,7 +57,7 @@ const SlangQuiz = () => {
       <div className="learnSlang">
           {quizzes.length && index.map((i, key) => {
             return (
-              <div key={key} className="card">
+              <div key={key} className="slangcard">
                 <div style={{backgroundColor: colors[key]}} className="content">
                   <div className="front">
                     <p>{quizzes[i].Slang}</p>

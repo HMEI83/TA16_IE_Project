@@ -236,7 +236,7 @@ const BankPg = () => {
 
         <div className="chartLayout">
           <div className="container-fluid mt-3 mb-3">
-            <h2 className="text-left">Donut Chart</h2>
+            <h2 className="text-left">Users Proportion of Big Four Banks</h2>
             <Chart
               type="donut"
               width={1349}
@@ -250,7 +250,7 @@ const BankPg = () => {
                   "Australia and NEW Zealand Banking Group (ANZ)",
                 ],
                 title: {
-                  text: "Number of customers at the big four banks in Australia(in millions)",
+                  text: "The donut chart below shows the proportion of users' choice between the Four Big Banks in Australia.(in millions)",
                 },
 
                 plotOptions: {
