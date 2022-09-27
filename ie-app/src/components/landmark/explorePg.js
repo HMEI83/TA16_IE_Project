@@ -25,7 +25,7 @@ const ExplorePg = () => {
         for you to better experience the local culture.
       </div>
       <div style={{ display: "flex", cursor: "pointer", marginLeft: "30px" }}>
-          <Link to='/landmark-map' style={{ textDecoration: 'none'.color: "black"  }}>
+          <Link to='/landmark-map' style={{ textDecoration: 'none',color: "black"  }}>
           <div
             className="content-item"
             style={{

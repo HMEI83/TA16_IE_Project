@@ -22,6 +22,8 @@ import PTV from './components/pages/ptvPg';
 import ScrollToTop from "./components/general/scrollToTop.js"
 import Transport from './components/pages/tranportPg';
 import MusicMap from './components/landmark/MusicMap';
+import StatisticsPg from './components/pages/statisticsPg';
+
 function App() {
   return (
     <div className='App'>
@@ -46,6 +48,7 @@ function App() {
         <Route path='/bank' element={<Bank/>} />
         <Route path='/meal-plan' element={<MenuPlanner/>} />
         <Route path='/transport' element={<Transport/>} />\
+        <Route path='/statistics' element={<StatisticsPg/>} />\
       </Routes>
     </Router>
 
