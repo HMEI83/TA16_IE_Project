@@ -6,6 +6,8 @@ import homebg from "../../images/homeBg.jpg";
 import homeIcon1 from "../../images/homeIcon1.png";
 import homeIcon2 from "../../images/homeIcon2.png";
 import homeIcon3 from "../../images/homeIcon3.png";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 export default function Home() {
   return (
@@ -29,11 +31,13 @@ export default function Home() {
       </div>
       <div className="home">
         <div className="IconDivider">
+        {/* <AnimationOnScroll animateOnce={true} animateIn="animate__fadeInDown"> */}
           <div className="SingleIcon">
             <p className="IconP" style={{marginLeft: "50px"}}>Number of Chinese students abroad</p>
             <img src={homeIcon1} style={{marginLeft: "65px"}}/>
             <p className="IconP1" style={{marginLeft: "125px"}}>1.27 million</p>
           </div>
+          {/* </AnimationOnScroll> */}
           <div className="SingleIcon">
             <p className="IconP">International Student Tertiary enrolments</p>
             <img src={homeIcon2} style={{marginLeft: "37px"}}/>
@@ -59,9 +63,15 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <InfoSection {...lifeObj} />
+      <AnimationOnScroll animateOnce={true} duration={1.5} animateIn="animate__fadeInDown">
+      <InfoSection {...lifeObj}/>
+      </AnimationOnScroll>
+      <AnimationOnScroll animateOnce={true} duration={1.8} animateIn="animate__fadeInDown">
       <InfoSection {...learnObj} />
+      </AnimationOnScroll>
+      <AnimationOnScroll animateOnce={true} duration={2.1} animateIn="animate__fadeInDown">
       <InfoSection {...socialObj} />
+      </AnimationOnScroll>
     </>
   );
 }
