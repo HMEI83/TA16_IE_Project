@@ -210,6 +210,7 @@ const StatisticsPg = () => {
               backgroundColor: "#FFFFFF",
               borderRadius: "20px",
               width: "70%",
+              boxShadow: '1px 2px 9px #F4AAB9'
             }}
           >
             <ReactApexChart
@@ -226,6 +227,7 @@ const StatisticsPg = () => {
               width: "40%",
               marginLeft: "5%",
               marginRight: "5%",
+              boxShadow: '1px 2px 9px #F4AAB9'
             }}
           >
             <p style={{ padding: "15%", fontSize: "20px" }}>
@@ -334,6 +336,7 @@ const StatisticsPg = () => {
             borderRadius: "20px",
             width: "90%",
             backgroundColor: "#FFFFFF",
+            boxShadow: '1px 2px 9px #F4AAB9'
           }}
         >
           <ReactApexChart
