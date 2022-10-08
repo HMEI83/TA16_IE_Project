@@ -139,8 +139,8 @@ const StatisticsPg = () => {
         floating: true,
         fontSize: "15px",
         position: "left",
-        offsetX: 560,
-        width: 500,
+        offsetX: 540,
+        width: 380,
         offsetY: 20,
         labels: {
           useSeriesColors: true,
@@ -243,39 +243,41 @@ const StatisticsPg = () => {
         <div
           style={{
             marginTop: "5%",
-            marginLeft: "5%",
-            marginRight: "5%",
+            marginLeft: "15%",
+            marginRight: "10%",
             borderRadius: "20px",
             backgroundColor: "#FFFFFF",
-            boxShadow: '1px 2px 9px #F4AAB9'
+            boxShadow: '1px 2px 9px #F4AAB9',
+            width:"fit-content"
           }}
         >
-          <div style={{ display: "inline-flex",marginTop: "1%",marginLeft: "1%" }}>
-            <div>
+          <div style={{ display: "flex",marginTop: "1%",marginLeft: "1%" }}>
+            <div style={{marginTop:"1%"}}>
               <img
                 src={zooPic}
                 alt=""
                 style={{ width: "320px", height: "300px" }}
               ></img>
             </div>
-            <div style={{marginLeft:"1%"}}>
+            <div style={{marginLeft:"1%",marginTop:"1%"}}>
               <img
                 src={parPic}
                 alt=""
                 style={{ width: "320px", height: "300px" }}
               ></img>
             </div>
-            <div style={{marginLeft:"1%"}}>
+            <div style={{marginLeft:"1%",marginTop:"1%"}}>
               <img
                 src={artPic}
                 alt=""
                 style={{ width: "320px", height: "300px" }}
               ></img>
             </div>
+            <div style={{width: "320px", marginRight:"1%",marginLeft:"1%",marginTop:"1%"}}>
             <p
               style={{
                 marginLeft:"1%",
-                width: "320px",
+                marginTop:"1%",
                 height: "300px",
                 backgroundColor: "#FFF4E2",
                 padding: "2%"
@@ -288,15 +290,16 @@ const StatisticsPg = () => {
               (NGV Australia), showcasing different aspects of Australia's human
               culture.
             </p>
+            </div>
           </div>
-          <div style={{ display: "inline-flex",marginTop: "1%",marginLeft: "1%" }}>
+          <div style={{ display: "flex",marginTop: "1%",marginLeft: "1%"}}>
             <p
               style={{
-                marginLeft:"1%",
                 width: "320px",
                 height: "300px",
                 backgroundColor: "#F0AB98",
-                padding:"3%"
+                padding:"3%",
+                marginBottom:"1%" 
               }}
             >
               Melbourne is just over an hour's drive south to the Mornington Peninsula, with its bays, beaches, wineries and orchards. You can also enjoy a Turkish bath in the spa area
@@ -311,7 +314,7 @@ const StatisticsPg = () => {
             <p
               style={{
                 marginLeft:"1%",
-                width: "390px",
+                width:"320px",
                 height: "300px",
                 backgroundColor: "#EC7F6A",
                 padding:"2%"
@@ -319,7 +322,7 @@ const StatisticsPg = () => {
             >
               Melbourne's most fashionable venues are in the South Yarra district, such as the popular Two Birds One Stone breakfast place. Chapel Street separates this neighbourhood from the popular Two Birds One Stone breakfast restaurant and is lined with boutiques all the way to Prahran, where you can visit the crowded Parham Market and turn into the eclectic Greville Street.
             </p>
-            <div style={{marginLeft:"1%"}}>
+            <div style={{marginLeft:"1%",marginRight:"1%"}}>
               <img
                 src={cinPic}
                 alt=""
