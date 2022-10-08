@@ -33,7 +33,7 @@ const ExplorePg = () => {
       <div className="headerBg" style={{backgroundImage:`url(${exploreBg}`, backgroundSize:"cover"}}>Explore Melbourne CBD</div>
       <div
         style={{
-          marginLeft: "420px",
+          marginLeft: "33%",
           marginTop: "30px",
           borderRadius: "60px",
           padding: "25px",
@@ -46,7 +46,7 @@ const ExplorePg = () => {
         for you to better experience the local culture.
       </div>
       
-      <div style={{ display: "flex", cursor: "pointer", marginLeft: "30px" }}>
+      <div style={{ display: "flex", cursor: "pointer", marginLeft: "15%" }}>
       <StyleRoot>
         <div style={styles.fadeInDown1}>
           <Link to='/landmark-map' style={{ textDecoration: 'none',color: "black"  }}>
