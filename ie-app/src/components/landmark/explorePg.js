@@ -10,6 +10,7 @@ import { fadeInDown } from 'react-animations';
 import Radium, {StyleRoot} from 'radium';
 import exploreBg from "../../images/exploreBg.png";
 
+
 const styles = {
   fadeInDown1: {
     animation: 'x 1.5s',
