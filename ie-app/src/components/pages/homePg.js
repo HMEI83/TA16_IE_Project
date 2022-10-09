@@ -31,12 +31,12 @@ export default function Home() {
         <div className="homepageDivider2">
           <div className="IconDivider">
             <div className="SingleIcon">
-              <p className="IconP" style={{ marginLeft: "50px", fontSize:"22px" }}>
+              <p className="IconP" style={{ marginLeft: "-15%", fontSize:"22px" }}>
                 Number of Chinese students abroad
               </p>
-              <img src={homeIcon1} style={{ marginLeft: "65px" }} />
-              <div className="IconP1">
-              <CountUp start={0} end={1.27} duration={2.75} decimals={2} suffix={" million"}>
+              <img src={homeIcon1} style={{ marginLeft: "1%" }} />
+              <div className="IconP1" style={{ marginLeft: "12%" }}>
+              <CountUp start={0} end={1.27} duration={2} decimals={2} suffix={" million"}>
                 {({ countUpRef, start }) => (
                   <VisibilitySensor onChange={start}>
                     <span ref={countUpRef}  style={{fontSize:"24px"}}/>
@@ -49,10 +49,10 @@ export default function Home() {
               </p> */}
             </div>
             <div className="SingleIcon">
-              <p className="IconP" style={{fontSize:"22px"}}>International Student Tertiary enrolments</p>
-              <img src={homeIcon2} style={{ marginLeft: "37px" }} />
-              <div className="IconP1">
-              <CountUp start={0} end={21} duration={2.75} suffix={"%"}>
+              <p className="IconP" style={{marginLeft: "-10%", fontSize:"22px", width: "120%"}}>International Student Tertiary Enrolments</p>
+              <img src={homeIcon2} style={{ marginLeft: "2%", width: "80%" }} />
+              <div className="IconP1" style={{marginLeft: "35%", marginTop: "-19%"}}>
+              <CountUp start={0} end={21} duration={2} suffix={"%"}>
                 {({ countUpRef, start }) => (
                   <VisibilitySensor onChange={start}>
                     <span ref={countUpRef}  style={{fontSize:"24px"}}/>
@@ -65,12 +65,12 @@ export default function Home() {
               </p> */}
             </div>
             <div className="SingleIcon">
-              <p className="IconP" style={{ marginLeft: "-3px" , fontSize:"22px"}}>
+              <p className="IconP" style={{ marginLeft: "20%" , fontSize:"22px"}}>
                 Expect to increase
               </p>
-              <img src={homeIcon3} style={{ marginLeft: "-29px" }} />
-              <div className="IconP1">
-              <CountUp start={0} end={17.65} duration={2.75} decimals={2} suffix={"%"}>
+              <img src={homeIcon3} style={{ marginLeft: "12%" ,width: "70%"}} />
+              <div className="IconP1" style={{marginLeft: "35%", marginTop: "-8%"}}>
+              <CountUp start={0} end={17.65} duration={2} decimals={2} suffix={"%"}>
                 {({ countUpRef, start }) => (
                   <VisibilitySensor onChange={start}>
                     <span ref={countUpRef}  style={{fontSize:"24px"}}/>
@@ -107,7 +107,7 @@ export default function Home() {
       <div className="home">
         {/* <div className="IconDivider" style={{backgroudColor: "#FFF4E2"}}>
           <div className="SingleIcon">
-            <p className="IconP" style={{marginLeft: "50px"}}>Number of Chinese students abroad</p>
+            <p className="IconP" style={{marginLeft: "50px"}}>Number of Chinese Students Abroad</p>
             <img src={homeIcon1} style={{marginLeft: "65px"}}/>
             <p className="IconP1" style={{marginLeft: "125px"}}>1.27 million</p>
           </div>
@@ -117,7 +117,7 @@ export default function Home() {
             <p className="IconP1" style={{marginLeft: "122px"}}>21%</p>
           </div>
           <div className="SingleIcon">
-            <p className="IconP" style={{marginLeft: "-3px"}}>Expect to increase</p>
+            <p className="IconP" style={{marginLeft: "-3px"}}>Expect to Increase</p>
             <img src={homeIcon3} style={{marginLeft: "-29px"}}/>
             <p className="IconP1" style={{marginLeft: "69px"}}>17.65%</p>
           </div>
