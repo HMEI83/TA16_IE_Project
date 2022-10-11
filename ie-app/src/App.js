@@ -22,6 +22,10 @@ import Artwork from './components/landmark/artworkPg';
 import Landmark from './components/landmark/landmarkPg';
 import MusicVenue from './components/landmark/musicPg';
 import SafePg from './components/pages/safePg';
+import SubSafePg1 from './components/pages/subSafePg1';
+import SubSafePg2 from './components/pages/subSafePg2';
+import SubSafePg3 from './components/pages/subSafePg3';
+import SubSafePg4 from './components/pages/subSafePg4';
 function App() {
   return (
     <div className='App'>
@@ -48,6 +52,10 @@ function App() {
         <Route path='/artworks' element={<Artwork/>}/>
         <Route path='/music-venue' element={<MusicVenue/>}/>
         <Route path='/health-and-safety' element={<SafePg/>}/>
+        <Route path='/Emergency' element={<SubSafePg1/>}/>
+        <Route path='/transport-personal' element={<SubSafePg2/>}/>
+        <Route path='/sun-and-water' element={<SubSafePg3/>}/>
+        <Route path='/fire' element={<SubSafePg4/>}/>
       </Routes>
     </Router>
     </div>
