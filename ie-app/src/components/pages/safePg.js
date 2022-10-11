@@ -7,6 +7,7 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { styled } from "@mui/material/styles";
 import "./safePg.css";
+import { Link } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -67,6 +68,7 @@ const SafePg = () => {
             columnSpacing={{ xs: 1, sm: 2, md: 3 }}
           >
             <Grid item xs={6}>
+            <Link to='/Emergency' style={{ textDecoration: 'none',color: "black"  }}>
               <Item className="box">
                 <h1>Emergencies</h1>
                 <p>
@@ -74,19 +76,24 @@ const SafePg = () => {
                   equipped to support you. Learn more about our fire, ambulance,
                   and police services so you are prepared.
                 </p>
-                {/* <a href=""></a> */}
+                
               </Item>
+              </Link>
             </Grid>
             <Grid item xs={6}>
+            <Link to='/transport-personal' style={{ textDecoration: 'none',color: "black"  }}>
               <Item className="box">
                 <h1>Transport and personal</h1>
                 <p>
                   Australia is a friendly and safe place to live and study,
                   however, there are practical steps you can take to stay safe.
                 </p>
+               
               </Item>
+              </Link>
             </Grid>
             <Grid item xs={6}>
+            <Link to='/sun-and-water' style={{ textDecoration: 'none',color: "black"  }}>
               <Item className="box">
                 <h1>Sun and water</h1>
                 <p>
@@ -94,9 +101,12 @@ const SafePg = () => {
                   but it is important to stay safe when outdoors or in the
                   water. See how you can enjoy it safely.
                 </p>
+                
               </Item>
+              </Link>
             </Grid>
             <Grid item xs={6}>
+            <Link to='/fire' style={{ textDecoration: 'none',color: "black"  }}>
               <Item className="box">
                 <h1>Fire</h1>
                 <p>
@@ -104,7 +114,9 @@ const SafePg = () => {
                   urban or rural areas. Follow these practical tips to ensure
                   you are prepared.
                 </p>
+                
               </Item>
+              </Link>
             </Grid>
           </Grid>
         </Box>
