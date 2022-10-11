@@ -8,6 +8,11 @@ export const LifeInAU = [
     title: 'Bank Account Set Up',
     path: '/bank',
     cName: 'dropdown-link'
+  },
+  {
+    title: 'Health And Safety',
+    path: '/health-and-safety',
+    cName: 'dropdown-link'
   }
 ];
 

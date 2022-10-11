@@ -21,6 +21,7 @@ import StatisticsPg from './components/pages/statisticsPg';
 import Artwork from './components/landmark/artworkPg';
 import Landmark from './components/landmark/landmarkPg';
 import MusicVenue from './components/landmark/musicPg';
+import SafePg from './components/pages/safePg';
 function App() {
   return (
     <div className='App'>
@@ -46,6 +47,7 @@ function App() {
         <Route path='/landmarks' element={<Landmark/>}/>
         <Route path='/artworks' element={<Artwork/>}/>
         <Route path='/music-venue' element={<MusicVenue/>}/>
+        <Route path='/health-and-safety' element={<SafePg/>}/>
       </Routes>
     </Router>
     </div>
