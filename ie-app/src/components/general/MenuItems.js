@@ -45,7 +45,12 @@ export const Entertainment = [
     title: 'Venues and Events statistics',
     path: '/statistics',
     cName: 'dropdown-link'
-  }
+  },
+  {
+    title: '12 Unmissbale things in Melbourne',
+    path: '/explore-city',
+    cName: 'dropdown-link'
+  },
 ];
 
 

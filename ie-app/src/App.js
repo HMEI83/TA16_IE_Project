@@ -26,6 +26,7 @@ import SubSafePg1 from './components/pages/subSafePg1';
 import SubSafePg2 from './components/pages/subSafePg2';
 import SubSafePg3 from './components/pages/subSafePg3';
 import SubSafePg4 from './components/pages/subSafePg4';
+import UnmissablePg from './components/pages/unmissablePg';
 function App() {
   return (
     <div className='App'>
@@ -56,6 +57,7 @@ function App() {
         <Route path='/transport-personal' element={<SubSafePg2/>}/>
         <Route path='/sun-and-water' element={<SubSafePg3/>}/>
         <Route path='/fire' element={<SubSafePg4/>}/>
+        <Route path='/explore-city' element={<UnmissablePg/>}/>
       </Routes>
     </Router>
     </div>
