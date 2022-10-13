@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useMemo} from "react";
 import { Link, useLocation } from "react-router-dom";
 // import MapboxDirections from "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions";
 import 'mapbox-gl/dist/mapbox-gl.css';
@@ -23,7 +23,7 @@ export default function VICISHMap() {
   const [stores, setStores] = useState({})
   var pageSize = 5;
   const [currentPage, setCurrentPage] = useState(0);
-  const [mapReady, setMapReady] = useState(0)
+  const [mapReady, setMapReady] = useState(false)
   const [data, setData] = useState([])
   useEffect(() => {
     setPageIsMounted(true)
@@ -59,11 +59,11 @@ export default function VICISHMap() {
 
   useEffect(() => {
     if (mapReady && stores) {
-      if (Map.getSource("places")) Map.removeSource("places");
       const firstPageIndex = (currentPage - 1) * pageSize;
       const lastPageIndex = firstPageIndex + pageSize;
       const currentTableData = {'type': 'FeatureCollection', 'features' : stores.features.slice(firstPageIndex, lastPageIndex)}
-        Map.addSource('places', {
+      if (Map.getSource("places")) Map.removeSource("places");
+      Map.addSource('places', {
           'type': 'geojson',
           'data': currentTableData
         });
@@ -72,7 +72,7 @@ export default function VICISHMap() {
     }
   }, [currentPage])
 
-  useEffect(() => {
+  useMemo(() => {
     if (data && pageIsMounted) {
       let tmp = {'type': 'FeatureCollection', 'features': []}
       for (var i in data) {
